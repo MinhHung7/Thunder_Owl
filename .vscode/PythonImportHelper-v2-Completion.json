@@ -1,0 +1,1522 @@
+[
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Tk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Label",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Entry",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "ssl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ssl",
+        "description": "ssl",
+        "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "kind": 2,
+        "importPath": "Client2.echo-client2",
+        "description": "Client2.echo-client2",
+        "peekOfCode": "def receiver():\n    while True:\n        print(\"Receiving the file from the server\")\n        print(\"Creating the file to save the data\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"wb\") as f:\n            while True:\n                data = client.recv(1024)\n                if not data:\n                    break\n                f.write(data)",
+        "detail": "Client2.echo-client2",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Client2.echo-client2",
+        "description": "Client2.echo-client2",
+        "peekOfCode": "client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nmachine = socket.gethostbyname(socket.gethostname())\nport = 9999\nclient.connect((machine, port))\ndef receiver():\n    while True:\n        print(\"Receiving the file from the server\")\n        print(\"Creating the file to save the data\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"wb\") as f:\n            while True:",
+        "detail": "Client2.echo-client2",
+        "documentation": {}
+    },
+    {
+        "label": "machine",
+        "kind": 5,
+        "importPath": "Client2.echo-client2",
+        "description": "Client2.echo-client2",
+        "peekOfCode": "machine = socket.gethostbyname(socket.gethostname())\nport = 9999\nclient.connect((machine, port))\ndef receiver():\n    while True:\n        print(\"Receiving the file from the server\")\n        print(\"Creating the file to save the data\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"wb\") as f:\n            while True:\n                data = client.recv(1024)",
+        "detail": "Client2.echo-client2",
+        "documentation": {}
+    },
+    {
+        "label": "port",
+        "kind": 5,
+        "importPath": "Client2.echo-client2",
+        "description": "Client2.echo-client2",
+        "peekOfCode": "port = 9999\nclient.connect((machine, port))\ndef receiver():\n    while True:\n        print(\"Receiving the file from the server\")\n        print(\"Creating the file to save the data\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"wb\") as f:\n            while True:\n                data = client.recv(1024)\n                if not data:",
+        "detail": "Client2.echo-client2",
+        "documentation": {}
+    },
+    {
+        "label": "sender",
+        "kind": 2,
+        "importPath": "Server2.echo-server2",
+        "description": "Server2.echo-server2",
+        "peekOfCode": "def sender():\n    print(f\"[{machine}] Waiting for the connection from the client\")\n    while True:\n        client, address = server.accept()\n        print(\"Client connected, sending the file now\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"rb\") as file:\n            while True:\n                data = file.read(1024)\n                if not data:\n                    break",
+        "detail": "Server2.echo-server2",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "kind": 5,
+        "importPath": "Server2.echo-server2",
+        "description": "Server2.echo-server2",
+        "peekOfCode": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nmachine = socket.gethostbyname(socket.gethostname())\nport = 9999\nserver.bind((machine, port))\nserver.listen()\ndef sender():\n    print(f\"[{machine}] Waiting for the connection from the client\")\n    while True:\n        client, address = server.accept()\n        print(\"Client connected, sending the file now\")",
+        "detail": "Server2.echo-server2",
+        "documentation": {}
+    },
+    {
+        "label": "machine",
+        "kind": 5,
+        "importPath": "Server2.echo-server2",
+        "description": "Server2.echo-server2",
+        "peekOfCode": "machine = socket.gethostbyname(socket.gethostname())\nport = 9999\nserver.bind((machine, port))\nserver.listen()\ndef sender():\n    print(f\"[{machine}] Waiting for the connection from the client\")\n    while True:\n        client, address = server.accept()\n        print(\"Client connected, sending the file now\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"rb\") as file:",
+        "detail": "Server2.echo-server2",
+        "documentation": {}
+    },
+    {
+        "label": "port",
+        "kind": 5,
+        "importPath": "Server2.echo-server2",
+        "description": "Server2.echo-server2",
+        "peekOfCode": "port = 9999\nserver.bind((machine, port))\nserver.listen()\ndef sender():\n    print(f\"[{machine}] Waiting for the connection from the client\")\n    while True:\n        client, address = server.accept()\n        print(\"Client connected, sending the file now\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"rb\") as file:\n            while True:",
+        "detail": "Server2.echo-server2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "def main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True\n    while connected:\n        msg = input(\"> \")\n        client.send(msg.encode(FORMAT))\n        if msg == DISCONNECT_MSG:\n            connected = False",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True\n    while connected:",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True\n    while connected:\n        msg = input(\"> \")",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True\n    while connected:\n        msg = input(\"> \")\n        client.send(msg.encode(FORMAT))",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "Socket3.Clients.Multi_Client",
+        "description": "Socket3.Clients.Multi_Client",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n    connected = True\n    while connected:\n        msg = input(\"> \")\n        client.send(msg.encode(FORMAT))\n        if msg == DISCONNECT_MSG:",
+        "detail": "Socket3.Clients.Multi_Client",
+        "documentation": {}
+    },
+    {
+        "label": "handle_client",
+        "kind": 2,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "def handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)\n        if msg == DISCONNECT_MSG:\n            connected = False\n        elif(msg == \"send file\"):\n            echoMsg = \"\"\n        print(f\"[{addr}] {msg}\")",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "def main():\n    print(\"[STARTING] Server is starting...\")\n    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server.bind(ADDR)\n    server.listen()\n    print(f\"[LISTENING] Server is listening on {IP}:{PORT}\")\n    while True:\n        conn, addr = server.accept()\n        thread = threading.Thread(target=handle_client, args=(conn, addr))\n        thread.start()",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "sender",
+        "kind": 2,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "def sender():\n    print(f\"[{machine}] Waiting for the connection from the client\")\n    while True:\n        client, address = server.accept()\n        print(\"Client connected, sending the file now\")\n        with open(\"Nguyễn Minh Hưng (Résume).png\", \"rb\") as file:\n            while True:\n                data = file.read(1024)\n                if not data:\n                    break",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 5566\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "PORT = 5566\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)\n        if msg == DISCONNECT_MSG:",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)\n        if msg == DISCONNECT_MSG:\n            connected = False",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nfileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)\n        if msg == DISCONNECT_MSG:\n            connected = False\n        elif(msg == \"send file\"):",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "fileprocess",
+        "kind": 5,
+        "importPath": "Socket3.Servers.Multi_Server",
+        "description": "Socket3.Servers.Multi_Server",
+        "peekOfCode": "fileprocess = 0\ndef handle_client(conn, addr, ):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    connected = True\n    while connected:\n        msg = conn.recv(SIZE).decode(FORMAT)\n        if msg == DISCONNECT_MSG:\n            connected = False\n        elif(msg == \"send file\"):\n            echoMsg = \"\"",
+        "detail": "Socket3.Servers.Multi_Server",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "def main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")\n            break\n        elif cmd == \"OK\":",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 4456\nADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "PORT = 4456\nADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "ADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "FORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "Socket4.client",
+        "description": "Socket4.client",
+        "peekOfCode": "SIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")\n            break",
+        "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "handle_client",
+        "kind": 2,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "def handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)\n        data = data.split(\"@\")\n        cmd = data[0]\n        if cmd == \"LIST\":\n            files = os.listdir(SERVER_DATA_PATH)\n            send_data = \"OK@\"",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "def main():\n    print(\"[STARTING] Server is starting\")\n    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server.bind(ADDR)\n    server.listen()\n    print(f\"[LISTENING] Server is listening on {IP}:{PORT}.\")\n    while True:\n        conn, addr = server.accept()\n        thread = threading.Thread(target=handle_client, args=(conn, addr))\n        thread.start()",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 4456\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nSERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "PORT = 4456\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nSERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nSERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)\n        data = data.split(\"@\")",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nSERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)\n        data = data.split(\"@\")\n        cmd = data[0]",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "FORMAT = \"utf-8\"\nSERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)\n        data = data.split(\"@\")\n        cmd = data[0]\n        if cmd == \"LIST\":",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "SERVER_DATA_PATH",
+        "kind": 5,
+        "importPath": "Socket4.server",
+        "description": "Socket4.server",
+        "peekOfCode": "SERVER_DATA_PATH = \"server_data\"\ndef handle_client(conn, addr):\n    print(f\"[NEW CONNECTION] {addr} connected.\")\n    conn.send(\"OK@Welcome to the File Server.\".encode(FORMAT))\n    while True:\n        data = conn.recv(SIZE).decode(FORMAT)\n        data = data.split(\"@\")\n        cmd = data[0]\n        if cmd == \"LIST\":\n            files = os.listdir(SERVER_DATA_PATH)",
+        "detail": "Socket4.server",
+        "documentation": {}
+    },
+    {
+        "label": "center_window",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef button_toolbar_clicked(parent_frame):\n    toolbar_frame = tk.Frame(parent_frame, bg=\"white\", bd=1, relief=\"solid\")\n    toolbar_frame.pack(side=\"top\", fill=\"x\")",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef button_toolbar_clicked(parent_frame):\n    toolbar_frame = tk.Frame(parent_frame, bg=\"white\", bd=1, relief=\"solid\")\n    toolbar_frame.pack(side=\"top\", fill=\"x\")\n    # Create buttons for the toolbar\n    buttons = []\n    button_names = [\"File\", \"Edit\", \"View\", \"Insert\", \"Attach\", \"Format\", \"Options\", \"Tools\", \"Help\"]\n    for name in button_names:\n        button = tk.Button(toolbar_frame, text=name, command=lambda n=name: button_toolbar_clicked(n), width=6, height=1)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def button_toolbar_clicked(parent_frame):\n    toolbar_frame = tk.Frame(parent_frame, bg=\"white\", bd=1, relief=\"solid\")\n    toolbar_frame.pack(side=\"top\", fill=\"x\")\n    # Create buttons for the toolbar\n    buttons = []\n    button_names = [\"File\", \"Edit\", \"View\", \"Insert\", \"Attach\", \"Format\", \"Options\", \"Tools\", \"Help\"]\n    for name in button_names:\n        button = tk.Button(toolbar_frame, text=name, command=lambda n=name: button_toolbar_clicked(n), width=6, height=1)\n        button.pack(side=\"left\", padx=5, pady=5)\n        buttons.append(button)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 900, 600)\n    new_Window.resizable(False, False)\n    txt_edit = tk.Text(new_Window)\n    txt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight = 1)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n            btn_sender.configure(bg=\"#f0f0f0\")\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_in",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_out",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "perform_search",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"lightgray\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_subframes():",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "create_subframes",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_subframes():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\") 2\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "txt_edit",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "def send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:\n            TIE_server.starttls(context=simple_email_context)\n            TIE_server.login(email_from, pswd)\n            print(\"Connected to server :-)\")\n            # Construct the message headers\n            headers = f\"To: {to}\\n\"",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "send_email_from_gui",
+        "kind": 2,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "def send_email_from_gui():\n    to = entry_email_to.get()\n    cc = entry_cc.get()\n    bcc = entry_bcc.get()\n    subject = entry_subject.get()\n    message = text_message.get(\"1.0\", \"end-1c\")\n    send_email(to, cc, bcc, subject, message)\nroot = Tk()\nroot.title(\"Email Sender\")\n# Labels",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "smtp_port",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "smtp_port = 587\nsmtp_server = \"smtp.gmail.com\"\nemail_from = \"hungm0434@gmail.com\"\npswd = \"gktlrndfkgadbacv\"\nsimple_email_context = ssl.create_default_context()\ndef send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "smtp_server",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "smtp_server = \"smtp.gmail.com\"\nemail_from = \"hungm0434@gmail.com\"\npswd = \"gktlrndfkgadbacv\"\nsimple_email_context = ssl.create_default_context()\ndef send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:\n            TIE_server.starttls(context=simple_email_context)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "email_from",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "email_from = \"hungm0434@gmail.com\"\npswd = \"gktlrndfkgadbacv\"\nsimple_email_context = ssl.create_default_context()\ndef send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:\n            TIE_server.starttls(context=simple_email_context)\n            TIE_server.login(email_from, pswd)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "pswd",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "pswd = \"gktlrndfkgadbacv\"\nsimple_email_context = ssl.create_default_context()\ndef send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:\n            TIE_server.starttls(context=simple_email_context)\n            TIE_server.login(email_from, pswd)\n            print(\"Connected to server :-)\")",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "simple_email_context",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "simple_email_context = ssl.create_default_context()\ndef send_email(to, cc, bcc, subject, message):\n    try:\n        # Connect to the server\n        print(\"Connecting to server...\")\n        with smtplib.SMTP(smtp_server, smtp_port) as TIE_server:\n            TIE_server.starttls(context=simple_email_context)\n            TIE_server.login(email_from, pswd)\n            print(\"Connected to server :-)\")\n            # Construct the message headers",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "root = Tk()\nroot.title(\"Email Sender\")\n# Labels\nLabel(root, text=\"To Email:\").grid(row=0, column=0, pady=10)\nLabel(root, text=\"CC:\").grid(row=1, column=0, pady=10)\nLabel(root, text=\"BCC:\").grid(row=2, column=0, pady=10)\nLabel(root, text=\"Subject:\").grid(row=3, column=0, pady=10)\nLabel(root, text=\"Message:\").grid(row=5, column=0, pady=10)\n# Entry widgets\nentry_email_to = Entry(root, width=30)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "entry_email_to",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "entry_email_to = Entry(root, width=30)\nentry_cc = Entry(root, width=30)\nentry_bcc = Entry(root, width=30)\nentry_subject = Entry(root, width=40)\ntext_message = Text(root, height=10, width=40)\n# Place entry widgets on the grid\nentry_email_to.grid(row=0, column=1)\nentry_cc.grid(row=1, column=1)\nentry_bcc.grid(row=2, column=1)\nentry_subject.grid(row=3, column=1)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "entry_cc",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "entry_cc = Entry(root, width=30)\nentry_bcc = Entry(root, width=30)\nentry_subject = Entry(root, width=40)\ntext_message = Text(root, height=10, width=40)\n# Place entry widgets on the grid\nentry_email_to.grid(row=0, column=1)\nentry_cc.grid(row=1, column=1)\nentry_bcc.grid(row=2, column=1)\nentry_subject.grid(row=3, column=1)\ntext_message.grid(row=5, column=1)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "entry_bcc",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "entry_bcc = Entry(root, width=30)\nentry_subject = Entry(root, width=40)\ntext_message = Text(root, height=10, width=40)\n# Place entry widgets on the grid\nentry_email_to.grid(row=0, column=1)\nentry_cc.grid(row=1, column=1)\nentry_bcc.grid(row=2, column=1)\nentry_subject.grid(row=3, column=1)\ntext_message.grid(row=5, column=1)\n# Button to send email",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "entry_subject",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "entry_subject = Entry(root, width=40)\ntext_message = Text(root, height=10, width=40)\n# Place entry widgets on the grid\nentry_email_to.grid(row=0, column=1)\nentry_cc.grid(row=1, column=1)\nentry_bcc.grid(row=2, column=1)\nentry_subject.grid(row=3, column=1)\ntext_message.grid(row=5, column=1)\n# Button to send email\nsend_button = Button(root, text=\"Send Email\", command=send_email_from_gui)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "text_message",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "text_message = Text(root, height=10, width=40)\n# Place entry widgets on the grid\nentry_email_to.grid(row=0, column=1)\nentry_cc.grid(row=1, column=1)\nentry_bcc.grid(row=2, column=1)\nentry_subject.grid(row=3, column=1)\ntext_message.grid(row=5, column=1)\n# Button to send email\nsend_button = Button(root, text=\"Send Email\", command=send_email_from_gui)\nsend_button.grid(row=6, column=0, columnspan=2, pady=10)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "send_button",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "send_button = Button(root, text=\"Send Email\", command=send_email_from_gui)\nsend_button.grid(row=6, column=0, columnspan=2, pady=10)\n# Run the GUI\nroot.mainloop()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "def connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed\n            # client.send(helo_command.encode('utf-8'))\n            # # Receive and print the server's response to the HELO or EHLO command",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "test3",
+        "description": "test3",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed\n            # client.send(helo_command.encode('utf-8'))",
+        "detail": "test3",
+        "documentation": {}
+    },
+    {
+        "label": "MailApp",
+        "kind": 6,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "class MailApp:\n    def __init__(self, master):\n        self.master = master\n        master.title(\"Mail Application\")\n        self.connect_button = tk.Button(master, text=\"Connect to Server\", command=self.connect_server)\n        self.connect_button.pack(pady=10)\n        self.send_mail_button = tk.Button(master, text=\"Send Mail\", command=self.send_mail)\n        self.send_mail_button.pack(pady=10)\n    def connect_server(self):\n        try:",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "def connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "def main():\n    root = tk.Tk()\n    app = MailApp(root)\n    root.mainloop()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "test4",
+        "description": "test4",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")\n            # # Send the HELO or EHLO command",
+        "detail": "test4",
+        "documentation": {}
+    },
+    {
+        "label": "MailApp",
+        "kind": 6,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "class MailApp:\n    def __init__(self, master):\n        self.master = master\n        master.title(\"Mail Application\")\n        self.sender_label = tk.Label(master, text=\"Sender:\")\n        self.sender_entry = tk.Entry(master)\n        self.sender_label.pack()\n        self.sender_entry.pack()\n        self.recipient_label = tk.Label(master, text=\"Recipient:\")\n        self.recipient_entry = tk.Entry(master)",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "def connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")\n            # Send the HELO or EHLO command\n            helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "def main():\n    root = tk.Tk()\n    app = MailApp(root)\n    root.mainloop()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "test5",
+        "description": "test5",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")\n            # Send the HELO or EHLO command",
+        "detail": "test5",
+        "documentation": {}
+    },
+    {
+        "label": "center_window",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # You can store the file_path or perform other actions with it\ndef newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)\n    new_Window.columnconfigure(1, weight=20)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n            btn_sender.configure(bg=\"#f0f0f0\")\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_in",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_out",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "perform_search",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"lightgray\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_subframes():",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_subframes",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_subframes():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "txt_edit",
+        "kind": 5,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\ndef create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\ndef create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        text=button_name,\n        image=image,\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        text=button_name,\n        image=image,\n        compound=tk.LEFT,\n        borderwidth=0,\n        relief=tk.FLAT,\n        command=command,",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)\n            btn_trash_sender.grid(row=3, column=0, pady=5)",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Button Example\")\n# Create buttons 1, 2, and 3\nbtn_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'hungm0434@gmail.com', lambda: toggle_additional_buttons(\"Sender\"))\nbtn_sender.grid(row=0, column=0, pady=5)\nbtn_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'iamhung12@gmail.com', lambda: toggle_additional_buttons(\"Receiver\"))\nbtn_receiver.grid(row=4, column=0, pady=5)\nbtn_localStorage = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/folder.png', 20, 20, 'Local Folders', lambda: toggle_additional_buttons(\"LocalStorage\"))\nbtn_localStorage.grid(row=7, column=0, pady=5)\n# Create buttons 4 and 5 with icons but initially hide them",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_sender",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'hungm0434@gmail.com', lambda: toggle_additional_buttons(\"Sender\"))\nbtn_sender.grid(row=0, column=0, pady=5)\nbtn_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'iamhung12@gmail.com', lambda: toggle_additional_buttons(\"Receiver\"))\nbtn_receiver.grid(row=4, column=0, pady=5)\nbtn_localStorage = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/folder.png', 20, 20, 'Local Folders', lambda: toggle_additional_buttons(\"LocalStorage\"))\nbtn_localStorage.grid(row=7, column=0, pady=5)\n# Create buttons 4 and 5 with icons but initially hide them\nbtn_inbox_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_sender.pack_forget()\nbtn_send = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/send.png', 20, 20, 'Send')",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_receiver",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'iamhung12@gmail.com', lambda: toggle_additional_buttons(\"Receiver\"))\nbtn_receiver.grid(row=4, column=0, pady=5)\nbtn_localStorage = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/folder.png', 20, 20, 'Local Folders', lambda: toggle_additional_buttons(\"LocalStorage\"))\nbtn_localStorage.grid(row=7, column=0, pady=5)\n# Create buttons 4 and 5 with icons but initially hide them\nbtn_inbox_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_sender.pack_forget()\nbtn_send = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/send.png', 20, 20, 'Send')\nbtn_send.pack_forget()\nbtn_trash_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_localStorage",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_localStorage = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/folder.png', 20, 20, 'Local Folders', lambda: toggle_additional_buttons(\"LocalStorage\"))\nbtn_localStorage.grid(row=7, column=0, pady=5)\n# Create buttons 4 and 5 with icons but initially hide them\nbtn_inbox_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_sender.pack_forget()\nbtn_send = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/send.png', 20, 20, 'Send')\nbtn_send.pack_forget()\nbtn_trash_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_sender.pack_forget()\nbtn_inbox_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_sender",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_inbox_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_sender.pack_forget()\nbtn_send = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/send.png', 20, 20, 'Send')\nbtn_send.pack_forget()\nbtn_trash_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_sender.pack_forget()\nbtn_inbox_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_receiver.pack_forget()\nbtn_trash_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_receiver.pack_forget()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_send",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_send = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/send.png', 20, 20, 'Send')\nbtn_send.pack_forget()\nbtn_trash_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_sender.pack_forget()\nbtn_inbox_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_receiver.pack_forget()\nbtn_trash_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_receiver.pack_forget()\nbtn_outbox = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/outbox.png', 20, 20, 'Outbox')\nbtn_outbox.pack_forget()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_sender",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_trash_sender = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_sender.pack_forget()\nbtn_inbox_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_receiver.pack_forget()\nbtn_trash_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_receiver.pack_forget()\nbtn_outbox = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/outbox.png', 20, 20, 'Outbox')\nbtn_outbox.pack_forget()\nbtn_trash_local = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Local Storages')\nbtn_trash_local.pack_forget()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_inbox_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/inbox.png', 20, 20, 'Inbox')\nbtn_inbox_receiver.pack_forget()\nbtn_trash_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_receiver.pack_forget()\nbtn_outbox = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/outbox.png', 20, 20, 'Outbox')\nbtn_outbox.pack_forget()\nbtn_trash_local = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Local Storages')\nbtn_trash_local.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_trash_receiver = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')\nbtn_trash_receiver.pack_forget()\nbtn_outbox = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/outbox.png', 20, 20, 'Outbox')\nbtn_outbox.pack_forget()\nbtn_trash_local = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Local Storages')\nbtn_trash_local.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_outbox",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_outbox = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/outbox.png', 20, 20, 'Outbox')\nbtn_outbox.pack_forget()\nbtn_trash_local = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Local Storages')\nbtn_trash_local.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_local",
+        "kind": 5,
+        "importPath": "testGUI2",
+        "description": "testGUI2",
+        "peekOfCode": "btn_trash_local = create_button_with_image_senDown(root, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Local Storages')\nbtn_trash_local.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI2",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def toggle_additional_buttons():\n    if button4.winfo_ismapped():\n        button4.pack_forget()\n        button5.pack_forget()\n    else:\n        button4.pack()\n        button5.pack()\n# Create the main window\nroot = tk.Tk()\nroot.title(\"Button Example\")",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Button Example\")\n# Load images for icons (replace these paths with your own image paths)\nicon_path = \"D:\\FILE SOCKET PYTHON\\Icons\\mail.png\"\nbutton4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "icon_path",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "icon_path = \"D:\\FILE SOCKET PYTHON\\Icons\\mail.png\"\nbutton4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button4_icon",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button1",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button2",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button3",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button4",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button5",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "button5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_frames",
+        "kind": 2,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "def create_frames():\n    whitesubframe = tk.Frame(window, bg=\"white\", bd=1, relief=\"solid\")\n    whitesubframe.grid(row=0, column=0, sticky=\"nsew\")\n    sendown_frame = tk.Frame(whitesubframe, bg=\"gray\", bd=1, relief=\"solid\")\n    sendown_frame.grid(row=0, column=0, sticky=\"new\")\n    sendown_label = tk.Label(sendown_frame, text='A', bg=\"gray\", width=40, height=5)\n    sendown_label.grid(row=0, column=0, padx=0, pady=0)\n    email_frame = tk.Frame(whitesubframe, bg=\"white\", bd=1, relief=\"solid\")\n    email_frame.grid(row=1, column=0, sticky=\"new\")\n    email_label = tk.Label(email_frame, text='B', bg=\"white\", width=40, height=5)",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Test\")\nwindow.geometry(\"400x400\")\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight=1)\ncreate_frames()\nwindow.mainloop()",
+        "detail": "testGUI4",
+        "documentation": {}
+    }
+]
