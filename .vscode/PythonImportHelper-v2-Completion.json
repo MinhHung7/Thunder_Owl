@@ -215,6 +215,14 @@
         "documentation": {}
     },
     {
+        "label": "DateEntry",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
         "label": "receiver",
         "kind": 2,
         "importPath": "Client2.echo-client2",
@@ -1097,6 +1105,24 @@
         "documentation": {}
     },
     {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
         "label": "center_window",
         "kind": 2,
         "importPath": "testGUI",
@@ -1119,7 +1145,7 @@
         "kind": 2,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":",
         "detail": "testGUI",
         "documentation": {}
     },
@@ -1128,7 +1154,7 @@
         "kind": 2,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
         "detail": "testGUI",
         "documentation": {}
     },
@@ -1137,7 +1163,7 @@
         "kind": 2,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    create_subframes()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
         "detail": "testGUI",
         "documentation": {}
     },
@@ -1218,16 +1244,25 @@
         "kind": 2,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"lightgray\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_subframes():",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"lightgray\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_mail_subframe():",
         "detail": "testGUI",
         "documentation": {}
     },
     {
-        "label": "create_subframes",
+        "label": "create_mail_subframe",
         "kind": 2,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "def create_subframes():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "peekOfCode": "def create_mail_subframe():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "testGUI",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testGUI",
+        "description": "testGUI",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"lightgray\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"lightgray\", width=200)\n    left_frame.pack_propagate(False)  # Prevent the frame from shrinking to fit its contents\n    mini_calendar_label = tk.Label(left_frame, text=\"Choose a Date:\", font=(\"Calibri\", 12, \"bold\"), bg=\"lightgray\")\n    mini_calendar_label.pack(pady=10)\n    chosen_date_label = tk.Label(left_frame, text=\"Chosen Date: \", font=(\"Calibri\", 12), bg=\"lightgray\")\n    chosen_date_label.pack(pady=5)",
         "detail": "testGUI",
         "documentation": {}
     },
@@ -1245,7 +1280,7 @@
         "kind": 5,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
         "detail": "testGUI",
         "documentation": {}
     },
@@ -1254,7 +1289,7 @@
         "kind": 5,
         "importPath": "testGUI",
         "description": "testGUI",
-        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
         "detail": "testGUI",
         "documentation": {}
     },

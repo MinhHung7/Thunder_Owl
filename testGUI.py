@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog
 from PIL import Image, ImageTk
+from tkcalendar import DateEntry
 
 btn_inbox_sender=None
 btn_send=None
@@ -11,6 +12,12 @@ btn_trash_receiver = None
 
 btn_trash_local=None
 btn_outbox=None
+
+def on_entry_click(event, entry_widget):
+    entry_widget.config(highlightbackground="cyan", highlightcolor="cyan", highlightthickness=3)
+
+def on_entry_leave(event, entry_widget):
+    entry_widget.config(highlightthickness=0)
 
 def center_window(window, width, height):
     screen_width = window.winfo_screenwidth()
@@ -39,7 +46,10 @@ def on_button_click(button_name):
     print(f"{button_name} clicked!")
 
     label_second_part.pack_forget()
-    create_subframes()
+    if button_name=="Mail":
+        create_mail_subframe()
+    elif button_name=="Calendar":
+        create_calendar_subframe()
 
 def create_button_with_image(parent, file_path, width, height, button_name):
     image = load_and_resize_image(file_path, width, height)
@@ -124,6 +134,9 @@ def newMessage():
     from_entry = tk.Entry(field_frame, font=("Calibri", 12), width=70, bd=1, relief="solid")
     from_entry.grid(row=0, column=1, pady=5, padx=10, sticky="w")
 
+    from_entry.bind("<FocusIn>", lambda event: on_entry_click(event, from_entry))
+    from_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, from_entry))
+
     cc_button = tk.Button(field_frame, text="CC", command=lambda: on_button_click("CC"))
     cc_button.grid(row=0, column=2, pady=5, padx=2, sticky="e")
 
@@ -139,18 +152,22 @@ def newMessage():
     # First text box
     to_entry = tk.Text(text_boxes_frame, wrap="word", width=80, height=1, bd=1, relief="solid")
     to_entry.grid(row=2, column=1, sticky="w", pady=2)
+    to_entry.bind("<FocusIn>", lambda event: on_entry_click(event, to_entry))
+    to_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, to_entry))
     to_label = tk.Label(text_boxes_frame, text="To:", font=("Calibri", 12))
     to_label.grid(row=2, column=0, pady=1, padx=10, sticky="w")
     # Second text box
     subject_entry = tk.Text(text_boxes_frame, wrap="word", width=80, height=1, bd=1, relief="solid")
     subject_entry.grid(row=3, column=1, sticky="w", pady=2)
+    subject_entry.bind("<FocusIn>", lambda event: on_entry_click(event, subject_entry))
+    subject_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, subject_entry))
     subject_label = tk.Label(text_boxes_frame, text="Subject:", font=("Calibri", 12))
     subject_label.grid(row=3, column=0, pady=1, padx=10, sticky="w")
 
 
     text_mail_frame = tk.Frame(message_frame)
     text_mail_frame.pack(side="top", fill="both", expand=True, padx=2, pady=2)
-
+    
     mail_entry = tk.Text(text_mail_frame, wrap="word", width=950, height=300, bd=1, relief="solid")
     mail_entry.grid(row=0, column=0, sticky="w", pady=2)
     mail_label = tk.Label(text_mail_frame, font=("Calibri", 12))
@@ -228,7 +245,7 @@ def create_second_part():
     label_second_part.pack()
 
 
-def create_subframes():
+def create_mail_subframe():
     global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage
     # Search Bar with rounded corners and border
     search_entry = ttk.Entry(window, font=("Arial", 12), width=70, style="Search.TEntry")
@@ -277,12 +294,15 @@ def create_subframes():
 
 
     btn_sender = create_button_with_image_senDown(email_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'hungm0434@gmail.com', lambda button_name="Sender": toggle_additional_buttons(button_name))
+    btn_sender.configure(font=("Calibri", 11, "bold"))
     btn_sender.grid(row=0, column=0, sticky="new", padx = 30, pady=5)
 
     btn_receiver = create_button_with_image_senDown(email_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 20, 20, 'iamhung12@gmail.com', lambda button_name="Receiver": toggle_additional_buttons(button_name))
+    btn_receiver.configure(font=("Calibri", 11, "bold"))    
     btn_receiver.grid(row=4, column=0,pady=5)
 
     btn_localStorage = create_button_with_image_senDown(email_frame, 'D:/FILE SOCKET PYTHON/Icons/folder.png', 20, 20, 'Local Folders', lambda button_name="LocalStorage": toggle_additional_buttons(button_name))
+    btn_localStorage.configure(font=("Calibri", 11, "bold"))
     btn_localStorage.grid(row=7, column=0,pady=5)
 
     # Create buttons 4 and 5 with icons but initially hide them
@@ -306,6 +326,43 @@ def create_subframes():
 
     btn_trash_local = create_button_with_image_senDown(email_frame, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')
     btn_trash_local.pack_forget()
+
+def create_calendar_subframe():
+    second_subframe = tk.Frame(window, bg="lightgray")
+    second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
+
+    # Left part (Mini Calendar)
+    left_frame = tk.Frame(second_subframe, bg="lightgray", width=200)
+    left_frame.pack_propagate(False)  # Prevent the frame from shrinking to fit its contents
+
+    mini_calendar_label = tk.Label(left_frame, text="Choose a Date:", font=("Calibri", 12, "bold"), bg="lightgray")
+    mini_calendar_label.pack(pady=10)
+
+    chosen_date_label = tk.Label(left_frame, text="Chosen Date: ", font=("Calibri", 12), bg="lightgray")
+    chosen_date_label.pack(pady=5)
+
+    mini_calendar = DateEntry(left_frame, width=12, background='darkblue',
+                              foreground='white', borderwidth=2, year=2023)
+    mini_calendar.pack(pady=10)
+
+    def on_mini_calendar_select():
+        chosen_date_label.config(text="Chosen Date: " + str(mini_calendar.get()))
+
+    mini_calendar.bind("<<DateEntrySelected>>", lambda event: on_mini_calendar_select())
+
+    # Right part (Big Calendar)
+    right_frame = tk.Frame(second_subframe, bg="lightgray")
+    big_calendar_label = tk.Label(right_frame, text="Task and Note Calendar", font=("Calibri", 16, "bold"), bg="lightgray")
+    big_calendar_label.pack(pady=20)
+
+    # Here you can add a larger calendar or other components for displaying tasks or notes
+    # For simplicity, let's just use a Text widget in this example
+    big_calendar_text = tk.Text(right_frame, width=40, height=10, wrap="word", font=("Calibri", 12))
+    big_calendar_text.pack()
+
+    # Ensure the left frame is always visible
+    left_frame.grid(row=0, column=0, sticky="nsew")
+    right_frame.grid(row=0, column=1, sticky="nsew")
 
 def create_buttons_frame():
     buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)
