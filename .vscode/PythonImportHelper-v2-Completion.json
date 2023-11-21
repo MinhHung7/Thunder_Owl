@@ -133,6 +133,46 @@
         "documentation": {}
     },
     {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Frame",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Label",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "Image",
         "importPath": "PIL",
         "description": "PIL",
@@ -216,6 +256,22 @@
     },
     {
         "label": "DateEntry",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
         "importPath": "tkcalendar",
         "description": "tkcalendar",
         "isExtraImport": true,
@@ -1456,101 +1512,281 @@
         "documentation": {}
     },
     {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "center_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # You can store the file_path or perform other actions with it\ndef newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)\n    new_Window.columnconfigure(1, weight=20)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
         "label": "toggle_additional_buttons",
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def toggle_additional_buttons():\n    if button4.winfo_ismapped():\n        button4.pack_forget()\n        button5.pack_forget()\n    else:\n        button4.pack()\n        button5.pack()\n# Create the main window\nroot = tk.Tk()\nroot.title(\"Button Example\")",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n            btn_sender.configure(bg=\"#f0f0f0\")\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)",
         "detail": "testGUI3",
         "documentation": {}
     },
     {
-        "label": "root",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "root = tk.Tk()\nroot.title(\"Button Example\")\n# Load images for icons (replace these paths with your own image paths)\nicon_path = \"D:\\FILE SOCKET PYTHON\\Icons\\mail.png\"\nbutton4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "icon_path",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "icon_path = \"D:\\FILE SOCKET PYTHON\\Icons\\mail.png\"\nbutton4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button4_icon",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button4_icon = ImageTk.PhotoImage(Image.open(icon_path))\n# Create buttons 1, 2, and 3\nbutton1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button1",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button1 = tk.Button(root, text=\"Button 1\")\nbutton1.pack()\nbutton2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button2",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button2 = tk.Button(root, text=\"Button 2\", command=toggle_additional_buttons)\nbutton2.pack()\nbutton3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button3",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button3 = tk.Button(root, text=\"Button 3\")\nbutton3.pack()\n# Create buttons 4 and 5 with icons but initially hide them\nbutton4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button4",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button4 = tk.Button(root, text=\"Button 4\", image=button4_icon, compound=tk.LEFT)\nbutton4.pack_forget()\nbutton5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "button5",
-        "kind": 5,
-        "importPath": "testGUI3",
-        "description": "testGUI3",
-        "peekOfCode": "button5 = tk.Button(root, text=\"Button 5\", image=button4_icon, compound=tk.LEFT)\nbutton5.pack_forget()\n# Start the Tkinter event loop\nroot.mainloop()",
-        "detail": "testGUI3",
-        "documentation": {}
-    },
-    {
-        "label": "create_frames",
+        "label": "search_bar_focus_in",
         "kind": 2,
-        "importPath": "testGUI4",
-        "description": "testGUI4",
-        "peekOfCode": "def create_frames():\n    whitesubframe = tk.Frame(window, bg=\"white\", bd=1, relief=\"solid\")\n    whitesubframe.grid(row=0, column=0, sticky=\"nsew\")\n    sendown_frame = tk.Frame(whitesubframe, bg=\"gray\", bd=1, relief=\"solid\")\n    sendown_frame.grid(row=0, column=0, sticky=\"new\")\n    sendown_label = tk.Label(sendown_frame, text='A', bg=\"gray\", width=40, height=5)\n    sendown_label.grid(row=0, column=0, padx=0, pady=0)\n    email_frame = tk.Frame(whitesubframe, bg=\"white\", bd=1, relief=\"solid\")\n    email_frame.grid(row=1, column=0, sticky=\"new\")\n    email_label = tk.Label(email_frame, text='B', bg=\"white\", width=40, height=5)",
-        "detail": "testGUI4",
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_out",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "perform_search",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"#F4F4F9\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_mail_subframe():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_mail_subframe",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_mail_subframe():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")\n    left_frame.grid(row=0, column=0, sticky=\"ns\")\n    # Increase the font size of the calendar\n    mycal = Calendar(left_frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testGUI3",
         "documentation": {}
     },
     {
         "label": "window",
         "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "txt_edit",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
         "importPath": "testGUI4",
         "description": "testGUI4",
-        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Test\")\nwindow.geometry(\"400x400\")\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight=1)\ncreate_frames()\nwindow.mainloop()",
+        "peekOfCode": "def select_date():\n    my_date = mycal.get_date()\n    selected_date.config(text=my_date)\n# Create the main window\nroot = tk.Tk()\nroot.title(\"Calendar Board\")\nroot.geometry(\"600x600\")\n# Create a frame for the calendar\nframe = Frame(root)\nframe.grid(row=0, column=0, sticky=\"w\")",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Calendar Board\")\nroot.geometry(\"600x600\")\n# Create a frame for the calendar\nframe = Frame(root)\nframe.grid(row=0, column=0, sticky=\"w\")\n# Increase the font size of the calendar\nmycal = Calendar(frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")\nmycal.pack(padx=15, pady=15)\nselected_date = Label(frame, text=\"\")",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "frame",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "frame = Frame(root)\nframe.grid(row=0, column=0, sticky=\"w\")\n# Increase the font size of the calendar\nmycal = Calendar(frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")\nmycal.pack(padx=15, pady=15)\nselected_date = Label(frame, text=\"\")\nselected_date.pack(padx=2, pady=2)\nopen_cal = Button(frame, text=\"Select Date\", command=select_date)\nopen_cal.pack(padx=15, pady=15)\n# Run the main loop",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "mycal",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "mycal = Calendar(frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")\nmycal.pack(padx=15, pady=15)\nselected_date = Label(frame, text=\"\")\nselected_date.pack(padx=2, pady=2)\nopen_cal = Button(frame, text=\"Select Date\", command=select_date)\nopen_cal.pack(padx=15, pady=15)\n# Run the main loop\nroot.mainloop()",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "selected_date",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "selected_date = Label(frame, text=\"\")\nselected_date.pack(padx=2, pady=2)\nopen_cal = Button(frame, text=\"Select Date\", command=select_date)\nopen_cal.pack(padx=15, pady=15)\n# Run the main loop\nroot.mainloop()",
+        "detail": "testGUI4",
+        "documentation": {}
+    },
+    {
+        "label": "open_cal",
+        "kind": 5,
+        "importPath": "testGUI4",
+        "description": "testGUI4",
+        "peekOfCode": "open_cal = Button(frame, text=\"Select Date\", command=select_date)\nopen_cal.pack(padx=15, pady=15)\n# Run the main loop\nroot.mainloop()",
         "detail": "testGUI4",
         "documentation": {}
     }

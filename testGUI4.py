@@ -1,26 +1,29 @@
+from tkcalendar import Calendar
 import tkinter as tk
+from tkinter import Frame, Button, Label
 
-def create_frames():
-    whitesubframe = tk.Frame(window, bg="white", bd=1, relief="solid")
-    whitesubframe.grid(row=0, column=0, sticky="nsew")
+def select_date():
+    my_date = mycal.get_date()
+    selected_date.config(text=my_date)
 
-    sendown_frame = tk.Frame(whitesubframe, bg="gray", bd=1, relief="solid")
-    sendown_frame.grid(row=0, column=0, sticky="new")
-    sendown_label = tk.Label(sendown_frame, text='A', bg="gray", width=40, height=5)
-    sendown_label.grid(row=0, column=0, padx=0, pady=0)
+# Create the main window
+root = tk.Tk()
+root.title("Calendar Board")
+root.geometry("600x600")
 
-    email_frame = tk.Frame(whitesubframe, bg="white", bd=1, relief="solid")
-    email_frame.grid(row=1, column=0, sticky="new")
-    email_label = tk.Label(email_frame, text='B', bg="white", width=40, height=5)
-    email_label.grid(row=0, column=0, padx=0, pady=0)
+# Create a frame for the calendar
+frame = Frame(root)
+frame.grid(row=0, column=0, sticky="w")
 
-window = tk.Tk()
-window.title("Test")
-window.geometry("400x400")
+# Increase the font size of the calendar
+mycal = Calendar(frame, setmode="day", date_pattern='d/m/yy', font="Arial 10")
+mycal.pack(padx=15, pady=15)
 
-window.rowconfigure(0, weight=1)
-window.columnconfigure(0, weight=1)
+selected_date = Label(frame, text="")
+selected_date.pack(padx=2, pady=2)
 
-create_frames()
+open_cal = Button(frame, text="Select Date", command=select_date)
+open_cal.pack(padx=15, pady=15)
 
-window.mainloop()
+# Run the main loop
+root.mainloop()
