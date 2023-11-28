@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk, filedialog
+from tkinter import ttk, filedialog, PhotoImage
 from PIL import Image, ImageTk
 from tkcalendar import Calendar
 
@@ -15,7 +15,7 @@ btn_trash_local=None
 btn_outbox=None
 
 def on_entry_click(event, entry_widget):
-    entry_widget.config(highlightbackground="cyan", highlightcolor="cyan", highlightthickness=3)
+    entry_widget.config(highlightbackground="#86b7fe", highlightcolor="#86b7fe", highlightthickness=2)
 
 def on_entry_leave(event, entry_widget):
     entry_widget.config(highlightthickness=0)
@@ -171,8 +171,12 @@ def newMessage():
     
     mail_entry = tk.Text(text_mail_frame, wrap="word", width=950, height=300, bd=1, relief="solid")
     mail_entry.grid(row=0, column=0, sticky="w", pady=2)
-    mail_label = tk.Label(text_mail_frame, font=("Calibri", 12))
-    mail_label.grid(row=0, column=0, pady=1, padx=10, sticky="w")
+
+    # attach_file_frame = tk.Frame(message_frame)
+    # attach_file_frame.pack(side="top", fill="both", expand=True, padx=2, pady=2, text = "Hello")
+    # mail_entry = tk.Text(text_mail_frame, wrap="word", width=950, height=300, bd=1, relief="solid")
+    # mail_entry.grid(row=0, column=0, sticky="w", pady=2)
+    
     #Additional components can be added as needed
 
 
@@ -377,6 +381,10 @@ window = tk.Tk()
 window.title("Thunder-Owl")
 center_window(window, 1400, 700)
 window.resizable(False, False)
+logo_image = PhotoImage(file="D:/FILE SOCKET PYTHON/Icons/owl.png")
+
+    # Set the window icon (logo)
+window.iconphoto(True, logo_image)
 txt_edit = tk.Text(window)
 txt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable
 

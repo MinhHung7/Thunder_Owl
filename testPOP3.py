@@ -1,7 +1,8 @@
 import tkinter as tk
-from tkinter import ttk, filedialog
+from tkinter import ttk, filedialog, PhotoImage
 from PIL import Image, ImageTk
-from tkcalendar import DateEntry
+from tkcalendar import Calendar
+
 
 btn_inbox_sender=None
 btn_send=None
@@ -14,7 +15,7 @@ btn_trash_local=None
 btn_outbox=None
 
 def on_entry_click(event, entry_widget):
-    entry_widget.config(highlightbackground="cyan", highlightcolor="cyan", highlightthickness=3)
+    entry_widget.config(highlightbackground="#86b7fe", highlightcolor="#86b7fe", highlightthickness=3)
 
 def on_entry_leave(event, entry_widget):
     entry_widget.config(highlightthickness=0)
@@ -240,7 +241,7 @@ def create_second_part():
     image_path = "D:/FILE SOCKET PYTHON/Icons/Thunder.png"  # Replace with the path to your image
     image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed
 
-    label_second_part = tk.Label(second_part_frame, bg="lightgray", image=image)
+    label_second_part = tk.Label(second_part_frame, bg="#F4F4F9", image=image)
     label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected
     label_second_part.pack()
 
@@ -262,7 +263,7 @@ def create_mail_subframe():
     style = ttk.Style()
     style.configure("Search.TEntry", borderwidth=1, relief="solid", padding=(5, 2, 5, 2), bordercolor="grey")
 
-    second_subframe = tk.Frame(window, bg="lightgray")
+    second_subframe = tk.Frame(window, bg="#F4F4F9")
     second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
 
     second_subframe.columnconfigure(0, weight=1)  # Part 1
@@ -327,42 +328,29 @@ def create_mail_subframe():
     btn_trash_local = create_button_with_image_senDown(email_frame, 'D:/FILE SOCKET PYTHON/Icons/trash-bin.png', 20, 20, 'Trash')
     btn_trash_local.pack_forget()
 
+def select_date(mycal, selected_date_label):
+    my_date = mycal.get_date()
+    selected_date_label.config(text=my_date)
+
 def create_calendar_subframe():
-    second_subframe = tk.Frame(window, bg="lightgray")
+    second_subframe = tk.Frame(window, bg="white")
     second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
+    second_subframe.rowconfigure(0, weight=1)
+    second_subframe.columnconfigure(1, weight=1)
 
     # Left part (Mini Calendar)
-    left_frame = tk.Frame(second_subframe, bg="lightgray", width=200)
-    left_frame.pack_propagate(False)  # Prevent the frame from shrinking to fit its contents
+    left_frame = tk.Frame(second_subframe, bg="#F4F4F9")
+    left_frame.grid(row=0, column=0, sticky="ns")
 
-    mini_calendar_label = tk.Label(left_frame, text="Choose a Date:", font=("Calibri", 12, "bold"), bg="lightgray")
-    mini_calendar_label.pack(pady=10)
+    # Increase the font size of the calendar
+    mycal = Calendar(left_frame, setmode="day", date_pattern='d/m/yy', font="Arial 10")
+    mycal.pack(padx=20, pady=80)
 
-    chosen_date_label = tk.Label(left_frame, text="Chosen Date: ", font=("Calibri", 12), bg="lightgray")
-    chosen_date_label.pack(pady=5)
+    selected_date_label = tk.Label(left_frame, text="")
+    selected_date_label.pack(padx=2, pady=2)
 
-    mini_calendar = DateEntry(left_frame, width=12, background='darkblue',
-                              foreground='white', borderwidth=2, year=2023)
-    mini_calendar.pack(pady=10)
-
-    def on_mini_calendar_select():
-        chosen_date_label.config(text="Chosen Date: " + str(mini_calendar.get()))
-
-    mini_calendar.bind("<<DateEntrySelected>>", lambda event: on_mini_calendar_select())
-
-    # Right part (Big Calendar)
-    right_frame = tk.Frame(second_subframe, bg="lightgray")
-    big_calendar_label = tk.Label(right_frame, text="Task and Note Calendar", font=("Calibri", 16, "bold"), bg="lightgray")
-    big_calendar_label.pack(pady=20)
-
-    # Here you can add a larger calendar or other components for displaying tasks or notes
-    # For simplicity, let's just use a Text widget in this example
-    big_calendar_text = tk.Text(right_frame, width=40, height=10, wrap="word", font=("Calibri", 12))
-    big_calendar_text.pack()
-
-    # Ensure the left frame is always visible
-    left_frame.grid(row=0, column=0, sticky="nsew")
-    right_frame.grid(row=0, column=1, sticky="nsew")
+    open_cal = tk.Button(left_frame, text="Select Date", command=lambda: select_date(mycal, selected_date_label))
+    open_cal.pack(padx=15, pady=15)
 
 def create_buttons_frame():
     buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)
@@ -389,6 +377,10 @@ window = tk.Tk()
 window.title("Thunder-Owl")
 center_window(window, 1400, 700)
 window.resizable(False, False)
+logo_image = PhotoImage(file="D:/FILE SOCKET PYTHON/Icons/owl.png")
+
+    # Set the window icon (logo)
+window.iconphoto(True, logo_image)
 txt_edit = tk.Text(window)
 txt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable
 

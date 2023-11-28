@@ -27,6 +27,96 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -149,6 +239,14 @@
         "documentation": {}
     },
     {
+        "label": "PhotoImage",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "Frame",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -170,70 +268,6 @@
         "description": "tkinter",
         "isExtraImport": true,
         "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "ImageTk",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "ImageTk",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "ImageTk",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "ImageTk",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
         "documentation": {}
     },
     {
@@ -504,56 +538,29 @@
         "documentation": {}
     },
     {
-        "label": "main",
-        "kind": 2,
+        "label": "image_data",
+        "kind": 5,
         "importPath": "Socket4.client",
         "description": "Socket4.client",
-        "peekOfCode": "def main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")\n            break\n        elif cmd == \"OK\":",
+        "peekOfCode": "image_data = '''/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAgMDAwMDBAcFBAQEBAkGBwUHCgkL\nCwoJCgoMDREODAwQDAoKDhQPEBESExMTCw4UFhQSFhESExL/2wBDAQMDAwQEBAgFBQgSDAoM\nEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhL/wAAR\nCAH0AfQDASIAAhEBAxEB/8QAHgABAAAHAQEBAAAAAAAAAAAAAAECAwQFBggHCQr/xABhEAAB\nAwIDAwcECwgNBg4DAAABAAIDBBEFBiEHEjEIEyJBUWFxCTKBkRQjOEJDhpKhsbPRFRgZUlVi\ncpQWFyQlM0dXc3R1k8HhJzU3RIKyNDZGU1RWY2RldoOi0vFFhdP/xAAcAQEAAQUBAQAAAAAA\nAAAAAAAAAwECBAUGBwj/xAA1EQEAAgECBAQEBQMEAwEAAAAAAQIDBBEFEiExBhNBURQVM1IH\nIjI18FNhkTRDoeEjcfFC/9oADAMBAAIRAxEAPwD5VIiICIiAiIgIiICIiAiIgIiICIiAiIgI\niICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiI\nCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICI",
         "detail": "Socket4.client",
         "documentation": {}
     },
     {
-        "label": "IP",
+        "label": "image_stream",
         "kind": 5,
         "importPath": "Socket4.client",
         "description": "Socket4.client",
-        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 4456\nADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)",
+        "peekOfCode": "image_stream = io.BytesIO(image_data.encode('utf-8'))\n# Open the image using PIL\nimage = Image.open(image_stream)\n# Display the image\nimage.show()",
         "detail": "Socket4.client",
         "documentation": {}
     },
     {
-        "label": "PORT",
+        "label": "image",
         "kind": 5,
         "importPath": "Socket4.client",
         "description": "Socket4.client",
-        "peekOfCode": "PORT = 4456\nADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")",
-        "detail": "Socket4.client",
-        "documentation": {}
-    },
-    {
-        "label": "ADDR",
-        "kind": 5,
-        "importPath": "Socket4.client",
-        "description": "Socket4.client",
-        "peekOfCode": "ADDR = (IP, PORT)\nFORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":",
-        "detail": "Socket4.client",
-        "documentation": {}
-    },
-    {
-        "label": "FORMAT",
-        "kind": 5,
-        "importPath": "Socket4.client",
-        "description": "Socket4.client",
-        "peekOfCode": "FORMAT = \"utf-8\"\nSIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")",
-        "detail": "Socket4.client",
-        "documentation": {}
-    },
-    {
-        "label": "SIZE",
-        "kind": 5,
-        "importPath": "Socket4.client",
-        "description": "Socket4.client",
-        "peekOfCode": "SIZE = 1024\ndef main():\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(ADDR)\n    while True:\n        data = client.recv(SIZE).decode(FORMAT)\n        cmd, msg = data.split(\"@\")\n        if cmd == \"DISCONNECTED\":\n            print(f\"[SERVER]: {msg}\")\n            break",
+        "peekOfCode": "image = Image.open(image_stream)\n# Display the image\nimage.show()",
         "detail": "Socket4.client",
         "documentation": {}
     },
@@ -1516,7 +1523,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1696,7 +1703,7 @@
         "kind": 5,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1705,7 +1712,7 @@
         "kind": 5,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"cyan\", highlightcolor=\"cyan\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=3)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1714,7 +1721,16 @@
         "kind": 5,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\nlogo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "logo_image",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "logo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image",
         "detail": "testGUI3",
         "documentation": {}
     },
