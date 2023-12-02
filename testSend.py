@@ -6,6 +6,15 @@ from tkcalendar import Calendar
 import os
 from tkinter.colorchooser import askcolor
 
+import socket
+from test_to_codeGUI import connect_server
+
+IP = socket.gethostbyname(socket.gethostname())
+PORT = 2225
+ADDR = (IP, PORT)
+SIZE = 1024
+FORMAT = "utf-8"
+DISCONNECT_MSG = "!DISCONNECT"
 
 class FileMail:
     def __init__(self, file_name, data_file):
@@ -25,10 +34,12 @@ btn_trash_local=None
 btn_outbox=None
 
 to_entry = None
+from_entry = None
 subject_entry = None
 cc_entry = None
 bcc_entry = None
 mail_entry = None
+file_mail_list = []
 
 image_references = []
 
@@ -349,6 +360,86 @@ def open_format_window():
     # Center the edit_window within the main window
     center_window(format_window, 300, 250)  # Adjust the size as needed
 
+def connect_server():
+    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
+        try:
+            client.settimeout(1000)
+            client.connect(ADDR)
+            print(f"[CONNECTED] Client connected to server at {IP}:{PORT}")
+
+            # Receive and print the server's initial response
+            initial_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {initial_response}")
+
+            # Send the MAIL FROM command
+            mail_from = from_entry.get("1.0", "end-1c")
+            mail_from_command = "MAIL FROM: " + mail_from + "\r\n"
+            client.send(mail_from_command.encode('utf-8'))
+
+            # Receive and print the server's response to the MAIL FROM command
+            mail_from_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {mail_from_response}")
+
+            # Send the RCPT TO command
+            recipient = to_entry.get("1.0", "end-1c")
+            recipient_email = "RCPT TO: " + recipient + "\r\n"
+            client.send(recipient_email.encode('utf-8'))
+
+            # Receive and print the server's response to the RCPT TO command
+            rcpt_to_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {rcpt_to_response}")
+
+            # Send DATA command
+            data_command = "DATA\r\n"
+            client.send(data_command.encode('utf-8'))
+
+            # Receive and print the server's response to the DATA command
+            data_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {data_response}")
+
+            # Send the message data
+            subject = subject_entry.get("1.0", "end-1c")
+            message_content = mail_entry.get("1.0", "end-1c")
+
+            message_data = (
+                f"To: {recipient}\r\n"
+                f"From: {mail_from}\r\n"
+                f"Subject: {subject}\r\n"
+                "\r\n"
+                f"{message_content}\r\n"
+            )
+            client.send(message_data.encode('utf-8'))
+
+            
+            # Receive and print the server's response to the message data
+            message_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {message_response}")
+
+            for file in file_mail_list:
+                message_file_data = (
+                    f"Content-Type: application/pdf;name={file.file_name}\r\n"
+                    f"Content-Disposition: attachment;filename={file.file_name}\r\n"
+                    f"Content-Transfer-Encoding: base64\r\n\r\n"
+                    f"{file.data_file}\r\n"
+                )
+                client.send(message_file_data.encode('utf-8'))
+                file_response = client.recv(1024).decode('utf-8')
+                print(f"[SERVER] {file_response}")
+                client.send(".\r\n".encode('utf-8'))
+
+
+            # Send the QUIT command
+            quit_command = "QUIT\r\n"
+            client.send(quit_command.encode('utf-8'))
+
+            # Receive and print the server's response to the QUIT command
+            quit_response = client.recv(1024).decode('utf-8')
+            print(f"[SERVER] {quit_response}")
+
+        except Exception as e:
+            print(f"Error: {e}")
+
 def button_toolbar_clicked(button_name):
     print(f"Toolbar button {button_name} clicked!")
     if (button_name == "Edit"):
@@ -363,6 +454,8 @@ def button_toolbar_clicked(button_name):
         insert_image()
     if(button_name == "Format"):
         open_format_window()
+    if(button_name == "Send"):
+        connect_server()
 
 def button_clicked(button_name):
     print(f"{button_name} clicked!")
@@ -411,7 +504,6 @@ def attach_file():
     file_path = filedialog.askopenfilename(title="Select File", filetypes=[("All Files", "*.*")])
     if file_path:
         print(f"File attached: {file_path}")
-
         # Read the contents of the file into a bytes variable
         with open(file_path, 'rb') as file:
             file_data = file.read()
@@ -425,7 +517,7 @@ def attach_file():
 
 
 def newMessage():
-    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry
+    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry, file_mail_list
 
     new_Window = tk.Toplevel()
     new_Window.title("Write - ThunderOwl")
@@ -469,7 +561,7 @@ def newMessage():
     from_label = tk.Label(field_frame, text="From:", font=("Calibri", 12))
     from_label.grid(row=0, column=0, pady=5, padx=10, sticky="w")
 
-    from_entry = tk.Entry(field_frame, font=("Calibri", 12), width=70, bd=1, relief="solid")
+    from_entry = tk.Text(field_frame, wrap="word", width=80, height=1, bd=1, relief="solid")
     from_entry.grid(row=0, column=1, pady=5, padx=10, sticky="w")
 
     from_entry.bind("<FocusIn>", lambda event: on_entry_click(event, from_entry))

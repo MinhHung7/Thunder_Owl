@@ -14,14 +14,6 @@ def connect_server():
             client.connect(ADDR)
             print(f"[CONNECTED] Client connected to server at {IP}:{PORT}")
 
-            # # Send the HELO or EHLO command
-            # helo_command = "EHLO client\r\n"  # You can use HELO instead of EHLO if needed
-            # client.send(helo_command.encode('utf-8'))
-
-            # # Receive and print the server's response to the HELO or EHLO command
-            # helo_response = client.recv(1024).decode('utf-8')
-            # print(f"[SERVER] {helo_response}")
-
             # Receive and print the server's initial response
             initial_response = client.recv(1024).decode('utf-8')
             print(f"[SERVER] {initial_response}")
