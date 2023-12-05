@@ -5,9 +5,10 @@ from PIL import Image, ImageTk
 from tkcalendar import Calendar
 import os
 from tkinter.colorchooser import askcolor
-from reportlab.pdfgen import canvas
-from tkinterhtml import TkinterHtml
+import base64
+
 import socket
+from test_to_codeGUI import connect_server
 
 IP = socket.gethostbyname(socket.gethostname())
 PORT = 2225
@@ -39,6 +40,7 @@ subject_entry = None
 cc_entry = None
 bcc_entry = None
 mail_entry = None
+file_mail_list = []
 
 image_references = []
 
@@ -338,44 +340,6 @@ def text_color_action():
             # Apply the tag to the selected text
             mail_entry.tag_add("text_color", "sel.first", "sel.last")
 
-def align_action(alignment):
-    global mail_entry
-
-    # Get the currently selected text
-    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)
-
-    # If there is no selected text, do nothing
-    if not selected_text:
-        return
-
-    # Configure a tag for the selected alignment
-    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())
-
-    # Add the tag to the selected text
-    mail_entry.tag_add(alignment, tk.SEL_FIRST, tk.SEL_LAST)
-
-def open_align_window():
-
-    align_window = tk.Toplevel(window)
-    align_window.title("Align Options")
-
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-    new_button = tk.Button(align_window, width=button_width, text="Left", command=lambda: align_action(tk.LEFT))
-    new_button.pack(pady=5)
-
-    attach_button = tk.Button(align_window, width=button_width, text="Center", command=lambda: align_action(tk.CENTER))
-    attach_button.pack(pady=5)
-
-    saveAs_button = tk.Button(align_window, width=button_width, text="Right", command=lambda: align_action(tk.RIGHT))
-    saveAs_button.pack(pady=5)
-
-    close_button = tk.Button(align_window, width=button_width, text="Justify", command=lambda: align_action(tk.BOTH))
-    close_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(align_window, 300, 170)  # Adjust the size as needed
-
 def open_format_window():
     format_window = tk.Toplevel(window)
     format_window.title("Format Options")
@@ -397,57 +361,27 @@ def open_format_window():
     # Center the edit_window within the main window
     center_window(format_window, 300, 250)  # Adjust the size as needed
 
-new_Window = None
-file_window = None
+def read_html_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            return file.read()
+    except Exception as e:
+        print(f"Error reading HTML file: {e}")
+        return ""
 
-def close_action():
-    global new_Window
-    global file_window
-
-    if new_Window.winfo_exists():
-        new_Window.destroy()
-    if file_window.winfo_exists():
-        file_window.destroy()
-
-def saveAs_action():
-    # Ask the user for the file location
-    file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
-    if not file_path:
-        return  # User canceled the file dialog
-
-    # Get the content from the Text widget
-    text_content = mail_entry.get("1.0", tk.END)
-
-    # Save the content to the specified file
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(text_content)
-
-def open_file_window():
-    global file_window
-    file_window = tk.Toplevel(window)
-    file_window.title("File Options")
-
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-    new_button = tk.Button(file_window, text="New", command=newMessage, width=button_width)
-    new_button.pack(pady=5)
-
-    attach_button = tk.Button(file_window, text="Attach", command=attach_file, width=button_width)
-    attach_button.pack(pady=5)
-
-    saveAs_button = tk.Button(file_window, text="Save as", command=saveAs_action, width=button_width)
-    saveAs_button.pack(pady=5)
-
-    close_button = tk.Button(file_window, text="Close", command=close_action, width=button_width)
-    close_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(file_window, 300, 170)  # Adjust the size as needed
-
-
+def embed_image(image_path):
+    try:
+        with open(image_path, 'rb') as image_file:
+            image_data = image_file.read()
+            encoded_image = base64.b64encode(image_data).decode('utf-8')
+            return f'<img src="data:image/png;base64,{encoded_image}" alt="Embedded Image">'
+    except Exception as e:
+        print(f"Error embedding image: {e}")
+        return ""
 
 def connect_server():
-    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list
+    global from_entry, to_entry, subject_entry
+
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
         try:
             client.settimeout(1000)
@@ -460,8 +394,7 @@ def connect_server():
 
             # Send the MAIL FROM command
             mail_from = from_entry.get("1.0", "end-1c")
-            mail_from_command = "MAIL FROM: " + mail_from + "\r\n"
-            client.send(mail_from_command.encode('utf-8'))
+            client.send(f"MAIL FROM: {mail_from}\r\n".encode('utf-8'))
 
             # Receive and print the server's response to the MAIL FROM command
             mail_from_response = client.recv(1024).decode('utf-8')
@@ -469,16 +402,14 @@ def connect_server():
 
             # Send the RCPT TO command
             recipient = to_entry.get("1.0", "end-1c")
-            recipient_email = "RCPT TO: " + recipient + "\r\n"
-            client.send(recipient_email.encode('utf-8'))
+            client.send(f"RCPT TO: {recipient}\r\n".encode('utf-8'))
 
             # Receive and print the server's response to the RCPT TO command
             rcpt_to_response = client.recv(1024).decode('utf-8')
             print(f"[SERVER] {rcpt_to_response}")
 
             # Send DATA command
-            data_command = "DATA\r\n"
-            client.send(data_command.encode('utf-8'))
+            client.send(b"DATA\r\n")
 
             # Receive and print the server's response to the DATA command
             data_response = client.recv(1024).decode('utf-8')
@@ -486,38 +417,21 @@ def connect_server():
 
             # Send the message data
             subject = subject_entry.get("1.0", "end-1c")
-            message_content = mail_entry.get("1.0", "end-1c")
+            image_path = "D:/Screenshot 2023-08-07 223752.png"
 
-            message_data = (
-                f"To: {recipient}\r\n"
-                f"From: {mail_from}\r\n"
-                f"Subject: {subject}\r\n"
-                "\r\n"
-                f"{message_content}\r\n"
-            )
-            client.send(message_data.encode('utf-8'))
+            email_headers = f"From: {mail_from}\r\nTo: {recipient}\r\nSubject: {subject}\r\nMIME-Version: 1.0\r\nContent-Type: text/html\r\n\r\n"
+            email_body = email_headers + read_html_file("D:/test2.html") + embed_image(image_path)
 
-            
-            # Receive and print the server's response to the message data
-            message_response = client.recv(1024).decode('utf-8')
-            print(f"[SERVER] {message_response}")
+            print("Email Body:")
+            print(email_body)
 
-            for file in file_mail_list:
-                message_file_data = (
-                    f"Content-Type: application/pdf;name={file.file_name}\r\n"
-                    f"Content-Disposition: attachment;filename={file.file_name}\r\n"
-                    f"Content-Transfer-Encoding: base64\r\n\r\n"
-                    f"{file.data_file}\r\n"
-                )
-                client.send(message_file_data.encode('utf-8'))
-                file_response = client.recv(1024).decode('utf-8')
-                print(f"[SERVER] {file_response}")
-                client.send(".\r\n".encode('utf-8'))
-
+            client.sendall(email_body.encode())
+            client.sendall("\r\n.\r\n".encode())
+            response = client.recv(1024).decode()
+            print(response)
 
             # Send the QUIT command
-            quit_command = "QUIT\r\n"
-            client.send(quit_command.encode('utf-8'))
+            client.send(b"QUIT\r\n")
 
             # Receive and print the server's response to the QUIT command
             quit_response = client.recv(1024).decode('utf-8')
@@ -526,10 +440,12 @@ def connect_server():
         except Exception as e:
             print(f"Error: {e}")
 
+        finally:
+            # Close the connection
+            client.close()
+
 def button_toolbar_clicked(button_name):
     print(f"Toolbar button {button_name} clicked!")
-    if(button_name == "File"):
-        open_file_window()
     if (button_name == "Edit"):
         open_edit_window()
     if(button_name == "View"):
@@ -592,7 +508,6 @@ def attach_file():
     file_path = filedialog.askopenfilename(title="Select File", filetypes=[("All Files", "*.*")])
     if file_path:
         print(f"File attached: {file_path}")
-
         # Read the contents of the file into a bytes variable
         with open(file_path, 'rb') as file:
             file_data = file.read()
@@ -606,9 +521,8 @@ def attach_file():
 
 
 def newMessage():
-    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry
+    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry, file_mail_list
 
-    global new_Window
     new_Window = tk.Toplevel()
     new_Window.title("Write - ThunderOwl")
     center_window(new_Window, 950, 600)

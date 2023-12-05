@@ -1,0 +1,112 @@
+{
+  "emails_type_1": {
+    "number_of_email": 3,
+    "emails_list": [
+      {
+        "ID": "khang",
+        "Date": "khang",
+        "MIME": "MIME-Version: 1.0",
+        "User-Agent": "Mozilla Thunderbird",
+        "Content-Language": "en-US",
+        "To": "ultimate@gmail.com",
+        "From": "serverfakenumber1@fit.hcmus.edu.vn",
+        "Subject": "Type 1",
+        "Content-Type": "text/plain",
+        "Content-Transfer-Encoding": "7bit",
+        "Cc": "",
+        "main_content": "Hello"
+      },
+      {
+
+      },
+      {
+
+      }
+    ]
+  },
+  "emails_type_2": [
+    {
+      "ID": "<0c3eec17-3e29-4085-9e77-6042743a45f6@fit.hcmus.edu.vn>",
+      "Date": "Tue, 5 Dec 2023 20:03:43 +0700",
+      "MIME": "MIME-Version: 1.0",
+      "User-Agent": "Mozilla Thunderbird",
+      "Content-Language": "en-US",
+      "To": "ultimate@gmail.com",
+      "From": "serverfakenumber1@fit.hcmus.edu.vn",
+      "Subject": "Type_2",
+      "Content-Type": "multipart/mixed",
+      "Cc": "",
+      "main_content": "",
+      "main_content_type": "",
+      "main_content_transfer_encoding": "",
+      "file_vector": [
+        {
+          "file_content_type": "",
+          "file_content": "",
+          "file_content_transfer_encoding": "",
+          "file_name": ""
+        }
+      ]
+    }
+  ],
+  "emails_type_3": [
+    {
+      "ID": "<0c3eec17-3e29-4085-9e77-6042743a45f6@fit.hcmus.edu.vn>",
+      "Date": "Tue, 5 Dec 2023 20:03:43 +0700",
+      "MIME": "MIME-Version: 1.0",
+      "User-Agent": "Mozilla Thunderbird",
+      "Content-Language": "en-US",
+      "To": "ultimate@gmail.com",
+      "From": "serverfakenumber1@fit.hcmus.edu.vn",
+      "Subject": "Type_3",
+      "Content-Type": "text/html or multipart/related",
+      "Cc": "",
+      "base_html": "",
+      "base_html_content-transfer-encoding": "7bit",
+      "image_vector": [
+        {
+          "image_content": "",
+          "image_type": "",
+          "image_name": "",
+          "image_id": "",
+          "image_cotent_transfer_encoding": "",
+          "content_disposition": "inline"
+        }
+      ]
+    }
+  ],
+  "emails_type_4": [
+    {
+      "ID": "<0c3eec17-3e29-4085-9e77-6042743a45f6@fit.hcmus.edu.vn>",
+      "Date": "Tue, 5 Dec 2023 20:03:43 +0700",
+      "MIME": "MIME-Version: 1.0",
+      "User-Agent": "Mozilla Thunderbird",
+      "Content-Language": "en-US",
+      "To": "ultimate@gmail.com",
+      "From": "serverfakenumber1@fit.hcmus.edu.vn",
+      "Subject": "Type_4",
+      "Content-Type": "multipart/mixed",
+      "Cc": "",
+      "base_html": "",
+      "base_html_content-transfer-encoding": "7bit",
+      "image_vector": [
+        {
+          "image_content": "",
+          "image_type": "",
+          "image_name": "",
+          "image_id": "",
+          "image_cotent_transfer_encoding": "",
+          "content_disposition": "inline"
+        }
+      ],
+      "file_vector": [
+        {
+          "file_content_type": "",
+          "file_content": "",
+          "file_content_transfer_encoding": "",
+          "file_name": ""
+        }
+      ]
+    }
+  ]
+}

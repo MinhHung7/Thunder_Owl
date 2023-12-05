@@ -88,6 +88,38 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
         "label": "BytesIO",
         "importPath": "io",
         "description": "io",
@@ -102,6 +134,22 @@
         "importPath": "base64",
         "description": "base64",
         "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
         "documentation": {}
     },
     {
@@ -282,6 +330,62 @@
         "documentation": {}
     },
     {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "PhotoImage",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "ttk",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -323,6 +427,70 @@
     },
     {
         "label": "PhotoImage",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "PhotoImage",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
         "importPath": "tkinter",
         "description": "tkinter",
         "isExtraImport": true,
@@ -354,6 +522,95 @@
         "importPath": "ssl",
         "description": "ssl",
         "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "TkinterHtml",
+        "importPath": "tkinterhtml",
+        "description": "tkinterhtml",
+        "isExtraImport": true,
+        "detail": "tkinterhtml",
+        "documentation": {}
+    },
+    {
+        "label": "TkinterHtml",
+        "importPath": "tkinterhtml",
+        "description": "tkinterhtml",
+        "isExtraImport": true,
+        "detail": "tkinterhtml",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "importPath": "test_to_codeGUI",
+        "description": "test_to_codeGUI",
+        "isExtraImport": true,
+        "detail": "test_to_codeGUI",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "importPath": "test_to_codeGUI",
+        "description": "test_to_codeGUI",
+        "isExtraImport": true,
+        "detail": "test_to_codeGUI",
         "documentation": {}
     },
     {
@@ -1059,6 +1316,15 @@
         "documentation": {}
     },
     {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
         "label": "on_entry_click",
         "kind": 2,
         "importPath": "testGUI3",
@@ -1090,7 +1356,250 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")\n    label.pack(pady=10)\n    # Create a listbox to show files\n    listbox = tk.Listbox(remove_window, selectmode=tk.SINGLE)\n    for i, file_mail in enumerate(file_mail_list):",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = tk.Button(edit_window, text=\"Cut\", command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = tk.Button(edit_window, text=\"Copy\", command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(edit_window, text=\"Paste\", command=paste_action, width=button_width)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = tk.Button(view_window, text=\"Zoom Out\", command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = tk.Button(view_window, text=\"Reset\", command=reset_action, width=button_width)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\ndef font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "font_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = tk.Button(font_window, text=font_name, width = button_width, command=lambda font=font_name: change_font(font))",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def apply_tag(tag):\n    current_tags = mail_entry.tag_names(\"sel.first\")\n    if tag in current_tags:\n        mail_entry.tag_remove(tag, \"sel.first\", \"sel.last\")\n    else:\n        mail_entry.tag_add(tag, \"sel.first\", \"sel.last\")\n        mail_entry.tag_configure(tag, **tag_styles[tag])\ntag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "text_style_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = tk.Button(style_window, text=style_name, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string\n            hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "align_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def align_action(alignment):\n    global mail_entry\n    # Get the currently selected text\n    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)\n    # If there is no selected text, do nothing\n    if not selected_text:\n        return\n    # Configure a tag for the selected alignment\n    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())\n    # Add the tag to the selected text",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "open_align_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def open_align_window():\n    align_window = tk.Toplevel(window)\n    align_window.title(\"Align Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(align_window, width=button_width, text=\"Left\", command=lambda: align_action(tk.LEFT))\n    new_button.pack(pady=5)\n    attach_button = tk.Button(align_window, width=button_width, text=\"Center\", command=lambda: align_action(tk.CENTER))\n    attach_button.pack(pady=5)\n    saveAs_button = tk.Button(align_window, width=button_width, text=\"Right\", command=lambda: align_action(tk.RIGHT))",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = tk.Button(format_window, text=\"Font\", command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = tk.Button(format_window, text=\"Text Style\", command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(format_window, text=\"Text Color\", command=text_color_action, width=button_width)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "close_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "saveAs_action",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"1.0\", tk.END)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:\n        file.write(text_content)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "open_file_window",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def open_file_window():\n    global file_window\n    file_window = tk.Toplevel(window)\n    file_window.title(\"File Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(file_window, text=\"New\", command=newMessage, width=button_width)\n    new_button.pack(pady=5)\n    attach_button = tk.Button(file_window, text=\"Attach\", command=attach_file, width=button_width)\n    attach_button.pack(pady=5)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "def connect_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1099,7 +1608,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"File\"):\n        open_file_window()\n    if (button_name == \"Edit\"):\n        open_edit_window()\n    if(button_name == \"View\"):\n        open_view_window()\n    if(button_name == \"Attach\"):\n        attach_file()",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1144,7 +1653,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # You can store the file_path or perform other actions with it\ndef newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1153,7 +1662,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)\n    new_Window.columnconfigure(1, weight=20)",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global new_Window\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1162,7 +1671,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n            btn_sender.configure(bg=\"#f0f0f0\")\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1239,11 +1748,74 @@
         "documentation": {}
     },
     {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
         "label": "btn_inbox_receiver",
         "kind": 5,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1252,7 +1824,97 @@
         "kind": 5,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "from_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "mail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "new_Window",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "new_Window = None\nfile_window = None\ndef close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():",
+        "detail": "testGUI3",
+        "documentation": {}
+    },
+    {
+        "label": "file_window",
+        "kind": 5,
+        "importPath": "testGUI3",
+        "description": "testGUI3",
+        "peekOfCode": "file_window = None\ndef close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1293,6 +1955,15 @@
         "documentation": {}
     },
     {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
         "label": "on_entry_click",
         "kind": 2,
         "importPath": "testGUITest",
@@ -1324,7 +1995,241 @@
         "kind": 2,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")\n    label.pack(pady=10)\n    # Create a listbox to show files\n    listbox = tk.Listbox(remove_window, selectmode=tk.SINGLE)\n    for i, file_mail in enumerate(file_mail_list):",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = tk.Button(edit_window, text=\"Cut\", command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = tk.Button(edit_window, text=\"Copy\", command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(edit_window, text=\"Paste\", command=paste_action, width=button_width)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = tk.Button(view_window, text=\"Zoom Out\", command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = tk.Button(view_window, text=\"Reset\", command=reset_action, width=button_width)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\ndef font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "font_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = tk.Button(font_window, text=font_name, width = button_width, command=lambda font=font_name: change_font(font))",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def apply_tag(tag):\n    current_tags = mail_entry.tag_names(\"sel.first\")\n    if tag in current_tags:\n        mail_entry.tag_remove(tag, \"sel.first\", \"sel.last\")\n    else:\n        mail_entry.tag_add(tag, \"sel.first\", \"sel.last\")\n        mail_entry.tag_configure(tag, **tag_styles[tag])\ntag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "text_style_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = tk.Button(style_window, text=style_name, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string\n            hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "align_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def align_action(alignment):\n    global mail_entry\n    # Get the currently selected text\n    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)\n    # If there is no selected text, do nothing\n    if not selected_text:\n        return\n    # Configure a tag for the selected alignment\n    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())\n    # Add the tag to the selected text",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "open_align_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def open_align_window():\n    align_window = tk.Toplevel(window)\n    align_window.title(\"Align Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(align_window, width=button_width, text=\"Left\", command=lambda: align_action(tk.LEFT))\n    new_button.pack(pady=5)\n    attach_button = tk.Button(align_window, width=button_width, text=\"Center\", command=lambda: align_action(tk.CENTER))\n    attach_button.pack(pady=5)\n    saveAs_button = tk.Button(align_window, width=button_width, text=\"Right\", command=lambda: align_action(tk.RIGHT))",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = tk.Button(format_window, text=\"Font\", command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = tk.Button(format_window, text=\"Text Style\", command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(format_window, text=\"Text Color\", command=text_color_action, width=button_width)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "close_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "saveAs_action",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"1.0\", tk.END)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:\n        file.write(text_content)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "open_file_window",
+        "kind": 2,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "def open_file_window():\n    global file_window\n    file_window = tk.Toplevel(window)\n    file_window.title(\"File Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(file_window, text=\"New\", command=newMessage, width=button_width)\n    new_button.pack(pady=5)\n    attach_button = tk.Button(file_window, text=\"Attach\", command=attach_file, width=button_width)\n    attach_button.pack(pady=5)",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1333,7 +2238,7 @@
         "kind": 2,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"Attach\"):\n        attach_file()\ndef button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"File\"):\n        open_file_window()\n    if (button_name == \"Edit\"):\n        open_edit_window()\n    if(button_name == \"View\"):\n        open_view_window()\n    if(button_name == \"Attach\"):\n        attach_file()",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1378,7 +2283,7 @@
         "kind": 2,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # You can store the file_path or perform other actions with it\ndef newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1387,7 +2292,7 @@
         "kind": 2,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "def newMessage():\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)\n    new_Window.columnconfigure(1, weight=20)",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry\n    global new_Window\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1396,7 +2301,7 @@
         "kind": 2,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n            btn_sender.configure(bg=\"#f0f0f0\")\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1473,11 +2378,20 @@
         "documentation": {}
     },
     {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nsubject_entry = None",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
         "label": "btn_inbox_receiver",
         "kind": 5,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1486,7 +2400,88 @@
         "kind": 5,
         "importPath": "testGUITest",
         "description": "testGUITest",
-        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "to_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "mail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "new_Window",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "new_Window = None\nfile_window = None\ndef close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():",
+        "detail": "testGUITest",
+        "documentation": {}
+    },
+    {
+        "label": "file_window",
+        "kind": 5,
+        "importPath": "testGUITest",
+        "description": "testGUITest",
+        "peekOfCode": "file_window = None\ndef close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location",
         "detail": "testGUITest",
         "documentation": {}
     },
@@ -1761,11 +2756,1271 @@
         "documentation": {}
     },
     {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "center_window",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")\n    label.pack(pady=10)\n    # Create a listbox to show files\n    listbox = tk.Listbox(remove_window, selectmode=tk.SINGLE)\n    for i, file_mail in enumerate(file_mail_list):",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = tk.Button(edit_window, text=\"Cut\", command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = tk.Button(edit_window, text=\"Copy\", command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(edit_window, text=\"Paste\", command=paste_action, width=button_width)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = tk.Button(view_window, text=\"Zoom Out\", command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = tk.Button(view_window, text=\"Reset\", command=reset_action, width=button_width)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\ndef font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "font_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = tk.Button(font_window, text=font_name, width = button_width, command=lambda font=font_name: change_font(font))",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def apply_tag(tag):\n    current_tags = mail_entry.tag_names(\"sel.first\")\n    if tag in current_tags:\n        mail_entry.tag_remove(tag, \"sel.first\", \"sel.last\")\n    else:\n        mail_entry.tag_add(tag, \"sel.first\", \"sel.last\")\n        mail_entry.tag_configure(tag, **tag_styles[tag])\ntag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "text_style_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = tk.Button(style_window, text=style_name, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string\n            hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = tk.Button(format_window, text=\"Font\", command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = tk.Button(format_window, text=\"Text Style\", command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(format_window, text=\"Text Color\", command=text_color_action, width=button_width)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def connect_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if (button_name == \"Edit\"):\n        open_edit_window()\n    if(button_name == \"View\"):\n        open_view_window()\n    if(button_name == \"Attach\"):\n        attach_file()\n    if(button_name == \"Remove\"):\n        remove_file_window()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry, file_mail_list\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_in",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_out",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "perform_search",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"#F4F4F9\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_mail_subframe():",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_mail_subframe",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_mail_subframe():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")\n    left_frame.grid(row=0, column=0, sticky=\"ns\")\n    # Increase the font size of the calendar\n    mycal = Calendar(left_frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "from_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "mail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "file_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\nlogo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "logo_image",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "logo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "txt_edit",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testSend",
+        "description": "testSend",
+        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testSend",
+        "documentation": {}
+    },
+    {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "center_window",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def remove_file_window():\n    remove_window = tk.Toplevel(window)\n    remove_window.title(\"Remove File\")\n    center_window(remove_window, 500, 400)\n    # Create a label to display file list\n    label = tk.Label(remove_window, text=\"File Mail List:\")\n    label.pack(pady=10)\n    # Create a listbox to show files\n    listbox = tk.Listbox(remove_window, selectmode=tk.SINGLE)\n    for i, file_mail in enumerate(file_mail_list):",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = tk.Button(edit_window, text=\"Cut\", command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = tk.Button(edit_window, text=\"Copy\", command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(edit_window, text=\"Paste\", command=paste_action, width=button_width)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = tk.Button(view_window, text=\"Zoom Out\", command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = tk.Button(view_window, text=\"Reset\", command=reset_action, width=button_width)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\ndef font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "font_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = tk.Button(font_window, text=font_name, width = button_width, command=lambda font=font_name: change_font(font))",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def apply_tag(tag):\n    current_tags = mail_entry.tag_names(\"sel.first\")\n    if tag in current_tags:\n        mail_entry.tag_remove(tag, \"sel.first\", \"sel.last\")\n    else:\n        mail_entry.tag_add(tag, \"sel.first\", \"sel.last\")\n        mail_entry.tag_configure(tag, **tag_styles[tag])\ntag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "text_style_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = tk.Button(style_window, text=style_name, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string\n            hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = tk.Button(format_window, text=\"Font\", command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = tk.Button(format_window, text=\"Text Style\", command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(format_window, text=\"Text Color\", command=text_color_action, width=button_width)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "read_html_file",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def read_html_file(file_path):\n    try:\n        with open(file_path, 'r') as file:\n            return file.read()\n    except Exception as e:\n        print(f\"Error reading HTML file: {e}\")\n        return \"\"\ndef embed_image(image_path):\n    try:\n        with open(image_path, 'rb') as image_file:",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "embed_image",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def embed_image(image_path):\n    try:\n        with open(image_path, 'rb') as image_file:\n            image_data = image_file.read()\n            encoded_image = base64.b64encode(image_data).decode('utf-8')\n            return f'<img src=\"data:image/png;base64,{encoded_image}\" alt=\"Embedded Image\">'\n    except Exception as e:\n        print(f\"Error embedding image: {e}\")\n        return \"\"\ndef connect_server():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "connect_server",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def connect_server():\n    global from_entry, to_entry, subject_entry\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    print(f\"Toolbar button {button_name} clicked!\")\n    if (button_name == \"Edit\"):\n        open_edit_window()\n    if(button_name == \"View\"):\n        open_view_window()\n    if(button_name == \"Attach\"):\n        attach_file()\n    if(button_name == \"Remove\"):\n        remove_file_window()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry, file_mail_list\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_in",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "search_bar_focus_out",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "perform_search",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"#F4F4F9\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_mail_subframe():",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_mail_subframe",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_mail_subframe():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")\n    left_frame.grid(row=0, column=0, sticky=\"ns\")\n    # Increase the font size of the calendar\n    mycal = Calendar(left_frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox_receiver",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "btn_trash_receiver",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "from_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "mail_entry = None\nfile_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "file_mail_list = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\nlogo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "logo_image",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "logo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "txt_edit",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testSendHtml",
+        "description": "testSendHtml",
+        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "detail": "testSendHtml",
+        "documentation": {}
+    },
+    {
+        "label": "MyMailApp",
+        "kind": 6,
+        "importPath": "test_align",
+        "description": "test_align",
+        "peekOfCode": "class MyMailApp:\n    def __init__(self, master):\n        self.master = master\n        self.mail_entry = tk.Text(master)\n        # Other initialization code...\n    def align_action(self, alignment):\n        selected_text = self.mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)\n        if not selected_text:\n            return\n        self.mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=self.mail_entry.winfo_width())",
+        "detail": "test_align",
+        "documentation": {}
+    },
+    {
+        "label": "encoded_text",
+        "kind": 5,
+        "importPath": "test_decode",
+        "description": "test_decode",
+        "peekOfCode": "encoded_text = '=?UTF-8?B?xJDDtCB0aOG7iyBow7NhLmRvY3g=?='\n# Extract the encoded part of the string\nencoded_part = encoded_text.split('?')[3]\n# Decode the Base64 part to obtain the original UTF-8 text\ndecoded_text = base64.b64decode(encoded_part).decode('utf-8')\nprint(decoded_text)",
+        "detail": "test_decode",
+        "documentation": {}
+    },
+    {
+        "label": "encoded_part",
+        "kind": 5,
+        "importPath": "test_decode",
+        "description": "test_decode",
+        "peekOfCode": "encoded_part = encoded_text.split('?')[3]\n# Decode the Base64 part to obtain the original UTF-8 text\ndecoded_text = base64.b64decode(encoded_part).decode('utf-8')\nprint(decoded_text)",
+        "detail": "test_decode",
+        "documentation": {}
+    },
+    {
+        "label": "decoded_text",
+        "kind": 5,
+        "importPath": "test_decode",
+        "description": "test_decode",
+        "peekOfCode": "decoded_text = base64.b64decode(encoded_part).decode('utf-8')\nprint(decoded_text)",
+        "detail": "test_decode",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "test_remove_file",
+        "description": "test_remove_file",
+        "peekOfCode": "def insert_image():\n    global img\n    global mail_entry\n    # Create a PhotoImage object\n    img = PhotoImage(file=\"D:/Picture1.png\")  # Change the path and file format if needed\n    # Get the dimensions of the image\n    img_width = img.width()\n    img_height = img.height()\n    # Define the maximum width for the image\n    max_width = 600  # Change this value to your desired maximum width",
+        "detail": "test_remove_file",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "test_remove_file",
+        "description": "test_remove_file",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Insert Image Example\")\n# Create a Text widget\nmail_entry = tk.Text(window, wrap=\"word\", width=100, height=50)\nmail_entry.pack(pady=10)\n# Create a button to insert an image\ninsert_button = tk.Button(window, text=\"Insert Image\", command=insert_image)\ninsert_button.pack(pady=5)\n# Start the Tkinter event loop\nwindow.mainloop()",
+        "detail": "test_remove_file",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "test_remove_file",
+        "description": "test_remove_file",
+        "peekOfCode": "mail_entry = tk.Text(window, wrap=\"word\", width=100, height=50)\nmail_entry.pack(pady=10)\n# Create a button to insert an image\ninsert_button = tk.Button(window, text=\"Insert Image\", command=insert_image)\ninsert_button.pack(pady=5)\n# Start the Tkinter event loop\nwindow.mainloop()",
+        "detail": "test_remove_file",
+        "documentation": {}
+    },
+    {
+        "label": "insert_button",
+        "kind": 5,
+        "importPath": "test_remove_file",
+        "description": "test_remove_file",
+        "peekOfCode": "insert_button = tk.Button(window, text=\"Insert Image\", command=insert_image)\ninsert_button.pack(pady=5)\n# Start the Tkinter event loop\nwindow.mainloop()",
+        "detail": "test_remove_file",
+        "documentation": {}
+    },
+    {
         "label": "connect_server",
         "kind": 2,
         "importPath": "test_to_codeGUI",
         "description": "test_to_codeGUI",
-        "peekOfCode": "def connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed\n            # client.send(helo_command.encode('utf-8'))\n            # # Receive and print the server's response to the HELO or EHLO command",
+        "peekOfCode": "def connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")\n            # Send the MAIL FROM command",
         "detail": "test_to_codeGUI",
         "documentation": {}
     },
@@ -1801,7 +4056,7 @@
         "kind": 5,
         "importPath": "test_to_codeGUI",
         "description": "test_to_codeGUI",
-        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response",
         "detail": "test_to_codeGUI",
         "documentation": {}
     },
@@ -1810,7 +4065,7 @@
         "kind": 5,
         "importPath": "test_to_codeGUI",
         "description": "test_to_codeGUI",
-        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')",
         "detail": "test_to_codeGUI",
         "documentation": {}
     },
@@ -1819,7 +4074,7 @@
         "kind": 5,
         "importPath": "test_to_codeGUI",
         "description": "test_to_codeGUI",
-        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # # Send the HELO or EHLO command\n            # helo_command = \"EHLO client\\r\\n\"  # You can use HELO instead of EHLO if needed\n            # client.send(helo_command.encode('utf-8'))",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\ndef connect_server():\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
         "detail": "test_to_codeGUI",
         "documentation": {}
     }

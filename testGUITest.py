@@ -5,6 +5,8 @@ from PIL import Image, ImageTk
 from tkcalendar import Calendar
 import os
 from tkinter.colorchooser import askcolor
+from reportlab.pdfgen import canvas
+from tkinterhtml import TkinterHtml
 
 
 class FileMail:
@@ -328,6 +330,44 @@ def text_color_action():
             # Apply the tag to the selected text
             mail_entry.tag_add("text_color", "sel.first", "sel.last")
 
+def align_action(alignment):
+    global mail_entry
+
+    # Get the currently selected text
+    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)
+
+    # If there is no selected text, do nothing
+    if not selected_text:
+        return
+
+    # Configure a tag for the selected alignment
+    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())
+
+    # Add the tag to the selected text
+    mail_entry.tag_add(alignment, tk.SEL_FIRST, tk.SEL_LAST)
+
+def open_align_window():
+
+    align_window = tk.Toplevel(window)
+    align_window.title("Align Options")
+
+    # Create buttons in the Edit window with fixed width
+    button_width = 15  # Adjust the width as needed
+    new_button = tk.Button(align_window, width=button_width, text="Left", command=lambda: align_action(tk.LEFT))
+    new_button.pack(pady=5)
+
+    attach_button = tk.Button(align_window, width=button_width, text="Center", command=lambda: align_action(tk.CENTER))
+    attach_button.pack(pady=5)
+
+    saveAs_button = tk.Button(align_window, width=button_width, text="Right", command=lambda: align_action(tk.RIGHT))
+    saveAs_button.pack(pady=5)
+
+    close_button = tk.Button(align_window, width=button_width, text="Justify", command=lambda: align_action(tk.BOTH))
+    close_button.pack(pady=5)
+
+    # Center the edit_window within the main window
+    center_window(align_window, 300, 170)  # Adjust the size as needed
+
 def open_format_window():
     format_window = tk.Toplevel(window)
     format_window.title("Format Options")
@@ -349,8 +389,57 @@ def open_format_window():
     # Center the edit_window within the main window
     center_window(format_window, 300, 250)  # Adjust the size as needed
 
+new_Window = None
+file_window = None
+
+def close_action():
+    global new_Window
+    global file_window
+
+    if new_Window.winfo_exists():
+        new_Window.destroy()
+    if file_window.winfo_exists():
+        file_window.destroy()
+
+def saveAs_action():
+    # Ask the user for the file location
+    file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
+    if not file_path:
+        return  # User canceled the file dialog
+
+    # Get the content from the Text widget
+    text_content = mail_entry.get("1.0", tk.END)
+
+    # Save the content to the specified file
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(text_content)
+
+def open_file_window():
+    global file_window
+    file_window = tk.Toplevel(window)
+    file_window.title("File Options")
+
+    # Create buttons in the Edit window with fixed width
+    button_width = 15  # Adjust the width as needed
+    new_button = tk.Button(file_window, text="New", command=newMessage, width=button_width)
+    new_button.pack(pady=5)
+
+    attach_button = tk.Button(file_window, text="Attach", command=attach_file, width=button_width)
+    attach_button.pack(pady=5)
+
+    saveAs_button = tk.Button(file_window, text="Save as", command=saveAs_action, width=button_width)
+    saveAs_button.pack(pady=5)
+
+    close_button = tk.Button(file_window, text="Close", command=close_action, width=button_width)
+    close_button.pack(pady=5)
+
+    # Center the edit_window within the main window
+    center_window(file_window, 300, 170)  # Adjust the size as needed
+
 def button_toolbar_clicked(button_name):
     print(f"Toolbar button {button_name} clicked!")
+    if(button_name == "File"):
+        open_file_window()
     if (button_name == "Edit"):
         open_edit_window()
     if(button_name == "View"):
@@ -427,6 +516,7 @@ def attach_file():
 def newMessage():
     global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry
 
+    global new_Window
     new_Window = tk.Toplevel()
     new_Window.title("Write - ThunderOwl")
     center_window(new_Window, 950, 600)
