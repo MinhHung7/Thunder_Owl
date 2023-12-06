@@ -8,6 +8,9 @@ from tkinter.colorchooser import askcolor
 from reportlab.pdfgen import canvas
 from tkinterhtml import TkinterHtml
 import socket
+import json
+from tkhtmlview import HTMLLabel
+import base64
 
 IP = socket.gethostbyname(socket.gethostname())
 PORT = 2225
@@ -207,13 +210,26 @@ def open_view_window():
     # Center the edit_window within the main window
     center_window(view_window, 200, 120)  # Adjust the size as needed
 
+
+def getIndexImage(event):
+    global cursor_index
+    cursor_index = mail_entry.index(tk.CURRENT)
+    with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+        data = json.load(file)
+        data["Image"]["position"].append(cursor_index)
+    with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+            json.dump(data, file, indent = 2)
+
 def insert_image():
+
     global mail_entry
     global image_references
+
     # Ask the user to choose an image file
     file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
-    
+
     if file_path:
+
         # Create a PhotoImage object
         img = tk.PhotoImage(file=file_path)
 
@@ -238,6 +254,19 @@ def insert_image():
         mail_entry.image_create(tk.END, image=img)
         
         image_references.append(img)
+
+        mail_entry.bind("<Button-3>", getIndexImage)
+
+        with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+            data = json.load(file)
+            with open(file_path, "rb") as f:
+                image_data = f.read()
+                data["Image"]["data"].append(base64.b64encode(image_data).decode('utf-8'))
+            data["Image"]["width"].append(new_width)
+            data["Image"]["height"].append(new_height)
+        with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                json.dump(data, file, indent = 2)
+        
 
 def change_font(font_name):
     global mail_entry
@@ -291,6 +320,16 @@ def apply_tag(tag):
         mail_entry.tag_add(tag, "sel.first", "sel.last")
         mail_entry.tag_configure(tag, **tag_styles[tag])
 
+        tag_ranges = mail_entry.tag_ranges(tag)
+        if tag_ranges:
+            start_index, end_index = tag_ranges[0], tag_ranges[1]
+            with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                data = json.load(file)
+                data["Style"][tag]["start"].append(str(start_index))
+                data["Style"][tag]["end"].append(str(end_index))
+            with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                    json.dump(data, file, indent = 2)
+            
 tag_styles = {
     "bold": {"font": ("Helvetica", 12, "bold")},
     "italic": {"font": ("Helvetica", 12, "italic")},
@@ -411,12 +450,13 @@ def close_action():
 
 def saveAs_action():
     # Ask the user for the file location
-    file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
+    file_path = filedialog.asksaveasfilename(defaultextension=".html", filetypes=[("Text files", "*.html")])
     if not file_path:
         return  # User canceled the file dialog
 
     # Get the content from the Text widget
     text_content = mail_entry.get("1.0", tk.END)
+    print(text_content)
 
     # Save the content to the specified file
     with open(file_path, 'w', encoding='utf-8') as file:
@@ -486,16 +526,12 @@ def connect_server():
 
             # Send the message data
             subject = subject_entry.get("1.0", "end-1c")
-            message_content = mail_entry.get("1.0", "end-1c")
 
-            message_data = (
-                f"To: {recipient}\r\n"
-                f"From: {mail_from}\r\n"
-                f"Subject: {subject}\r\n"
-                "\r\n"
-                f"{message_content}\r\n"
-            )
-            client.send(message_data.encode('utf-8'))
+            with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                data = json.load(file)
+                data["RawContent"] = mail_entry.get("1.0", "end-1c")
+                with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                    json.dump(data, file, indent = 2)
 
             
             # Receive and print the server's response to the message data

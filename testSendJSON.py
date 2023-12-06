@@ -5,9 +5,12 @@ from PIL import Image, ImageTk
 from tkcalendar import Calendar
 import os
 from tkinter.colorchooser import askcolor
-
+from reportlab.pdfgen import canvas
+from tkinterhtml import TkinterHtml
 import socket
-from test_to_codeGUI import connect_server
+import json
+from tkhtmlview import HTMLLabel
+import base64
 
 IP = socket.gethostbyname(socket.gethostname())
 PORT = 2225
@@ -39,7 +42,6 @@ subject_entry = None
 cc_entry = None
 bcc_entry = None
 mail_entry = None
-file_mail_list = []
 
 image_references = []
 
@@ -208,13 +210,26 @@ def open_view_window():
     # Center the edit_window within the main window
     center_window(view_window, 200, 120)  # Adjust the size as needed
 
+
+def getIndexImage(event):
+    global cursor_index
+    cursor_index = mail_entry.index(tk.CURRENT)
+    with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+        data = json.load(file)
+        data["Image"]["position"].append(cursor_index)
+    with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+            json.dump(data, file, indent = 2)
+
 def insert_image():
+
     global mail_entry
     global image_references
+
     # Ask the user to choose an image file
     file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
-    
+
     if file_path:
+
         # Create a PhotoImage object
         img = tk.PhotoImage(file=file_path)
 
@@ -240,6 +255,19 @@ def insert_image():
         
         image_references.append(img)
 
+        mail_entry.bind("<Button-3>", getIndexImage)
+
+        with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+            data = json.load(file)
+            with open(file_path, "rb") as f:
+                image_data = f.read()
+                data["Image"]["data"].append(base64.b64encode(image_data).decode('utf-8'))
+            data["Image"]["width"].append(new_width)
+            data["Image"]["height"].append(new_height)
+        with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                json.dump(data, file, indent = 2)
+        
+
 def change_font(font_name):
     global mail_entry
     print(font_name)
@@ -247,6 +275,14 @@ def change_font(font_name):
         start, end = mail_entry.tag_ranges(tk.SEL)
         mail_entry.tag_add("highlighted", start, end)
         mail_entry.tag_configure("highlighted", font=font_name)
+
+        with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+            data = json.load(file)
+            data["Font"]["start"].append(str(start))
+            data["Font"]["end"].append(str(end))
+            data["Font"]["NameFont"].append(font_name)
+        with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                json.dump(data, file, indent = 2)
 
 def font_action():
     global mail_entry
@@ -292,6 +328,16 @@ def apply_tag(tag):
         mail_entry.tag_add(tag, "sel.first", "sel.last")
         mail_entry.tag_configure(tag, **tag_styles[tag])
 
+        tag_ranges = mail_entry.tag_ranges(tag)
+        if tag_ranges:
+            start_index, end_index = tag_ranges[0], tag_ranges[1]
+            with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                data = json.load(file)
+                data["Style"][tag]["start"].append(str(start_index))
+                data["Style"][tag]["end"].append(str(end_index))
+            with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                    json.dump(data, file, indent = 2)
+            
 tag_styles = {
     "bold": {"font": ("Helvetica", 12, "bold")},
     "italic": {"font": ("Helvetica", 12, "italic")},
@@ -339,6 +385,56 @@ def text_color_action():
             # Apply the tag to the selected text
             mail_entry.tag_add("text_color", "sel.first", "sel.last")
 
+            tag_ranges = mail_entry.tag_ranges("text_color")
+            if tag_ranges:
+                start_index, end_index = tag_ranges[0], tag_ranges[1]
+                with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                    data = json.load(file)
+                    data["Color"]["start"].append(str(start_index))
+                    data["Color"]["end"].append(str(end_index))
+                    data["Color"]["colors"].append(str(hex_color))
+                with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                        json.dump(data, file, indent = 2)
+
+
+def align_action(alignment):
+    global mail_entry
+
+    # Get the currently selected text
+    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)
+
+    # If there is no selected text, do nothing
+    if not selected_text:
+        return
+
+    # Configure a tag for the selected alignment
+    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())
+
+    # Add the tag to the selected text
+    mail_entry.tag_add(alignment, tk.SEL_FIRST, tk.SEL_LAST)
+
+def open_align_window():
+
+    align_window = tk.Toplevel(window)
+    align_window.title("Align Options")
+
+    # Create buttons in the Edit window with fixed width
+    button_width = 15  # Adjust the width as needed
+    new_button = tk.Button(align_window, width=button_width, text="Left", command=lambda: align_action(tk.LEFT))
+    new_button.pack(pady=5)
+
+    attach_button = tk.Button(align_window, width=button_width, text="Center", command=lambda: align_action(tk.CENTER))
+    attach_button.pack(pady=5)
+
+    saveAs_button = tk.Button(align_window, width=button_width, text="Right", command=lambda: align_action(tk.RIGHT))
+    saveAs_button.pack(pady=5)
+
+    close_button = tk.Button(align_window, width=button_width, text="Justify", command=lambda: align_action(tk.BOTH))
+    close_button.pack(pady=5)
+
+    # Center the edit_window within the main window
+    center_window(align_window, 300, 170)  # Adjust the size as needed
+
 def open_format_window():
     format_window = tk.Toplevel(window)
     format_window.title("Format Options")
@@ -359,6 +455,56 @@ def open_format_window():
 
     # Center the edit_window within the main window
     center_window(format_window, 300, 250)  # Adjust the size as needed
+
+new_Window = None
+file_window = None
+
+def close_action():
+    global new_Window
+    global file_window
+
+    if new_Window.winfo_exists():
+        new_Window.destroy()
+    if file_window.winfo_exists():
+        file_window.destroy()
+
+def saveAs_action():
+    # Ask the user for the file location
+    file_path = filedialog.asksaveasfilename(defaultextension=".html", filetypes=[("Text files", "*.html")])
+    if not file_path:
+        return  # User canceled the file dialog
+
+    # Get the content from the Text widget
+    text_content = mail_entry.get("1.0", tk.END)
+    print(text_content)
+
+    # Save the content to the specified file
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(text_content)
+
+def open_file_window():
+    global file_window
+    file_window = tk.Toplevel(window)
+    file_window.title("File Options")
+
+    # Create buttons in the Edit window with fixed width
+    button_width = 15  # Adjust the width as needed
+    new_button = tk.Button(file_window, text="New", command=newMessage, width=button_width)
+    new_button.pack(pady=5)
+
+    attach_button = tk.Button(file_window, text="Attach", command=attach_file, width=button_width)
+    attach_button.pack(pady=5)
+
+    saveAs_button = tk.Button(file_window, text="Save as", command=saveAs_action, width=button_width)
+    saveAs_button.pack(pady=5)
+
+    close_button = tk.Button(file_window, text="Close", command=close_action, width=button_width)
+    close_button.pack(pady=5)
+
+    # Center the edit_window within the main window
+    center_window(file_window, 300, 170)  # Adjust the size as needed
+
+
 
 def connect_server():
     global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list
@@ -400,16 +546,12 @@ def connect_server():
 
             # Send the message data
             subject = subject_entry.get("1.0", "end-1c")
-            message_content = mail_entry.get("1.0", "end-1c")
 
-            message_data = (
-                f"To: {recipient}\r\n"
-                f"From: {mail_from}\r\n"
-                f"Subject: {subject}\r\n"
-                "\r\n"
-                f"{message_content}\r\n"
-            )
-            client.send(message_data.encode('utf-8'))
+            with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                data = json.load(file)
+                data["RawContent"] = mail_entry.get("1.0", "end-1c")
+                with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                    json.dump(data, file, indent = 2)
 
             
             # Receive and print the server's response to the message data
@@ -442,6 +584,8 @@ def connect_server():
 
 def button_toolbar_clicked(button_name):
     print(f"Toolbar button {button_name} clicked!")
+    if(button_name == "File"):
+        open_file_window()
     if (button_name == "Edit"):
         open_edit_window()
     if(button_name == "View"):
@@ -504,6 +648,7 @@ def attach_file():
     file_path = filedialog.askopenfilename(title="Select File", filetypes=[("All Files", "*.*")])
     if file_path:
         print(f"File attached: {file_path}")
+
         # Read the contents of the file into a bytes variable
         with open(file_path, 'rb') as file:
             file_data = file.read()
@@ -517,8 +662,9 @@ def attach_file():
 
 
 def newMessage():
-    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry, file_mail_list
+    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry
 
+    global new_Window
     new_Window = tk.Toplevel()
     new_Window.title("Write - ThunderOwl")
     center_window(new_Window, 950, 600)
