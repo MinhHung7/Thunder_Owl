@@ -1,0 +1,143 @@
+{
+  "Number_of_user": 2,
+  "User_list": {
+    "hungm0434@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Go to work"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Go to spam"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    },
+    "hahuy@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Go to work"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "HELLO"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    },
+    "hoangkhang@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Go to work"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Go to spam"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important":{
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    }
+  }
+}

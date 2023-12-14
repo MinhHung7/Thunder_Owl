@@ -1,0 +1,60 @@
+{
+  "To": "",
+  "From": "",
+  "Subject": "",
+  "Content_type": {
+    "RawContent": "",
+    "Style": {
+      "bold": {
+        "start": [],
+        "end": []
+      },
+      "italic": {
+        "start": [],
+        "end": []
+      },
+      "underline": {
+        "start": [],
+        "end": []
+      },
+      "strikethrough": {
+        "start": [],
+        "end": []
+      },
+      "superscript": {
+        "start": [],
+        "end": []
+      },
+      "subscript": {
+        "start": [],
+        "end": []
+      },
+      "emphasis": {
+        "start": [],
+        "end": []
+      },
+      "code": {
+        "start": [],
+        "end": []
+      }
+    },
+    "Font": {
+      "start": [],
+      "end": [],
+      "NameFont": []
+    },
+    "Color": {
+      "start": [],
+      "end": [],
+      "colors": []
+    },
+    "Image": {
+      "position": [],
+      "data": [],
+      "height": [],
+      "width": []
+    }
+  },
+  "Cc": [],
+  "File_list": []
+}

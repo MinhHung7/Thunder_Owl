@@ -1,0 +1,63 @@
+{
+  "Have_been_read": 0,
+  "To": "",
+  "From": "",
+  "Date": "",
+  "Subject": "",
+  "Content_type": "",
+  "Cc": [],
+  "Main_content": {
+    "RawContent": "",
+    "Style": {
+      "bold": {
+        "start": [],
+        "end": []
+      },
+      "italic": {
+        "start": [],
+        "end": []
+      },
+      "underline": {
+        "start": [],
+        "end": []
+      },
+      "strikethrough": {
+        "start": [],
+        "end": []
+      },
+      "superscript": {
+        "start": [],
+        "end": []
+      },
+      "subscript": {
+        "start": [],
+        "end": []
+      },
+      "emphasis": {
+        "start": [],
+        "end": []
+      },
+      "code": {
+        "start": [],
+        "end": []
+      }
+    },
+    "Font": {
+      "start": [],
+      "end": [],
+      "NameFont": []
+    },
+    "Color": {
+      "start": [],
+      "end": [],
+      "colors": []
+    },
+    "Image": {
+      "position": [],
+      "data": [],
+      "height": [],
+      "width": []
+    }
+  },
+  "File_list": []
+}

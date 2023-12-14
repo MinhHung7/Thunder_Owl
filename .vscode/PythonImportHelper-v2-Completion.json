@@ -88,6 +88,23 @@
         "documentation": {}
     },
     {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
         "label": "BytesIO",
         "importPath": "io",
         "description": "io",
@@ -105,43 +122,27 @@
         "documentation": {}
     },
     {
-        "label": "Calendar",
-        "importPath": "tkcalendar",
-        "description": "tkcalendar",
-        "isExtraImport": true,
-        "detail": "tkcalendar",
-        "documentation": {}
-    },
-    {
-        "label": "Calendar",
-        "importPath": "tkcalendar",
-        "description": "tkcalendar",
-        "isExtraImport": true,
-        "detail": "tkcalendar",
-        "documentation": {}
-    },
-    {
-        "label": "Calendar",
-        "importPath": "tkcalendar",
-        "description": "tkcalendar",
-        "isExtraImport": true,
-        "detail": "tkcalendar",
-        "documentation": {}
-    },
-    {
-        "label": "Calendar",
-        "importPath": "tkcalendar",
-        "description": "tkcalendar",
-        "isExtraImport": true,
-        "detail": "tkcalendar",
-        "documentation": {}
-    },
-    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "tkinter",
         "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
         "detail": "tkinter",
         "documentation": {}
     },
@@ -170,6 +171,62 @@
         "documentation": {}
     },
     {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "ttk",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -234,23 +291,7 @@
         "documentation": {}
     },
     {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
         "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "PhotoImage",
         "importPath": "tkinter",
         "description": "tkinter",
         "isExtraImport": true,
@@ -266,11 +307,160 @@
         "documentation": {}
     },
     {
-        "label": "font",
-        "importPath": "tkinter",
-        "description": "tkinter",
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
         "isExtraImport": true,
-        "detail": "tkinter",
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "customtkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "isExtraImport": true,
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "isExtraImport": true,
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Progressbar",
+        "importPath": "tkinter.ttk",
+        "description": "tkinter.ttk",
+        "isExtraImport": true,
+        "detail": "tkinter.ttk",
         "documentation": {}
     },
     {
@@ -323,39 +513,6 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "askcolor",
-        "importPath": "tkinter.colorchooser",
-        "description": "tkinter.colorchooser",
-        "isExtraImport": true,
-        "detail": "tkinter.colorchooser",
-        "documentation": {}
-    },
-    {
-        "label": "askcolor",
-        "importPath": "tkinter.colorchooser",
-        "description": "tkinter.colorchooser",
-        "isExtraImport": true,
-        "detail": "tkinter.colorchooser",
-        "documentation": {}
-    },
-    {
-        "label": "canvas",
-        "importPath": "reportlab.pdfgen",
-        "description": "reportlab.pdfgen",
-        "isExtraImport": true,
-        "detail": "reportlab.pdfgen",
-        "documentation": {}
-    },
-    {
         "label": "canvas",
         "importPath": "reportlab.pdfgen",
         "description": "reportlab.pdfgen",
@@ -369,40 +526,6 @@
         "description": "tkinterhtml",
         "isExtraImport": true,
         "detail": "tkinterhtml",
-        "documentation": {}
-    },
-    {
-        "label": "TkinterHtml",
-        "importPath": "tkinterhtml",
-        "description": "tkinterhtml",
-        "isExtraImport": true,
-        "detail": "tkinterhtml",
-        "documentation": {}
-    },
-    {
-        "label": "socket",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "socket",
-        "description": "socket",
-        "detail": "socket",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "HTMLLabel",
-        "importPath": "tkhtmlview",
-        "description": "tkhtmlview",
-        "isExtraImport": true,
-        "detail": "tkhtmlview",
         "documentation": {}
     },
     {
@@ -438,6 +561,825 @@
         "description": "Socket4.client",
         "peekOfCode": "image = Image.open(BytesIO(binary_data))\n# Display the image\nimage.show()",
         "detail": "Socket4.client",
+        "documentation": {}
+    },
+    {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, file_data):\n        self.file_name = file_name\n        self.file_data = file_data\nfile_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "get_date",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")\n    return formatted_date\n# ===============================================================================================\ndef fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "fixTextForButton",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject\n    return finalText \n# ===============================================================================================\ndef resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "resolveMail",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)\n    detailMailListFolderFrame.rowconfigure(1, weight=1)\n    detailMailListFolderFrame.columnconfigure(0, weight=1)\n    header_frame = CTkFrame(master=detailMailListFolderFrame, fg_color=\"#27272A\", border_width=3, border_color=\"#323742\", height=130)\n    header_frame.grid(row=0, column=0, sticky = \"nsew\")\n    content_frame = CTkFrame(master=detailMailListFolderFrame, fg_color=\"white\", border_width=3)\n    content_frame.grid(row=1, column=0, sticky = \"nsew\")\n    file_frame = CTkScrollableFrame(master=detailMailListFolderFrame, fg_color=\"#3F3F46\", height=40, orientation = \"horizontal\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "resolve_image",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def resolve_image(image_data, position):\n    global content_Text, image_references\n    img = Image.open(io.BytesIO(image_data))\n    img = ImageTk.PhotoImage(img)\n    # Insert an invisible image at the specified position\n    content_Text.image_create(position, image=img)\n    image_references.append(img)\n# ===============================================================================================\ndef change_style_resolve(start, end, mode):\n    global resolveTagName, content_Text",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "change_style_resolve",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def change_style_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, **tag_styles[mode])\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\ndef change_font_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, font = mode)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "change_font_resolve",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def change_font_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, font = mode)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\ndef change_color_resolve(start, end, color):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, foreground = color)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "change_color_resolve",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def change_color_resolve(start, end, color):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, foreground = color)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\n# ===============================================================================================\ndef getFolderMessage(user, folder):\n    global detailMailListFolderFrame\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"1400x700\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "getFolderMessage",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def getFolderMessage(user, folder):\n    global detailMailListFolderFrame\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"1400x700\")\n    new_Window.title(f\"{folder} - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "disable",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "send_data_to_server",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)\n            response = client.recv(1024).decode()\n            print(response)\n            # Send EHLO command\n            client.sendall(b'EHLO test mail server\\n')",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_string",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def is_valid_string(input_string, list_of_keywords):\n    for keyword in list_of_keywords:\n        pattern = re.compile(r'\\b' + re.escape(keyword) + r'\\b')\n        if pattern.search(input_string):\n            return True  \n    return False \n# ========================== Nhận data ==============================\ndef recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "recvall",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''\n    while True:\n        part = sock.recv(BUFF_SIZE)\n        data += part\n        if len(part) < BUFF_SIZE:\n            # either 0 or end of data\n            break\n    return data",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_from_server",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def get_data_from_server(user, password, mail_id):\n    final = ''\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "proccess_data_so_we_can_convert_to_json_file",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def proccess_data_so_we_can_convert_to_json_file(raw_data):\n    lines = raw_data.splitlines()\n    # Remove the first and last lines\n    result_lines = lines[1:-1]\n    # Join the remaining lines into a new string\n    result_string = '\\n'.join(result_lines)\n    # Decode\n    decoded_string_that_can_be_write_directly_into_json = base64.b64decode(result_string).decode()\n    return decoded_string_that_can_be_write_directly_into_json\ndef write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):\n    with open(PATH/'Buffer.json', 'w') as file:\n        file.write(decoded_string_that_can_be_write_directly_into_json)\ndef clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "clean_the_temporary_json_file_afer_we_done_with_it",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "choose_which_mail_box_base_on_user_config",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:\n        target_string = None\n        if condition['Target'] == 'Subject': # Check the Subject part\n            target_string = buffer_json['Subject']",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox):\n    # turn the buffer json into a dictionary\n    with open(PATH/'Buffer.json', 'r') as file:\n        dict_data = json.load(file)\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Email_list'].append(dict_data)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Number_of_email'] += 1\n    database['User_list'][user]['Mail_box']['Number_of_email_total'] += 1\n    with open(PATH/'database.json', 'w') as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "check_to_see_how_many_mail_are_there_in_the_acount_of_the_user",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password):\n    number_of_line = 0\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "get_the_number_of_mail_the_user_already_has",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def get_the_number_of_mail_the_user_already_has(user, password):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    return database['User_list'][user]['Mail_box']['Number_of_email_total']\n# ======================================= Tổng hợp ====================================================\ndef get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_the_mail_from_sever_that_has_not_been_dowloaded",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)\n        decoded_string_that_can_be_write_directly_into_json = proccess_data_so_we_can_convert_to_json_file(data)\n        write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json)\n        final_mailbox = choose_which_mail_box_base_on_user_config(user)\n        after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox)\n        clean_the_temporary_json_file_afer_we_done_with_it()",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    global new_Window, file_mail_list",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    global new_Window, file_mail_list\n    remove_Window = CTkToplevel(new_Window)\n    remove_Window.geometry(\"300x350\")\n    remove_Window.title(\"Remove - ThunderOwl\")\n    remove_Window.resizable(False, False)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def remove_file_window():\n    global new_Window, file_mail_list\n    remove_Window = CTkToplevel(new_Window)\n    remove_Window.geometry(\"300x350\")\n    remove_Window.title(\"Remove - ThunderOwl\")\n    remove_Window.resizable(False, False)\n    remove_Window.transient(new_Window)\n    # Create a label to display file list\n    label = CTkLabel(remove_Window, text=\"File Mail List:\")\n    label.pack(pady=5)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def open_edit_window(event):\n    global new_Window, edit_menu\n    edit_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    edit_menu.add_command(label=\"Cut\", command=cut_action)\n    edit_menu.add_command(label=\"Copy\", command=copy_action)\n    edit_menu.add_command(label=\"Paste\", command=paste_action)\n    edit_menu.add_command(label=\"Select All\", command=select_all_action)\n    edit_menu.add_command(label=\"Find\", command=find_action)\n    edit_menu.add_command(label=\"Find and Replace\", command=find_replace_action)\n    edit_menu.post(event.x_root, event.y_root)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 12))\ndef open_view_window(event):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 12))\ndef open_view_window(event):\n    global new_Window, view_menu\n    view_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    view_menu.add_command(label=\"Zoom In\", command=zoomIn_action)\n    view_menu.add_command(label=\"Zoom Out\", command=zoomOut_action)\n    view_menu.add_command(label=\"Reset\", command=reset_action)\n    view_menu.post(event.x_root, event.y_root)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def open_view_window(event):\n    global new_Window, view_menu\n    view_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    view_menu.add_command(label=\"Zoom In\", command=zoomIn_action)\n    view_menu.add_command(label=\"Zoom Out\", command=zoomOut_action)\n    view_menu.add_command(label=\"Reset\", command=reset_action)\n    view_menu.post(event.x_root, event.y_root)\ndef getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "getIndexImage",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"Image\"][\"position\"].append(cursor_index)\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\ndef insert_image():\n    global mail_entry",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry, tagName\n    print(font_name)\n    mail_entry.tag_configure(tagName, font=font_name)\n    mail_entry.tag_add(tagName, \"sel.first\", \"sel.last\")\n    tag_ranges = mail_entry.tag_ranges(tagName)\n    tagName = tagName + 1\n    if tag_ranges:\n        start, end = tag_ranges[0], tag_ranges[1]\n        with open(PATH/\"Temp_email.json\", \"r\") as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def apply_tag(tag):\n    global tagName\n    mail_entry.tag_configure(tagName, **tag_styles[tag])\n    # Apply the tag to the selected text\n    mail_entry.tag_add(tagName, \"sel.first\", \"sel.last\")\n    tag_ranges = mail_entry.tag_ranges(tagName)\n    tagName = tagName + 1\n    if tag_ranges:\n        start_index, end_index = tag_ranges[0], tag_ranges[1]\n        with open(PATH/\"Temp_email.json\", \"r\") as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def text_color_action():\n    global mail_entry, tagName\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    print(selected_text)\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def open_format_window(event):\n    global new_Window, format_menu\n    format_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    font_sub_menu = tk.Menu(new_Window, tearoff=False)\n    format_menu.add_cascade(label=\"Font\", menu=font_sub_menu)\n    fonts = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font in fonts:\n        font_sub_menu.add_command(label=font, command=lambda font = font :change_font(font))\n    style_sub_menu = tk.Menu(new_Window, tearoff=False)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "close_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "saveAs_action",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"0.0\", \"end\")\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "open_file_window",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def open_file_window(event):\n    global new_Window, file_menu\n    file_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    file_menu.add_command(label=\"New\", command=newMessage)\n    file_menu.add_command(label=\"Attach\", command=attach_file)\n    file_menu.add_command(label=\"Save as\", command=saveAs_action)\n    file_menu.add_command(label=\"Close\", command=close_action)\n    file_menu.post(event.x_root, event.y_root)\ndef json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "json_fully_complete_now_send_the_json_file_to_server",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"RawContent\"] = mail_entry.get(\"0.0\", \"end\")\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"To\"] = to_entry.get()",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    global buttons\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"File\"):\n        buttons[0].bind(\"<Button-1>\", open_file_window)\n    if (button_name == \"Edit\"):\n        buttons[1].bind(\"<Button-1>\", open_edit_window)\n    if(button_name == \"View\"):\n        buttons[2].bind(\"<Button-1>\", open_view_window)\n    if(button_name == \"Attach\"):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = customtkinter.CTkButton(\n        parent,\n        image=image,\n        text = button_name,\n        corner_radius=7,\n        command=lambda: on_button_click(button_name),\n        anchor=\"w\",\n    )",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = customtkinter.CTkButton(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        corner_radius=10,\n        command=command,",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global buttons\n    global new_Window\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"950x600\")\n    new_Window.title(\"Write - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")\n    new_Window.resizable(False, False)\n    new_Window.transient(window)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    if button_name == \"Sender\":\n        if btn_inbox.winfo_ismapped():\n            btn_inbox.grid_forget()\n            btn_spam.grid_forget()\n            btn_work.grid_forget()\n            btn_important.grid_forget()\n            btn_project.grid_forget()\n            btn_receive_all.grid_forget()",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_second_part():\n    global label_second_part, second_part_frame\n    second_part_frame = CTkFrame(master=window, border_color=\"#323742\", border_width=2)\n    second_part_frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    image_path = PATH/\"Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1230, 769)  # Adjust the width and height as needed\n    label_second_part = customtkinter.CTkLabel(master = second_part_frame, image=image, text = \"\", anchor = \"s\")\n    label_second_part.pack(padx=4, pady=4)\ndef create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_mail_subframe",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    global second_part_frame\n    second_part_frame.destroy()\n    second_subframe = customtkinter.CTkFrame(window, fg_color=\"#282C34\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.columnconfigure(0, weight=1)  # Part 1\n    second_subframe.columnconfigure(1, weight=20)  # Part 2\n    second_subframe.rowconfigure(0, weight=1)\n    whitesubframe = customtkinter.CTkFrame(second_subframe, fg_color=\"#282C34\", corner_radius=15)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")\n    left_frame.grid(row=0, column=0, sticky=\"ns\")\n    # Increase the font size of the calendar\n    mycal = Calendar(left_frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = CTkFrame(master = window, fg_color=\"#282C34\")\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    buttons_frame.rowconfigure(0, weight=20)\n    buttons_frame.rowconfigure(1, weight=1)\n    buttons_frame.columnconfigure(0, weight=1)\n    buttons_sub_frame = CTkFrame(master = buttons_frame, fg_color=\"#282C34\", border_color=\"#323742\", border_width=3, corner_radius=10, height=600)\n    buttons_sub_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    logout_frame = CTkFrame(master = buttons_frame, border_color=\"#323742\", border_width=3, fg_color=\"#282C34\")\n    logout_frame.grid(row=1, column=0, sticky=\"nsew\", padx=0, pady=0)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nSMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "SMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "POP3_PORT",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "POP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_SMTP",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "ADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_POP3",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "ADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")\n    return formatted_date",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")\n    return formatted_date\n# ===============================================================================================",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "PATH",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")\n    return formatted_date\n# ===============================================================================================\ndef fixTextForButton(fromUser, date, subject, width):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "btn_sender",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "btn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "btn_receive_all",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "btn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "btn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "detailMailListFolderFrame",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "detailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "from_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "mail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "buttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "image_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "tagName",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "tagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "resolveTagName",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "resolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "content_Text",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "content_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "new_Window",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "new_Window = None\nfile_menu = None\ndef close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "file_menu",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "file_menu = None\ndef close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():\n    # Ask the user for the file location",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "window = customtkinter.CTk()\nwindow.title(\"Thunder-Owl\")\nwindow.geometry(\"1400x700\")\nwindow.iconbitmap(PATH/\"Icons/owl_icon.ico\")\nwindow.resizable(False, False)\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 3)\ncreate_second_part() # Image",
+        "detail": "testFolder.testCode",
         "documentation": {}
     },
     {
@@ -492,6 +1434,258 @@
         "description": "caledar-board",
         "peekOfCode": "open_cal = Button(frame, text=\"Select Date\", command=select_date)\nopen_cal.pack(padx=15, pady=15)\n# Run the main loop\nroot.mainloop()",
         "detail": "caledar-board",
+        "documentation": {}
+    },
+    {
+        "label": "MailApp",
+        "kind": 6,
+        "importPath": "Custom",
+        "description": "Custom",
+        "peekOfCode": "class MailApp:\n    def __init__(self, master):\n        self.master = master\n        self.master.title(\"Mail App\")\n        # Initialize some sample data\n        self.emails = [\n            {\"sender\": \"john.doe@example.com\", \"subject\": \"Meeting Tomorrow\", \"read\": False},\n            {\"sender\": \"jane.smith@example.com\", \"subject\": \"Vacation Plans\", \"read\": True},\n            # Add more sample emails as needed\n        ]",
+        "detail": "Custom",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "LandingPage",
+        "description": "LandingPage",
+        "peekOfCode": "window = Tk()\nwindow.geometry(\"800x500\")",
+        "detail": "LandingPage",
+        "documentation": {}
+    },
+    {
+        "label": "top",
+        "kind": 2,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "def top():\n    root.withdraw()\n    os.system(\"python testSendJSON.py\")\n    root.destroy()\ni = 0\ndef load():\n    global i\n    if i <= 10:\n        txt = 'Loading ...' + (str(10*i) + '%')\n        progress_label.config(text = txt)",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "kind": 2,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "def load():\n    global i\n    if i <= 10:\n        txt = 'Loading ...' + (str(10*i) + '%')\n        progress_label.config(text = txt)\n        progress_label.after(600, load)\n        progress['value'] = 10 * i\n        i += 1\nload()\nroot.resizable(False, False)",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "root = Tk()\nimage = PhotoImage(file = \"\")\nheight=430\nwidth = 530\nx = (root.winfo_screenwidth()//2) - (width//2)\ny = (root.winfo_screenheight()//2) - (height//2)\nroot.geometry('{}x{}+{}+{}'.format(width, height,x, y))\nroot.overrideredirect(True)\nroot.config(background=\"#2F6C60\")\nwelcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "image",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "image = PhotoImage(file = \"\")\nheight=430\nwidth = 530\nx = (root.winfo_screenwidth()//2) - (width//2)\ny = (root.winfo_screenheight()//2) - (height//2)\nroot.geometry('{}x{}+{}+{}'.format(width, height,x, y))\nroot.overrideredirect(True)\nroot.config(background=\"#2F6C60\")\nwelcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nwelcome_label.place(x=130, y=25)",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "width",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "width = 530\nx = (root.winfo_screenwidth()//2) - (width//2)\ny = (root.winfo_screenheight()//2) - (height//2)\nroot.geometry('{}x{}+{}+{}'.format(width, height,x, y))\nroot.overrideredirect(True)\nroot.config(background=\"#2F6C60\")\nwelcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nwelcome_label.place(x=130, y=25)\nbg_label = Label(root, image = image, bg = \"#2F6C60\")\nbg_label.place(x=130, y=65)",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "x = (root.winfo_screenwidth()//2) - (width//2)\ny = (root.winfo_screenheight()//2) - (height//2)\nroot.geometry('{}x{}+{}+{}'.format(width, height,x, y))\nroot.overrideredirect(True)\nroot.config(background=\"#2F6C60\")\nwelcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nwelcome_label.place(x=130, y=25)\nbg_label = Label(root, image = image, bg = \"#2F6C60\")\nbg_label.place(x=130, y=65)\nprogress_label = Label(root, text = \"Loading...\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "y = (root.winfo_screenheight()//2) - (height//2)\nroot.geometry('{}x{}+{}+{}'.format(width, height,x, y))\nroot.overrideredirect(True)\nroot.config(background=\"#2F6C60\")\nwelcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nwelcome_label.place(x=130, y=25)\nbg_label = Label(root, image = image, bg = \"#2F6C60\")\nbg_label.place(x=130, y=65)\nprogress_label = Label(root, text = \"Loading...\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nprogress_label.place(x=190, y=330)",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "welcome_label",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "welcome_label = Label(text = \"WELCOME TO THUNDER OWL\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nwelcome_label.place(x=130, y=25)\nbg_label = Label(root, image = image, bg = \"#2F6C60\")\nbg_label.place(x=130, y=65)\nprogress_label = Label(root, text = \"Loading...\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nprogress_label.place(x=190, y=330)\nprogress = ttk.Style()\nprogress.theme_use('clam')\nprogress.configure(\"red.Horizontal.TProgressbar\", background = \"#108cff\")\nprogress = Progressbar(root, orient=HORIZONTAL, length=400, mode='determinate', style=\"red.Horizontal.TProgressbar\")",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "bg_label",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "bg_label = Label(root, image = image, bg = \"#2F6C60\")\nbg_label.place(x=130, y=65)\nprogress_label = Label(root, text = \"Loading...\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nprogress_label.place(x=190, y=330)\nprogress = ttk.Style()\nprogress.theme_use('clam')\nprogress.configure(\"red.Horizontal.TProgressbar\", background = \"#108cff\")\nprogress = Progressbar(root, orient=HORIZONTAL, length=400, mode='determinate', style=\"red.Horizontal.TProgressbar\")\nprogress.place(x=60, y=370)\ndef top():",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "progress_label",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "progress_label = Label(root, text = \"Loading...\", bg = \"#2F6C60\", font=(\"Trebuchet Ms\", 15, \"bold\"), fg = \"#FFFFFF\")\nprogress_label.place(x=190, y=330)\nprogress = ttk.Style()\nprogress.theme_use('clam')\nprogress.configure(\"red.Horizontal.TProgressbar\", background = \"#108cff\")\nprogress = Progressbar(root, orient=HORIZONTAL, length=400, mode='determinate', style=\"red.Horizontal.TProgressbar\")\nprogress.place(x=60, y=370)\ndef top():\n    root.withdraw()\n    os.system(\"python testSendJSON.py\")",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "progress",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "progress = ttk.Style()\nprogress.theme_use('clam')\nprogress.configure(\"red.Horizontal.TProgressbar\", background = \"#108cff\")\nprogress = Progressbar(root, orient=HORIZONTAL, length=400, mode='determinate', style=\"red.Horizontal.TProgressbar\")\nprogress.place(x=60, y=370)\ndef top():\n    root.withdraw()\n    os.system(\"python testSendJSON.py\")\n    root.destroy()\ni = 0",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "progress",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "progress = Progressbar(root, orient=HORIZONTAL, length=400, mode='determinate', style=\"red.Horizontal.TProgressbar\")\nprogress.place(x=60, y=370)\ndef top():\n    root.withdraw()\n    os.system(\"python testSendJSON.py\")\n    root.destroy()\ni = 0\ndef load():\n    global i\n    if i <= 10:",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "loading",
+        "description": "loading",
+        "peekOfCode": "i = 0\ndef load():\n    global i\n    if i <= 10:\n        txt = 'Loading ...' + (str(10*i) + '%')\n        progress_label.config(text = txt)\n        progress_label.after(600, load)\n        progress['value'] = 10 * i\n        i += 1\nload()",
+        "detail": "loading",
+        "documentation": {}
+    },
+    {
+        "label": "signin",
+        "kind": 2,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "def signin():\n    username = user.get()\n    password = code.get()\n    if username == 'admin' and password == '12345678':\n        print('OK')\n        root.destroy()\n    else:\n        messagebox.showerror(\"Invalid\", \"invalid username and password\")\nimg = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/login.png\")\nLabel(root, image=img, bg=\"white\").place(x=50, y=50)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "on_enter",
+        "kind": 2,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "def on_enter(e):\n    user.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()\n    if name=='':\n        user.insert(0, 'Username')\nuser = Entry(frame, width=25, fg='black', border=0, bg='white', font = ('Microsoft YaHei UI Light', 11))\nuser.place(x=30, y=80)\nuser.insert(0, 'Username')\nuser.bind('<FocusIn>', on_enter)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "on_leave",
+        "kind": 2,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "def on_leave(e):\n    name = user.get()\n    if name=='':\n        user.insert(0, 'Username')\nuser = Entry(frame, width=25, fg='black', border=0, bg='white', font = ('Microsoft YaHei UI Light', 11))\nuser.place(x=30, y=80)\nuser.insert(0, 'Username')\nuser.bind('<FocusIn>', on_enter)\nuser.bind('<FocusOut>', on_leave)\nFrame(frame, width=295,height=2, bg='black').place(x=25, y=107)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "on_enter",
+        "kind": 2,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "def on_enter(e):\n    code.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()\n    if name=='':\n        code.insert(0, 'Password')\ncode = Entry(frame, width=25, fg='black', border=0, bg='white',font = ('Microsoft YaHei UI Light', 11))\ncode.place(x=30, y=150)\ncode.insert(0, 'Password')\ncode.bind('<FocusIn>', on_enter)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "on_leave",
+        "kind": 2,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "def on_leave(e):\n    name = user.get()\n    if name=='':\n        code.insert(0, 'Password')\ncode = Entry(frame, width=25, fg='black', border=0, bg='white',font = ('Microsoft YaHei UI Light', 11))\ncode.place(x=30, y=150)\ncode.insert(0, 'Password')\ncode.bind('<FocusIn>', on_enter)\ncode.bind('<FocusOut>', on_leave)\nFrame(frame, width=295, height=2, bg = 'black').place(x=25, y=177)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "root = Tk()\nroot.title('Login')\nroot.geometry('925x500+300+200')\nroot.configure(bg=\"#fff\")\nroot.resizable(False, False)\ndef signin():\n    username = user.get()\n    password = code.get()\n    if username == 'admin' and password == '12345678':\n        print('OK')",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "img = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/login.png\")\nLabel(root, image=img, bg=\"white\").place(x=50, y=50)\nframe = Frame(root, width=350, height=350, bg='white')\nframe.place(x=480, y=70)\nheading = Label(frame, text = \"Sign in\", fg = '#57a1f8', bg = 'white', font=('Microsoft YaHei UI Light', 23, 'bold'))\nheading.place(x=100, y=5)\ndef on_enter(e):\n    user.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "frame",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "frame = Frame(root, width=350, height=350, bg='white')\nframe.place(x=480, y=70)\nheading = Label(frame, text = \"Sign in\", fg = '#57a1f8', bg = 'white', font=('Microsoft YaHei UI Light', 23, 'bold'))\nheading.place(x=100, y=5)\ndef on_enter(e):\n    user.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()\n    if name=='':\n        user.insert(0, 'Username')",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "heading",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "heading = Label(frame, text = \"Sign in\", fg = '#57a1f8', bg = 'white', font=('Microsoft YaHei UI Light', 23, 'bold'))\nheading.place(x=100, y=5)\ndef on_enter(e):\n    user.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()\n    if name=='':\n        user.insert(0, 'Username')\nuser = Entry(frame, width=25, fg='black', border=0, bg='white', font = ('Microsoft YaHei UI Light', 11))\nuser.place(x=30, y=80)",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "user = Entry(frame, width=25, fg='black', border=0, bg='white', font = ('Microsoft YaHei UI Light', 11))\nuser.place(x=30, y=80)\nuser.insert(0, 'Username')\nuser.bind('<FocusIn>', on_enter)\nuser.bind('<FocusOut>', on_leave)\nFrame(frame, width=295,height=2, bg='black').place(x=25, y=107)\ndef on_enter(e):\n    code.delete(0, 'end')\ndef on_leave(e):\n    name = user.get()",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "code",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "code = Entry(frame, width=25, fg='black', border=0, bg='white',font = ('Microsoft YaHei UI Light', 11))\ncode.place(x=30, y=150)\ncode.insert(0, 'Password')\ncode.bind('<FocusIn>', on_enter)\ncode.bind('<FocusOut>', on_leave)\nFrame(frame, width=295, height=2, bg = 'black').place(x=25, y=177)\nButton(frame, width=39, pady=7, text=\"Sign in\", bg = \"#57a1f8\", fg='white', border = 0, command=signin).place(x=35, y=204)\nlabel = Label(frame, text = \"Don't have an account?\", fg = \"black\", bg='white', font= ('Microsoft YaHei UI Light', 9))\nlabel.place(x=75, y=270)\nsign_up = Button(frame, width=6, text = 'Sign up', border=0, bg='white', cursor = 'hand2', fg=\"#57a1f8\")",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "label",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "label = Label(frame, text = \"Don't have an account?\", fg = \"black\", bg='white', font= ('Microsoft YaHei UI Light', 9))\nlabel.place(x=75, y=270)\nsign_up = Button(frame, width=6, text = 'Sign up', border=0, bg='white', cursor = 'hand2', fg=\"#57a1f8\")\nsign_up.place(x=215, y=270)\nroot.mainloop()",
+        "detail": "login",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "kind": 5,
+        "importPath": "login",
+        "description": "login",
+        "peekOfCode": "sign_up = Button(frame, width=6, text = 'Sign up', border=0, bg='white', cursor = 'hand2', fg=\"#57a1f8\")\nsign_up.place(x=215, y=270)\nroot.mainloop()",
+        "detail": "login",
         "documentation": {}
     },
     {
@@ -688,7 +1882,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\ndef font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        if \"highlighted\" in mail_entry.tag_names(start):\n            # Remove the \"highlighted\" tag from the previous selection\n            mail_entry.tag_remove(\"highlighted\", start, end)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -769,7 +1963,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".html\", filetypes=[(\"Text files\", \"*.html\")])",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -778,7 +1972,7 @@
         "kind": 2,
         "importPath": "testGUI3",
         "description": "testGUI3",
-        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".html\", filetypes=[(\"Text files\", \"*.html\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"1.0\", tk.END)\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"1.0\", tk.END)\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
         "detail": "testGUI3",
         "documentation": {}
     },
@@ -1480,7 +2674,124 @@
         "kind": 6,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, file_data):\n        self.file_name = file_name\n        self.file_data = file_data\nfile_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\nto_entry = None\nfrom_entry = None",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "disable",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "send_data_to_server",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)\n            response = client.recv(1024).decode()\n            print(response)\n            # Send EHLO command\n            client.sendall(b'EHLO test mail server\\n')",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_string",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def is_valid_string(input_string, list_of_keywords):\n    for keyword in list_of_keywords:\n        pattern = re.compile(r'\\b' + re.escape(keyword) + r'\\b')\n        if pattern.search(input_string):\n            return True  \n    return False \n# ========================== Nhận data ==============================\ndef recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "recvall",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''\n    while True:\n        part = sock.recv(BUFF_SIZE)\n        data += part\n        if len(part) < BUFF_SIZE:\n            # either 0 or end of data\n            break\n    return data",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_from_server",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def get_data_from_server(user, password, mail_id):\n    final = ''\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "proccess_data_so_we_can_convert_to_json_file",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def proccess_data_so_we_can_convert_to_json_file(raw_data):\n    lines = raw_data.splitlines()\n    # Remove the first and last lines\n    result_lines = lines[1:-1]\n    # Join the remaining lines into a new string\n    result_string = '\\n'.join(result_lines)\n    # Decode\n    decoded_string_that_can_be_write_directly_into_json = base64.b64decode(result_string).decode()\n    return decoded_string_that_can_be_write_directly_into_json\ndef write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):\n    with open(PATH/'Buffer.json', 'w') as file:\n        file.write(decoded_string_that_can_be_write_directly_into_json)\ndef clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "clean_the_temporary_json_file_afer_we_done_with_it",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "choose_which_mail_box_base_on_user_config",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:\n        target_string = None\n        if condition['Target'] == 'Subject': # Check the Subject part\n            target_string = buffer_json['Subject']",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox):\n    # turn the buffer json into a dictionary\n    with open(PATH/'Buffer.json', 'r') as file:\n        dict_data = json.load(file)\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Email_list'].append(dict_data)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Number_of_email'] += 1\n    database['User_list'][user]['Mail_box']['Number_of_email_total'] += 1\n    with open(PATH/'database.json', 'w') as file:",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "check_to_see_how_many_mail_are_there_in_the_acount_of_the_user",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password):\n    number_of_line = 0\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "get_the_number_of_mail_the_user_already_has",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def get_the_number_of_mail_the_user_already_has(user, password):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    return database['User_list'][user]['Mail_box']['Number_of_email_total']\n# ======================================= Tổng hợp ====================================================\ndef get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_the_mail_from_sever_that_has_not_been_dowloaded",
+        "kind": 2,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "def get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)\n        decoded_string_that_can_be_write_directly_into_json = proccess_data_so_we_can_convert_to_json_file(data)\n        write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json)\n        final_mailbox = choose_which_mail_box_base_on_user_config(user)\n        after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox)\n        clean_the_temporary_json_file_afer_we_done_with_it()",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1489,7 +2800,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1498,7 +2809,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1507,7 +2818,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)",
+        "peekOfCode": "def center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2\n    window.geometry(f\"{width}x{height}+{x_coordinate}+{y_coordinate}\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1516,7 +2827,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    resized_image = original_image.resize((width, height))\n    photo_image = ImageTk.PhotoImage(resized_image)\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    remove_window = tk.Toplevel(window)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1597,7 +2908,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = tk.Button(edit_window, text=\"Cut\", command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = tk.Button(edit_window, text=\"Copy\", command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(edit_window, text=\"Paste\", command=paste_action, width=button_width)",
+        "peekOfCode": "def open_edit_window():\n    edit_window = tk.Toplevel(window)\n    edit_window.title(\"Edit Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    cut_button = customtkinter.CTkButton(edit_window, text=\"Cut\",corner_radius=10, command=cut_action, width=button_width)\n    cut_button.pack(pady=5)\n    copy_button = customtkinter.CTkButton(edit_window, text=\"Copy\", corner_radius=10, command=copy_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = customtkinter.CTkButton(edit_window, text=\"Paste\", corner_radius=10, command=paste_action, width=button_width)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1606,7 +2917,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1615,7 +2926,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.config(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 11))\ndef open_view_window():",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1624,7 +2935,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.config(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 11))\ndef open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = customtkinter.CTkButton(view_window, text=\"Zoom In\",corner_radius=10,  command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1633,7 +2944,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = tk.Button(view_window, text=\"Zoom In\", command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = tk.Button(view_window, text=\"Zoom Out\", command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = tk.Button(view_window, text=\"Reset\", command=reset_action, width=button_width)",
+        "peekOfCode": "def open_view_window():\n    view_window = tk.Toplevel(window)\n    view_window.title(\"View Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    zoomIn_button = customtkinter.CTkButton(view_window, text=\"Zoom In\",corner_radius=10,  command=zoomIn_action, width=button_width)\n    zoomIn_button.pack(pady=5)\n    zoomOut_button = customtkinter.CTkButton(view_window, text=\"Zoom Out\",corner_radius=10,  command=zoomOut_action, width=button_width)\n    zoomOut_button.pack(pady=5)\n    reset_button = customtkinter.CTkButton(view_window, text=\"Reset\",corner_radius=10, command=reset_action, width=button_width)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1642,7 +2953,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)\n    with open(\"D:/FILE SOCKET PYTHON/data.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Image\"][\"position\"].append(cursor_index)\n    with open(\"D:/FILE SOCKET PYTHON/data.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\ndef insert_image():\n    global mail_entry",
+        "peekOfCode": "def getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"Image\"][\"position\"].append(cursor_index)\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\ndef insert_image():\n    global mail_entry",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1660,7 +2971,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font=font_name)\n        with open(\"D:/FILE SOCKET PYTHON/data.json\", \"r\") as file:\n            data = json.load(file)\n            data[\"Font\"][\"start\"].append(str(start))",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry\n    print(font_name)\n    if mail_entry.tag_ranges(tk.SEL):\n        start, end = mail_entry.tag_ranges(tk.SEL)\n        if \"highlighted\" in mail_entry.tag_names(start):\n            # Remove the \"highlighted\" tag from the previous selection\n            mail_entry.tag_remove(\"highlighted\", start, end)\n        mail_entry.tag_add(\"highlighted\", start, end)\n        mail_entry.tag_configure(\"highlighted\", font = font_name)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1669,7 +2980,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = tk.Button(font_window, text=font_name, width = button_width, command=lambda font=font_name: change_font(font))",
+        "peekOfCode": "def font_action():\n    global mail_entry\n    font_window = tk.Toplevel(window)\n    font_window.title(\"Font Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_buttons = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font_name in font_buttons:\n        font_button = customtkinter.CTkButton(master = font_window, text=font_name, corner_radius=10, width = button_width, command=lambda font=font_name: change_font(font))",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1696,7 +3007,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = tk.Button(style_window, text=style_name, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
+        "peekOfCode": "def text_style_action():\n    global mail_entry\n    style_window = tk.Toplevel(window)\n    style_window.title(\"Style Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    style_buttons = [\"Bold\", \"Italic\", \"Underline\", \"Strikethrough\", \"Superscript\", \"Subscript\", \"Emphasis\", \"Code\"]\n    for style_name in style_buttons:\n        style_button = customtkinter.CTkButton(style_window, text=style_name, corner_radius=10, width = button_width, command=lambda style=style_name: change_style(style))\n        style_button.pack(pady=5)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1705,7 +3016,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string\n            hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))",
+        "peekOfCode": "def text_color_action():\n    global mail_entry\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    print(selected_text)\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1719,20 +3030,11 @@
         "documentation": {}
     },
     {
-        "label": "open_align_window",
-        "kind": 2,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "def open_align_window():\n    align_window = tk.Toplevel(window)\n    align_window.title(\"Align Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(align_window, width=button_width, text=\"Left\", command=lambda: align_action(tk.LEFT))\n    new_button.pack(pady=5)\n    attach_button = tk.Button(align_window, width=button_width, text=\"Center\", command=lambda: align_action(tk.CENTER))\n    attach_button.pack(pady=5)\n    saveAs_button = tk.Button(align_window, width=button_width, text=\"Right\", command=lambda: align_action(tk.RIGHT))",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
         "label": "open_format_window",
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = tk.Button(format_window, text=\"Font\", command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = tk.Button(format_window, text=\"Text Style\", command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = tk.Button(format_window, text=\"Text Color\", command=text_color_action, width=button_width)",
+        "peekOfCode": "def open_format_window():\n    format_window = tk.Toplevel(window)\n    format_window.title(\"Format Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    font_button = customtkinter.CTkButton(format_window, text=\"Font\", corner_radius=10, command=font_action, width=button_width)\n    font_button.pack(pady=5)\n    copy_button = customtkinter.CTkButton(format_window, text=\"Text Style\", corner_radius=10, command=text_style_action, width=button_width)\n    copy_button.pack(pady=5)\n    paste_button = customtkinter.CTkButton(format_window, text=\"Text Color\", corner_radius=10, command=text_color_action, width=button_width)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1741,7 +3043,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".html\", filetypes=[(\"Text files\", \"*.html\")])",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_window\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_window.winfo_exists():\n        file_window.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1750,7 +3052,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".html\", filetypes=[(\"Text files\", \"*.html\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"1.0\", tk.END)\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"0.0\", \"end\")\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1759,7 +3061,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def open_file_window():\n    global file_window\n    file_window = tk.Toplevel(window)\n    file_window.title(\"File Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = tk.Button(file_window, text=\"New\", command=newMessage, width=button_width)\n    new_button.pack(pady=5)\n    attach_button = tk.Button(file_window, text=\"Attach\", command=attach_file, width=button_width)\n    attach_button.pack(pady=5)",
+        "peekOfCode": "def open_file_window():\n    global file_window\n    file_window = tk.Toplevel(window)\n    file_window.title(\"File Options\")\n    # Create buttons in the Edit window with fixed width\n    button_width = 15  # Adjust the width as needed\n    new_button = customtkinter.CTkButton(file_window, text=\"New\",corner_radius=10,  command=newMessage, width=button_width)\n    new_button.pack(pady=5)\n    attach_button = customtkinter.CTkButton(file_window, text=\"Attach\",corner_radius=10,  command=attach_file, width=button_width)\n    attach_button.pack(pady=5)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1768,7 +3070,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def connect_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.settimeout(1000)\n            client.connect(ADDR)\n            print(f\"[CONNECTED] Client connected to server at {IP}:{PORT}\")\n            # Receive and print the server's initial response\n            initial_response = client.recv(1024).decode('utf-8')\n            print(f\"[SERVER] {initial_response}\")",
+        "peekOfCode": "def connect_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"RawContent\"] = mail_entry.get(\"0.0\", \"end\")\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"To\"] = to_entry.get()",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1786,7 +3088,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1795,7 +3097,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1804,7 +3106,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = tk.Button(\n        parent,\n        image=image,\n        borderwidth=0,\n        cursor=\"hand2\",\n        relief=tk.FLAT,\n        command=lambda: on_button_click(button_name),\n        activebackground=\"lightblue\",",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = customtkinter.CTkButton(\n        parent,\n        image=image,\n        text = button_name,\n        text_color=\"black\",\n        corner_radius=7,\n        command=lambda: on_button_click(button_name),\n        fg_color = \"white\",",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1813,7 +3115,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = tk.Button(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        compound=tk.LEFT,\n        borderwidth=0,",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = customtkinter.CTkButton(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        corner_radius=10,\n        command=command,",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1831,7 +3133,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global new_Window\n    new_Window = tk.Toplevel()\n    new_Window.title(\"Write - ThunderOwl\")\n    center_window(new_Window, 950, 600)\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Set up grid weights for resizable behavior\n    new_Window.rowconfigure(0, weight=1)",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global new_Window\n    new_Window = CTkToplevel(window, fg_color=\"white\")\n    new_Window.geometry(\"950x600\")\n    new_Window.title(\"Write - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    # Toolbar frame (top)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1840,34 +3142,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_inbox_sender, btn_send, btn_trash_sender, btn_inbox_receiver, btn_trash_receiver, btn_outbox, btn_trash_local\n    if button_name == \"Sender\":\n        if btn_inbox_sender.winfo_ismapped():\n            btn_inbox_sender.grid_forget()\n            btn_send.grid_forget()\n            btn_trash_sender.grid_forget()\n        else:\n            btn_inbox_sender.grid(row=1, column=0, pady=5)\n            btn_send.grid(row=2, column=0, pady=5)",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "search_bar_focus_in",
-        "kind": 2,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "def search_bar_focus_in(event):\n    search_entry.delete(0, tk.END)\n    search_entry.config(foreground=\"black\")\ndef search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "search_bar_focus_out",
-        "kind": 2,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "def search_bar_focus_out(event):\n    if not search_entry.get():\n        search_entry.insert(0, \"Search...\")\n        search_entry.config(foreground=\"grey\")\ndef perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "perform_search",
-        "kind": 2,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "def perform_search():\n    search_term = search_entry.get()\n    # Add your search functionality here\n    print(f\"Searching for: {search_term}\")\ndef create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    if button_name == \"Sender\":\n        if btn_inbox.winfo_ismapped():\n            btn_inbox.grid_forget()\n            btn_spam.grid_forget()\n            btn_work.grid_forget()\n            btn_important.grid_forget()\n            btn_project.grid_forget()\n            btn_receive_all.grid_forget()",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1876,7 +3151,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def create_second_part():\n    global label_second_part\n    second_part_frame = tk.Frame(window, bg=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"ns\", padx=0, pady=0)\n    image_path = \"D:/FILE SOCKET PYTHON/Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1400, 700)  # Adjust the width and height as needed\n    label_second_part = tk.Label(second_part_frame, bg=\"#F4F4F9\", image=image)\n    label_second_part.image = image  # Keep a reference to the image to prevent it from being garbage collected\n    label_second_part.pack()\ndef create_mail_subframe():",
+        "peekOfCode": "def create_second_part():\n    global label_second_part, second_part_frame\n    second_part_frame = CTkFrame(master=window, border_color=\"#66BF94\", border_width=2, fg_color=\"white\")\n    second_part_frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    image_path = PATH/\"Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1458, 769)  # Adjust the width and height as needed\n    label_second_part = customtkinter.CTkLabel(master = second_part_frame, image=image, text = \"\", anchor = \"s\")\n    label_second_part.pack(padx=2, pady=2)\ndef create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1885,7 +3160,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def create_mail_subframe():\n    global search_entry, btn_inbox_receiver, btn_trash_receiver, btn_inbox_sender, btn_send, btn_trash_sender, btn_outbox, btn_trash_local, btn_sender, btn_receiver, btn_localStorage\n    # Search Bar with rounded corners and border\n    search_entry = ttk.Entry(window, font=(\"Arial\", 12), width=70, style=\"Search.TEntry\")\n    search_entry.grid(row=0, column=1, pady=10, padx=5, sticky=\"n\")\n    search_entry.insert(0, \"Search...\")\n    search_entry.config(foreground=\"grey\")\n    search_entry.bind(\"<FocusIn>\", search_bar_focus_in)\n    search_entry.bind(\"<FocusOut>\", search_bar_focus_out)\n    search_button, _ = create_button_with_image(window, 'D:/FILE SOCKET PYTHON/Icons/search_icon.png', 30, 30, 'Search_icon')",
+        "peekOfCode": "def create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    global second_part_frame\n    second_part_frame.configure(border_color = \"white\", fg_color = \"white\", corner_radius=15)\n    second_subframe = customtkinter.CTkFrame(window, border_width=3, border_color=\"white\", fg_color=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=2)\n    second_subframe.columnconfigure(0, weight=1)  # Part 1\n    second_subframe.columnconfigure(1, weight=20)  # Part 2\n    second_subframe.rowconfigure(0, weight=1)\n    whitesubframe = customtkinter.CTkFrame(second_subframe, fg_color=\"white\", corner_radius=15)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1912,7 +3187,7 @@
         "kind": 2,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = tk.Frame(window, relief=tk.RAISED, bd=2)\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    # Create buttons with images\n    buttons = []\n    btn_mail, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/mail.png', 35, 35, 'Mail')\n    btn_address_book, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/phone-book.png', 35, 35, 'Address_Book')\n    btn_calendar, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/calendar.png', 35, 35, 'Calendar')\n    btn_task, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/list.png', 35, 35, 'Task')\n    btn_chat, _ = create_button_with_image(buttons_frame, 'D:/FILE SOCKET PYTHON/Icons/chat.png', 35, 35, 'Chat')",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = CTkFrame(master = window, border_color=\"white\", border_width=2, fg_color=\"white\")\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    buttons_frame.rowconfigure(0, weight=10)\n    buttons_frame.rowconfigure(1, weight=1)\n    buttons_sub_frame = CTkFrame(master = buttons_frame, border_color=\"white\", border_width=2, fg_color=\"white\")\n    buttons_sub_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    logout_frame = CTkFrame(master = buttons_frame, border_color=\"white\", border_width=2, fg_color=\"white\")\n    logout_frame.grid(row=1, column=0, sticky=\"sew\", padx=0, pady=0)\n    btn_logout, _ = create_button_with_image(logout_frame, PATH/'Icons/settings.png', 30, 30, 'Sign out')",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1921,25 +3196,43 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nPORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nSMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:",
         "detail": "testSendJSON",
         "documentation": {}
     },
     {
-        "label": "PORT",
+        "label": "SMTP_PORT",
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "PORT = 2225\nADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects",
+        "peekOfCode": "SMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)",
         "detail": "testSendJSON",
         "documentation": {}
     },
     {
-        "label": "ADDR",
+        "label": "POP3_PORT",
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "ADDR = (IP, PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None",
+        "peekOfCode": "POP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_SMTP",
+        "kind": 5,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "ADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_POP3",
+        "kind": 5,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "ADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước\ndef disable(frame):",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1948,7 +3241,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước\ndef disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1957,7 +3250,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước\ndef disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1966,7 +3259,16 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nclass FileMail:\n    def __init__(self, file_name, data_file):\n        self.file_name = file_name\n        self.data_file = data_file\nfile_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước\ndef disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "PATH",
+        "kind": 5,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\n# ===============================================================================================\n# Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước\ndef disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server():",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -1975,25 +3277,34 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_inbox_sender=None\nbtn_send=None\nbtn_trash_sender=None\nbtn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
         "detail": "testSendJSON",
         "documentation": {}
     },
     {
-        "label": "btn_inbox_receiver",
+        "label": "btn_sender",
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "btn_inbox_receiver = None\nbtn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
+        "peekOfCode": "btn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []",
         "detail": "testSendJSON",
         "documentation": {}
     },
     {
-        "label": "btn_trash_receiver",
+        "label": "btn_receive_all",
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "btn_trash_receiver = None\nbtn_trash_local=None\nbtn_outbox=None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []",
+        "peekOfCode": "btn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox",
+        "kind": 5,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "btn_inbox = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2002,7 +3313,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2011,7 +3322,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2020,7 +3331,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2029,7 +3340,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2038,7 +3349,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "bcc_entry = None\nmail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2047,7 +3358,16 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "mail_entry = None\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
+        "peekOfCode": "mail_entry = None\nbuttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()",
+        "detail": "testSendJSON",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testSendJSON",
+        "description": "testSendJSON",
+        "peekOfCode": "buttons = []\nimage_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2056,7 +3376,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.config(highlightbackground=\"#86b7fe\", highlightcolor=\"#86b7fe\", highlightthickness=2)\ndef on_entry_leave(event, entry_widget):\n    entry_widget.config(highlightthickness=0)\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
+        "peekOfCode": "image_references = []\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef center_window(window, width, height):\n    screen_width = window.winfo_screenwidth()\n    screen_height = window.winfo_screenheight()\n    x_coordinate = (screen_width - width) // 2\n    y_coordinate = (screen_height - height) // 2",
         "detail": "testSendJSON",
         "documentation": {}
     },
@@ -2092,34 +3412,7 @@
         "kind": 5,
         "importPath": "testSendJSON",
         "description": "testSendJSON",
-        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Thunder-Owl\")\ncenter_window(window, 1400, 700)\nwindow.resizable(False, False)\nlogo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "logo_image",
-        "kind": 5,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "logo_image = PhotoImage(file=\"D:/FILE SOCKET PYTHON/Icons/owl.png\")\n    # Set the window icon (logo)\nwindow.iconphoto(True, logo_image)\ntxt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "txt_edit",
-        "kind": 5,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "txt_edit = tk.Text(window)\ntxt_edit.config(state=tk.DISABLED)  # Make the Text widget initially non-editable\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 20)\ncreate_second_part() # Image\n# Create buttons frame (Part 1)\nbuttons = create_buttons_frame()\nwindow.mainloop()",
-        "detail": "testSendJSON",
-        "documentation": {}
-    },
-    {
-        "label": "buttons",
-        "kind": 5,
-        "importPath": "testSendJSON",
-        "description": "testSendJSON",
-        "peekOfCode": "buttons = create_buttons_frame()\nwindow.mainloop()",
+        "peekOfCode": "window = customtkinter.CTk()\nwindow.title(\"Thunder-Owl\")\nwindow.geometry(\"1400x700\")\nwindow.iconbitmap(PATH/\"Icons/owl_icon.ico\")\nwindow.resizable(False, False)\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 35)\ncreate_second_part() # Image",
         "detail": "testSendJSON",
         "documentation": {}
     }

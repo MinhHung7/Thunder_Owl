@@ -269,12 +269,26 @@ def insert_image():
         
 
 def change_font(font_name):
+
     global mail_entry
     print(font_name)
     if mail_entry.tag_ranges(tk.SEL):
         start, end = mail_entry.tag_ranges(tk.SEL)
+
+        if "highlighted" in mail_entry.tag_names(start):
+            # Remove the "highlighted" tag from the previous selection
+            mail_entry.tag_remove("highlighted", start, end)
+
         mail_entry.tag_add("highlighted", start, end)
         mail_entry.tag_configure("highlighted", font=font_name)
+
+        with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+            data = json.load(file)
+            data["Font"]["start"].append(str(start))
+            data["Font"]["end"].append(str(end))
+            data["Font"]["NameFont"].append(font_name)
+        with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                json.dump(data, file, indent = 2)
 
 def font_action():
     global mail_entry
@@ -377,6 +391,18 @@ def text_color_action():
             # Apply the tag to the selected text
             mail_entry.tag_add("text_color", "sel.first", "sel.last")
 
+            tag_ranges = mail_entry.tag_ranges("text_color")
+            if tag_ranges:
+                start_index, end_index = tag_ranges[0], tag_ranges[1]
+                with open("D:/FILE SOCKET PYTHON/data.json", "r") as file:
+                    data = json.load(file)
+                    data["Color"]["start"].append(str(start_index))
+                    data["Color"]["end"].append(str(end_index))
+                    data["Color"]["colors"].append(str(hex_color))
+                with open("D:/FILE SOCKET PYTHON/data.json", "w") as file:
+                        json.dump(data, file, indent = 2)
+
+
 def align_action(alignment):
     global mail_entry
 
@@ -450,7 +476,7 @@ def close_action():
 
 def saveAs_action():
     # Ask the user for the file location
-    file_path = filedialog.asksaveasfilename(defaultextension=".html", filetypes=[("Text files", "*.html")])
+    file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
     if not file_path:
         return  # User canceled the file dialog
 
@@ -688,7 +714,7 @@ def newMessage():
     from_label.grid(row=0, column=0, pady=5, padx=10, sticky="w")
 
     from_entry = tk.Text(field_frame, wrap="word", width=80, height=1, bd=1, relief="solid")
-    from_entry.grid(row=0, column=1, pady=5, padx=10, sticky="w")
+    from_entry.grid(row=0, column=1, pady=5, padx=15, sticky="w")
 
     from_entry.bind("<FocusIn>", lambda event: on_entry_click(event, from_entry))
     from_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, from_entry))
