@@ -42,8 +42,29 @@ def fixTextForButton(fromUser, date, subject, width):
 
     return finalText 
 # ===============================================================================================
+def resolveFile(data):
+    file_path = filedialog.asksaveasfilename(
+        defaultextension=f".{data["File_content_type"]}",
+        filetypes=[(f"{data["File_content_type"].upper()} files", f"*.{data["File_content_type"]}")],
+        title="Save File As"
+    )
+
+    if file_path:
+        with open(file_path, "wb") as file:
+            file.write(base64.b64decode(data["File_content"]))
+        print(f"File '{file_path}' has been saved.")
+
+# ===============================================================================================
 def resolveMail(user, Mail_box, index):
     global detailMailListFolderFrame, resolveTagName, content_Text
+
+    with open(PATH/"database.json", "r") as file:
+        data = json.load(file)
+        data["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Have_been_read"] = 1
+    
+    with open(PATH/'database.json', 'w') as file:
+        json.dump(data, file, indent=2)
+
     # detailMailListFolderFrame.rowconfigure(0, weight=1)
     detailMailListFolderFrame.rowconfigure(1, weight=1)
     detailMailListFolderFrame.columnconfigure(0, weight=1)
@@ -54,24 +75,30 @@ def resolveMail(user, Mail_box, index):
     content_frame.grid(row=1, column=0, sticky = "nsew")
     file_frame = CTkScrollableFrame(master=detailMailListFolderFrame, fg_color="#3F3F46", height=40, orientation = "horizontal")
     file_frame.grid(row=2, column=0, sticky = "nsew")
+
+    with open(PATH/"database.json", "r") as file:
+        database = json.load(file)
+
+    for file in database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["File_list"]:
+        file_button = CTkButton(file_frame, text = file["File_name"], fg_color="#484F60", font=("Montserra", 14), hover_color="#707A94", cursor = "hand2", text_color="#91F3FD", height = 50, command=lambda data = file: resolveFile(data))
+        file_button.pack(side = tk.LEFT, padx = 5)
     disable(header_frame)
 
     header_frame.rowconfigure(0, weight=1)
     header_frame.rowconfigure(1, weight=1)
     header_frame.rowconfigure(2, weight=1)
     header_frame.rowconfigure(3, weight=1)
-
-    with open(PATH/"database.json", "r") as file:
-        database = json.load(file)
-
-    from_header_label = CTkLabel(master = header_frame, text = ">>> From: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"], font = ("Montserrat", 17))
-    from_header_label.grid(row=0, column=0, padx = 20, pady = 5, sticky = "w")
-    to_header_text = ">>> To: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["To"]
-    length_To_Header = len(database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["To"]) + 3
-    for i in range(125 - length_To_Header):
-        to_header_text += " " 
     
-    to_header_text += database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Date"]
+
+    from_header_text = ">>> From: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]
+    length_To_Header = len(database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]) + 3
+    for i in range(125 - length_To_Header):
+        from_header_text += " " 
+    from_header_text += database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Date"]
+    from_header_label = CTkLabel(master = header_frame, text = from_header_text, font = ("Montserrat", 17))    
+    from_header_label.grid(row=0, column=0, padx = 20, pady = 5, sticky = "w")
+    
+    to_header_text = ">>> To: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["To"]
     to_header_label = CTkLabel(master = header_frame, text = to_header_text, font = ("Montserrat", 17))
     to_header_label.grid(row=1, column=0, padx = 20, pady = 4, sticky = "w")
     
@@ -122,16 +149,22 @@ def resolveMail(user, Mail_box, index):
     for index, items in enumerate(target_mail["Image"]["position"]):
         position = items
         data = base64.b64decode(target_mail["Image"]["data"][index])
+        height = target_mail["Image"]["height"][index]
+        width = target_mail["Image"]["width"][index]
 
-        with open(PATH/"newImage.gif", "wb") as file:
-            file.write(data)
+        resolve_image(data, position, height, width)
 
-        resolve_image(data, position)
+    
   
 # ===============================================================================================
-def resolve_image(image_data, position):
+def resolve_image(image_data, position, height, width):
     global content_Text, image_references
     img = Image.open(io.BytesIO(image_data))
+    
+    max_width = 300
+    scale_factor = max_width / width
+    new_size = (int(width * scale_factor), int(height * scale_factor))
+    img = img.resize(new_size, Image.ANTIALIAS)
     img = ImageTk.PhotoImage(img)
 
     # Insert an invisible image at the specified position
@@ -181,8 +214,6 @@ def getFolderMessage(user, folder):
 
     with open(PATH/"Database.json", "r") as file:
         database = json.load(file)
-    
-
 
     for index, mail in enumerate(database["User_list"][user]["Mail_box"][folder]["Email_list"]):
         textButton = fixTextForButton(mail["From"], mail["Date"], mail["Subject"], 40)
@@ -190,6 +221,8 @@ def getFolderMessage(user, folder):
         
         if mail["Have_been_read"] == 0:
             mailFolderButton.configure(text_color = "white", font = ("Montserra",14, "bold"))
+        else:
+            mailFolderButton.configure(fg_color = "#282C34")
         mailFolderButton.pack(pady = 2)
 
         disable(mailFolderButton)
@@ -201,7 +234,8 @@ def disable(frame):
     frame.configure(height=frame["height"],width=frame["width"])
     frame.grid_propagate(0)
 # ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================
-def send_data_to_server():
+def send_data_to_server(user):
+
     with open(PATH/'Temp_email.json', 'r') as f:
         data = json.load(f)
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
@@ -221,7 +255,7 @@ def send_data_to_server():
             print(response)
 
             # Send RCPT TO command
-            client.sendall(f'RCPT TO: <{data["To"]}>\r\n'.encode())
+            client.sendall(f'RCPT TO: <{user}>\r\n'.encode())
             response = client.recv(1024).decode()
             print(response)
 
@@ -254,13 +288,12 @@ def send_data_to_server():
             print("Send successfully")
         except Exception as e:
             print(f"Error: {e}")
-    # Đưa file json tạm về trạng thái ban đầu
-    with open(PATH/'Temp_email.json', 'w') as f:
-        json.dump(data_copy, f, indent= 2)
     
 # ========================= Phần nhận =========================
 def is_valid_string(input_string, list_of_keywords):
+    input_string = input_string.lower()
     for keyword in list_of_keywords:
+        keyword = keyword.lower()
         pattern = re.compile(r'\b' + re.escape(keyword) + r'\b')
         if pattern.search(input_string):
             return True  
@@ -622,7 +655,7 @@ def insert_image():
         img_height = img.height()
 
         # Define the maximum width for the image
-        max_width = 100  # Change this value to your desired maximum width
+        max_width = 300  # Change this value to your desired maximum width
 
         # Calculate the scale factor based on the maximum width
         scale_factor = max_width / img_width
@@ -822,11 +855,12 @@ def json_fully_complete_now_send_the_json_file_to_server():
 
 
     with open(PATH/"Temp_email.json", "r") as file:
-        data = json.load(file)
-        data["To"] = to_entry.get()
+        data = json.load(file)   
         data["From"] = from_entry.get()
         data["Subject"] = subject_entry.get()
         data["Date"] = get_date()
+
+        data["To"] = to_entry.get()
 
         cc_list = cc_entry.get().split()
         for name in cc_list:
@@ -849,13 +883,26 @@ def json_fully_complete_now_send_the_json_file_to_server():
                 }
                 data["File_list"].append(file_block) 
 
-    with open(PATH/"Temp_email.json", "w") as file:
-            json.dump(data, file, indent = 2)
+    with open(PATH/'Temp_email.json', 'w') as file:
+        json.dump(data, file, indent=2)
 
-    with open(PATH/"Temp_email.json", "r") as file:
-        data = json.load(file)
-        send_data_to_server()
+    to_user_list = data["To"].split()
+    for user in to_user_list:
+        send_data_to_server(user)
+    
+    for user in data["Cc"]:
+        send_data_to_server(user)
 
+    bcc_list = bcc_entry.get().split()
+    data["Cc"].clear()
+    with open(PATH/'Temp_email.json', 'w') as file:
+        json.dump(data, file, indent=2)
+    for user in bcc_list:
+        send_data_to_server(user)
+
+    # Đưa file json tạm về trạng thái ban đầu
+    with open(PATH/'Temp_email.json', 'w') as f:
+        json.dump(data_copy, f, indent= 2)
 
 def button_toolbar_clicked(button_name):
     global buttons
@@ -875,7 +922,6 @@ def button_toolbar_clicked(button_name):
     if(button_name == "Format"):
         buttons[5].bind("<Button-1>", open_format_window)
     if(button_name == "Send"):
-        new_Window.destroy()
         json_fully_complete_now_send_the_json_file_to_server()
 
 def button_clicked(button_name):
@@ -884,7 +930,7 @@ def button_clicked(button_name):
 def on_button_click(button_name):
     print(f"{button_name} clicked!")
 
-    label_second_part.pack_forget()
+    label_second_part.pack_forget()   
     if button_name=="Mail":
         create_mail_subframe()
     elif button_name=="Sign out":
@@ -910,12 +956,11 @@ def create_button_with_image(parent, file_path, width, height, button_name):
         button.configure(font = ("Arial", 15))
     return button, image
 
-def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):
+def create_button_with_image_senDown(parent, file_path, width, height, button_name, user, command=None):
     image = load_and_resize_image(file_path, width, height)
-    button_text = text if text is not None else button_name
     button = customtkinter.CTkButton(
         parent,
-        text=button_text,
+        text=button_name,
         image=image,
         cursor="hand2",
         corner_radius=10,
@@ -930,7 +975,18 @@ def create_button_with_image_senDown(parent, file_path, width, height, button_na
         hover_color = "#484F60",
         text_color = "#979EAF"
     )
+        
+    if(button_name!="hungm0434@gmail.com" and button_name != "hahuy@gmail.com" and button_name != "hoangkhang@gmail.com" and button_name != "Download"):
+        with open(PATH/"database.json", "r") as file:
+            database = json.load(file)
+        
+        unreadMail = 0
+        for data in database["User_list"][user]["Mail_box"][button_name]["Email_list"]:
+            if data["Have_been_read"] == 0:
+                unreadMail += 1
 
+        if unreadMail != 0:
+            button.configure(text = button_name + f'({unreadMail})')
     return button
 
 def attach_file():
@@ -954,6 +1010,10 @@ def newMessage():
     global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry
     global buttons
     global new_Window
+    global file_mail_list
+
+    file_mail_list = []
+
     new_Window = CTkToplevel(window)
     new_Window.geometry("950x600")
     new_Window.title("Write - ThunderOwl")
@@ -1041,7 +1101,7 @@ def newMessage():
 
 def toggle_additional_buttons(button_name):
     global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2
-    if button_name == "Sender":
+    if button_name == "hungm0434@gmail.com":
         if btn_inbox.winfo_ismapped():
             btn_inbox.grid_forget()
             btn_spam.grid_forget()
@@ -1057,7 +1117,7 @@ def toggle_additional_buttons(button_name):
             btn_important.grid(row=5, column=0, pady=5)
             btn_project.grid(row=6, column=0, pady=5)
 
-    elif button_name == "Receiver1":
+    elif button_name == "hahuy@gmail.com":
         if btn_inbox_receiver1.winfo_ismapped():
             btn_inbox_receiver1.grid_forget()
             btn_spam_receiver1.grid_forget()
@@ -1073,7 +1133,7 @@ def toggle_additional_buttons(button_name):
             btn_work_receiver1.grid(row=11, column=0, pady=5)
             btn_important_receiver1.grid(row=12, column=0, pady=5)
             btn_project_receiver1.grid(row=13, column=0, pady=5)
-    elif button_name == "Receiver2":
+    elif button_name == "hoangkhang@gmail.com":
         if btn_inbox_receiver2.winfo_ismapped():
             btn_inbox_receiver2.grid_forget()
             btn_spam_receiver2.grid_forget()
@@ -1145,59 +1205,59 @@ def create_mail_subframe():
     button_inside_whitesubframe.grid(row=0, column=0, sticky="nse", padx=36, pady=25)
 
 
-    btn_sender = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hungm0434@gmail.com', lambda button_name="Sender": toggle_additional_buttons(button_name))
+    btn_sender = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hungm0434@gmail.com', 'hungm0434@gmail.com', lambda user = "hungm0434@gmail.com": toggle_additional_buttons(user))
     btn_sender.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
     btn_sender.grid(row=0, column=0, sticky="nsew", padx = 5, pady=5)
 
-    btn_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hahuy@gmail.com', lambda button_name="Receiver1": toggle_additional_buttons(button_name))
+    btn_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hahuy@gmail.com','hungm0434@gmail.com', lambda user = "hahuy@gmail.com": toggle_additional_buttons(user))
     btn_receiver1.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
     btn_receiver1.grid(row=7, column=0, sticky="nsew", padx = 5, pady=5)
 
-    btn_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hoangkhang@gmail.com', lambda button_name="Receiver2": toggle_additional_buttons(button_name))
+    btn_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hoangkhang@gmail.com', 'hungm0434@gmail.com',lambda user = "hoangkhang@gmail.com": toggle_additional_buttons(user))
     btn_receiver2.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
     btn_receiver2.grid(row=14, column=0, sticky="nsew", padx = 5, pady=5)
 
 
 
     # Create buttons 4 and 5 with icons but initially hide them
-    btn_receive_all = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download', lambda user="hungm0434@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
+    btn_receive_all = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download', "hungm0434@gmail.com", lambda user="hungm0434@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all.pack_forget()
-    btn_inbox = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox', lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Inbox'))
+    btn_inbox = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hungm0434@gmail.com", lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox.pack_forget()
-    btn_project = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project',lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Project'))
+    btn_project = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project',"hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Project'))
     btn_project.pack_forget()
-    btn_work = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Work'))
+    btn_work = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Work'))
     btn_work.pack_forget()
-    btn_important = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Important'))
+    btn_important = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', "hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Important'))
     btn_important.pack_forget()
-    btn_spam = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Spam'))
+    btn_spam = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', "hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam.pack_forget()
 
     
-    btn_receive_all1 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download', lambda user="hahuy@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
+    btn_receive_all1 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download',"hahuy@gmail.com", lambda user="hahuy@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all1.pack_forget()
-    btn_inbox_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox', lambda user="hahuy@gmail.com": getFolderMessage(user, 'Inbox'))
+    btn_inbox_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox_receiver1.pack_forget()
-    btn_work_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work', lambda user="hahuy@gmail.com": getFolderMessage(user, 'Work'))
+    btn_work_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Work'))
     btn_work_receiver1.pack_forget()
-    btn_spam_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', lambda user="hahuy@gmail.com": getFolderMessage(user, 'Spam'))
+    btn_spam_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam_receiver1.pack_forget()
-    btn_important_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', lambda user="hahuy@gmail.com": getFolderMessage(user, 'Important'))
+    btn_important_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Important'))
     btn_important_receiver1.pack_forget()
-    btn_project_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', lambda user="hahuy@gmail.com": getFolderMessage(user, 'Project'))
+    btn_project_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', "hahuy@gmail.com",lambda user="hahuy@gmail.com": getFolderMessage(user, 'Project'))
     btn_project_receiver1.pack_forget()
 
-    btn_receive_all2 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download', lambda user="hoangkhang@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
+    btn_receive_all2 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all2.pack_forget()
-    btn_inbox_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox', lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Inbox'))
+    btn_inbox_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox_receiver2.pack_forget()
-    btn_work_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work', lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Work'))
+    btn_work_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Work'))
     btn_work_receiver2.pack_forget()
-    btn_spam_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Spam'))
+    btn_spam_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam_receiver2.pack_forget()
-    btn_important_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Important'))
+    btn_important_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Important'))
     btn_important_receiver2.pack_forget()
-    btn_project_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Project'))
+    btn_project_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Project'))
     btn_project_receiver2.pack_forget()
 
 

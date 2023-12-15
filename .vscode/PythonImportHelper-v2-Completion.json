@@ -171,22 +171,6 @@
         "documentation": {}
     },
     {
-        "label": "messagebox",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "simpledialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
         "label": "*",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -439,6 +423,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "isExtraImport": true,
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
         "label": "re",
         "kind": 6,
         "isExtraImport": true,
@@ -586,7 +578,16 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject\n    return finalText \n# ===============================================================================================\ndef resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)",
+        "peekOfCode": "def fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject\n    return finalText \n# ===============================================================================================\ndef resolveFile(data):\n    file_path = filedialog.asksaveasfilename(\n        defaultextension=f\".{data[\"File_content_type\"]}\",",
+        "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "resolveFile",
+        "kind": 2,
+        "importPath": "testFolder.testCode",
+        "description": "testFolder.testCode",
+        "peekOfCode": "def resolveFile(data):\n    file_path = filedialog.asksaveasfilename(\n        defaultextension=f\".{data[\"File_content_type\"]}\",\n        filetypes=[(f\"{data[\"File_content_type\"].upper()} files\", f\"*.{data[\"File_content_type\"]}\")],\n        title=\"Save File As\"\n    )\n    if file_path:\n        with open(file_path, \"wb\") as file:\n            file.write(base64.b64decode(data[\"File_content\"]))\n        print(f\"File '{file_path}' has been saved.\")",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -595,7 +596,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)\n    detailMailListFolderFrame.rowconfigure(1, weight=1)\n    detailMailListFolderFrame.columnconfigure(0, weight=1)\n    header_frame = CTkFrame(master=detailMailListFolderFrame, fg_color=\"#27272A\", border_width=3, border_color=\"#323742\", height=130)\n    header_frame.grid(row=0, column=0, sticky = \"nsew\")\n    content_frame = CTkFrame(master=detailMailListFolderFrame, fg_color=\"white\", border_width=3)\n    content_frame.grid(row=1, column=0, sticky = \"nsew\")\n    file_frame = CTkScrollableFrame(master=detailMailListFolderFrame, fg_color=\"#3F3F46\", height=40, orientation = \"horizontal\")",
+        "peekOfCode": "def resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    with open(PATH/\"database.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"User_list\"][user][\"Mail_box\"][Mail_box][\"Email_list\"][index][\"Have_been_read\"] = 1\n    with open(PATH/'database.json', 'w') as file:\n        json.dump(data, file, indent=2)\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)\n    detailMailListFolderFrame.rowconfigure(1, weight=1)\n    detailMailListFolderFrame.columnconfigure(0, weight=1)",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -604,7 +605,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def resolve_image(image_data, position):\n    global content_Text, image_references\n    img = Image.open(io.BytesIO(image_data))\n    img = ImageTk.PhotoImage(img)\n    # Insert an invisible image at the specified position\n    content_Text.image_create(position, image=img)\n    image_references.append(img)\n# ===============================================================================================\ndef change_style_resolve(start, end, mode):\n    global resolveTagName, content_Text",
+        "peekOfCode": "def resolve_image(image_data, position, height, width):\n    global content_Text, image_references\n    img = Image.open(io.BytesIO(image_data))\n    max_width = 300\n    scale_factor = max_width / width\n    new_size = (int(width * scale_factor), int(height * scale_factor))\n    img = img.resize(new_size, Image.ANTIALIAS)\n    img = ImageTk.PhotoImage(img)\n    # Insert an invisible image at the specified position\n    content_Text.image_create(position, image=img)",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -649,7 +650,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)",
+        "peekOfCode": "def disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server(user):\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -658,7 +659,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def send_data_to_server():\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)\n            response = client.recv(1024).decode()\n            print(response)\n            # Send EHLO command\n            client.sendall(b'EHLO test mail server\\n')",
+        "peekOfCode": "def send_data_to_server(user):\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)\n            response = client.recv(1024).decode()\n            print(response)\n            # Send EHLO command\n            client.sendall(b'EHLO test mail server\\n')",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -667,7 +668,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def is_valid_string(input_string, list_of_keywords):\n    for keyword in list_of_keywords:\n        pattern = re.compile(r'\\b' + re.escape(keyword) + r'\\b')\n        if pattern.search(input_string):\n            return True  \n    return False \n# ========================== Nhận data ==============================\ndef recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''",
+        "peekOfCode": "def is_valid_string(input_string, list_of_keywords):\n    input_string = input_string.lower()\n    for keyword in list_of_keywords:\n        keyword = keyword.lower()\n        pattern = re.compile(r'\\b' + re.escape(keyword) + r'\\b')\n        if pattern.search(input_string):\n            return True  \n    return False \n# ========================== Nhận data ==============================\ndef recvall(sock):",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1000,7 +1001,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"RawContent\"] = mail_entry.get(\"0.0\", \"end\")\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"To\"] = to_entry.get()",
+        "peekOfCode": "def json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"RawContent\"] = mail_entry.get(\"0.0\", \"end\")\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)   \n        data[\"From\"] = from_entry.get()",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1018,7 +1019,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()   \n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1027,7 +1028,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()\n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()   \n    if button_name==\"Mail\":\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":\n        create_calendar_subframe()\ndef create_button_with_image(parent, file_path, width, height, button_name):",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1045,7 +1046,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):\n    image = load_and_resize_image(file_path, width, height)\n    button_text = text if text is not None else button_name\n    button = customtkinter.CTkButton(\n        parent,\n        text=button_text,\n        image=image,\n        cursor=\"hand2\",\n        corner_radius=10,\n        command=command,",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, user, command=None):\n    image = load_and_resize_image(file_path, width, height)\n    button = customtkinter.CTkButton(\n        parent,\n        text=button_name,\n        image=image,\n        cursor=\"hand2\",\n        corner_radius=10,\n        command=command,\n        anchor=\"w\",",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1063,7 +1064,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global buttons\n    global new_Window\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"950x600\")\n    new_Window.title(\"Write - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")\n    new_Window.resizable(False, False)\n    new_Window.transient(window)",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global buttons\n    global new_Window\n    global file_mail_list\n    file_mail_list = []\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"950x600\")\n    new_Window.title(\"Write - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1072,7 +1073,7 @@
         "kind": 2,
         "importPath": "testFolder.testCode",
         "description": "testFolder.testCode",
-        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    if button_name == \"Sender\":\n        if btn_inbox.winfo_ismapped():\n            btn_inbox.grid_forget()\n            btn_spam.grid_forget()\n            btn_work.grid_forget()\n            btn_important.grid_forget()\n            btn_project.grid_forget()\n            btn_receive_all.grid_forget()",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    if button_name == \"hungm0434@gmail.com\":\n        if btn_inbox.winfo_ismapped():\n            btn_inbox.grid_forget()\n            btn_spam.grid_forget()\n            btn_work.grid_forget()\n            btn_important.grid_forget()\n            btn_project.grid_forget()\n            btn_receive_all.grid_forget()",
         "detail": "testFolder.testCode",
         "documentation": {}
     },
@@ -1437,11 +1438,29 @@
         "documentation": {}
     },
     {
-        "label": "MailApp",
-        "kind": 6,
+        "label": "root",
+        "kind": 5,
         "importPath": "Custom",
         "description": "Custom",
-        "peekOfCode": "class MailApp:\n    def __init__(self, master):\n        self.master = master\n        self.master.title(\"Mail App\")\n        # Initialize some sample data\n        self.emails = [\n            {\"sender\": \"john.doe@example.com\", \"subject\": \"Meeting Tomorrow\", \"read\": False},\n            {\"sender\": \"jane.smith@example.com\", \"subject\": \"Vacation Plans\", \"read\": True},\n            # Add more sample emails as needed\n        ]",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Scrollable Frame Example\")\n# Create a frame to contain the scrollable frame\ndetailMailListFolderFrame = tk.Frame(root)\ndetailMailListFolderFrame.pack(fill=tk.BOTH, expand=True)\n# Create the CtkScrollableFrame\nfile_frame = CTkScrollableFrame(\n    master=detailMailListFolderFrame,\n    fg_color=\"#3F3F46\",\n    height=40,",
+        "detail": "Custom",
+        "documentation": {}
+    },
+    {
+        "label": "detailMailListFolderFrame",
+        "kind": 5,
+        "importPath": "Custom",
+        "description": "Custom",
+        "peekOfCode": "detailMailListFolderFrame = tk.Frame(root)\ndetailMailListFolderFrame.pack(fill=tk.BOTH, expand=True)\n# Create the CtkScrollableFrame\nfile_frame = CTkScrollableFrame(\n    master=detailMailListFolderFrame,\n    fg_color=\"#3F3F46\",\n    height=40,\n    orientation=\"horizontal\"\n)\n# Add widgets to the scrollable frame",
+        "detail": "Custom",
+        "documentation": {}
+    },
+    {
+        "label": "file_frame",
+        "kind": 5,
+        "importPath": "Custom",
+        "description": "Custom",
+        "peekOfCode": "file_frame = CTkScrollableFrame(\n    master=detailMailListFolderFrame,\n    fg_color=\"#3F3F46\",\n    height=40,\n    orientation=\"horizontal\"\n)\n# Add widgets to the scrollable frame\nfor i in range(20):\n    label = tk.Label(file_frame, text=f\"Label {i}\")\n    label.pack(side=tk.LEFT, padx=5)",
         "detail": "Custom",
         "documentation": {}
     },
