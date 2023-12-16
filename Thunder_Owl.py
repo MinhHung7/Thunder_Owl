@@ -1,7 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog, simpledialog
-from PIL import Image
+from PIL import Image, ImageTk
+import io
 from tkcalendar import Calendar
+import threading
+import time
 import os
 from tkinter.colorchooser import askcolor
 import socket
@@ -11,6 +14,7 @@ from pathlib import Path
 import customtkinter
 from customtkinter import *
 import re
+from datetime import datetime
 
 IP = socket.gethostbyname(socket.gethostname())
 SMTP_PORT = 2225
@@ -24,13 +28,230 @@ PATH = CRIPT_LOCATION = Path(__file__).absolute().parent
 
 with open(PATH/'Temp_email.json', 'r') as file:
     data_copy = json.load(file)
+
+def dowload_email_every_1_minute_thread_function():
+    while (True):
+        time.sleep(10)
+        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)
+        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)
+        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hungm0434@gmail.com', 123)
+    
+
+# ===============================================================================================
+def get_date():
+    current_date = datetime.now()
+    formatted_date = current_date.strftime("%a, %d %b %Y %H:%M:%S")
+    return formatted_date
+# ===============================================================================================
+def fixTextForButton(fromUser, date, subject, width):
+    finalText = fromUser
+    for i in range(width - 20 - len(fromUser)):
+        finalText += " "
+    finalText = finalText + date + "\n" + "Subject: " + subject
+
+    return finalText 
+# ===============================================================================================
+def resolveFile(data):
+    file_path = filedialog.asksaveasfilename(
+        defaultextension=f".{data["File_content_type"]}",
+        filetypes=[(f"{data["File_content_type"].upper()} files", f"*.{data["File_content_type"]}")],
+        title="Save File As"
+    )
+
+    if file_path:
+        with open(file_path, "wb") as file:
+            file.write(base64.b64decode(data["File_content"]))
+        print(f"File '{file_path}' has been saved.")
+
+# ===============================================================================================
+def resolveMail(user, Mail_box, index):
+    global detailMailListFolderFrame, resolveTagName, content_Text
+
+    with open(PATH/"database.json", "r") as file:
+        data = json.load(file)
+        data["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Have_been_read"] = 1
+    
+    with open(PATH/'database.json', 'w') as file:
+        json.dump(data, file, indent=2)
+
+    # detailMailListFolderFrame.rowconfigure(0, weight=1)
+    detailMailListFolderFrame.rowconfigure(1, weight=1)
+    detailMailListFolderFrame.columnconfigure(0, weight=1)
+
+    header_frame = CTkFrame(master=detailMailListFolderFrame, fg_color="#27272A", border_width=3, border_color="#323742", height=130)
+    header_frame.grid(row=0, column=0, sticky = "nsew")
+    content_frame = CTkFrame(master=detailMailListFolderFrame, fg_color="white", border_width=3)
+    content_frame.grid(row=1, column=0, sticky = "nsew")
+    file_frame = CTkScrollableFrame(master=detailMailListFolderFrame, fg_color="#3F3F46", height=40, orientation = "horizontal")
+    file_frame.grid(row=2, column=0, sticky = "nsew")
+
+    with open(PATH/"database.json", "r") as file:
+        database = json.load(file)
+
+    for file in database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["File_list"]:
+        file_button = CTkButton(file_frame, text = file["File_name"], fg_color="#484F60", font=("Montserra", 14), hover_color="#707A94", cursor = "hand2", text_color="#91F3FD", height = 50, command=lambda data = file: resolveFile(data))
+        file_button.pack(side = tk.LEFT, padx = 5)
+    disable(header_frame)
+
+    header_frame.rowconfigure(0, weight=1)
+    header_frame.rowconfigure(1, weight=1)
+    header_frame.rowconfigure(2, weight=1)
+    header_frame.rowconfigure(3, weight=1)
+    
+
+    from_header_text = ">>> From: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]
+    length_To_Header = len(database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]) + 3
+    for i in range(125 - length_To_Header):
+        from_header_text += " " 
+    from_header_text += database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Date"]
+    from_header_label = CTkLabel(master = header_frame, text = from_header_text, font = ("Montserrat", 17))    
+    from_header_label.grid(row=0, column=0, padx = 20, pady = 5, sticky = "w")
+    
+    to_header_text = ">>> To: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["To"]
+    to_header_label = CTkLabel(master = header_frame, text = to_header_text, font = ("Montserrat", 17))
+    to_header_label.grid(row=1, column=0, padx = 20, pady = 4, sticky = "w")
+    
+    text_cc = ">>> Cc: "
+    if not database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Cc"]:
+        text_cc += "None"
+    
+    for user_cc in database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Cc"]:
+        text_cc = text_cc + " " + user_cc
+
+    cc_header_label = CTkLabel(master = header_frame, text =  text_cc, font = ("Montserrat", 17))
+    cc_header_label.grid(row=2, column=0, padx = 20, pady = 4, sticky = "w")
+    
+    subject_header_label = CTkLabel(master = header_frame, text = ">>> Subject: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Subject"], font = ("Montserrat", 17))
+    subject_header_label.grid(row=3, column=0, padx = 20, pady = 10, sticky = "w")
+
+    content_frame.rowconfigure(0, weight=1)
+    content_frame.columnconfigure(0, weight=1)
+    content_Text = tk.Text(content_frame, bd=1, relief = "solid", borderwidth=2, font = ("Calibri", 12), background="#282C34", foreground="white")
+    content_Text.grid(row=0, column=0, sticky="nsew", padx=3, pady=3)
+
+#================================================================================================
+    target_mail = database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Main_content"]
+    content_Text.insert(tk.END, target_mail["RawContent"])
+
+    for key in target_mail["Style"]:
+        mode = key
+        for index, items in enumerate(target_mail["Style"][key]["start"]):
+            start_position = items
+            end_position = target_mail["Style"][key]["end"][index]
+
+            change_style_resolve(start_position, end_position, mode)
+
+    for index, items in enumerate(target_mail["Font"]["start"]):
+        start_position = items
+        end_position = target_mail["Font"]["end"][index]
+        mode = target_mail["Font"]["NameFont"][index]
+
+        change_font_resolve(start_position, end_position, mode)
+
+    for index, items in enumerate(target_mail["Color"]["start"]):
+        start_position = items
+        end_position = target_mail["Color"]["end"][index]
+        mode = target_mail["Color"]["colors"][index]
+
+        change_color_resolve(start_position, end_position, mode)
+
+    for index, items in enumerate(target_mail["Image"]["position"]):
+        position = items
+        data = base64.b64decode(target_mail["Image"]["data"][index])
+        height = target_mail["Image"]["height"][index]
+        width = target_mail["Image"]["width"][index]
+
+        resolve_image(data, position, height, width)
+
+    
+  
+# ===============================================================================================
+def resolve_image(image_data, position, height, width):
+    global content_Text, image_references
+    img = Image.open(io.BytesIO(image_data))
+    
+    max_width = 300
+    scale_factor = max_width / width
+    new_size = (int(width * scale_factor), int(height * scale_factor))
+    img = img.resize(new_size, Image.ANTIALIAS)
+    img = ImageTk.PhotoImage(img)
+
+    # Insert an invisible image at the specified position
+    content_Text.image_create(position, image=img)
+    image_references.append(img)
+# ===============================================================================================
+def change_style_resolve(start, end, mode):
+    global resolveTagName, content_Text
+    content_Text.tag_configure(resolveTagName, **tag_styles[mode])
+    content_Text.tag_add(resolveTagName, start, end)
+    resolveTagName = resolveTagName + 1
+
+def change_font_resolve(start, end, mode):
+    global resolveTagName, content_Text
+    content_Text.tag_configure(resolveTagName, font = mode)
+    content_Text.tag_add(resolveTagName, start, end)
+    resolveTagName = resolveTagName + 1
+
+def change_color_resolve(start, end, color):
+    global resolveTagName, content_Text
+    content_Text.tag_configure(resolveTagName, foreground = color)
+    content_Text.tag_add(resolveTagName, start, end)
+    resolveTagName = resolveTagName + 1
+
+
+# ===============================================================================================
+def getFolderMessage(user, folder):
+    global detailMailListFolderFrame
+    new_Window = CTkToplevel(window)
+    new_Window.geometry("1400x700")
+    new_Window.title(f"{folder} - ThunderOwl")
+    new_Window.iconbitmap(PATH/"Icons/owl_icon.ico")
+    new_Window.resizable(False, False)
+
+    new_Window.transient(window)
+
+    new_Window.rowconfigure(0, weight=1)
+    new_Window.columnconfigure(0, weight=1)
+    new_Window.columnconfigure(1, weight=5)
+
+    mailListFolderFrame = CTkScrollableFrame(master = new_Window, corner_radius=10, fg_color="#18181B",scrollbar_button_color = "#323742", scrollbar_button_hover_color="#323742", border_width=3, border_color="#323742")
+    mailListFolderFrame.grid(row = 0, column = 0, sticky = "nsew")
+    #disable(mailListFolderFrame)
+    detailMailListFolderFrame = CTkFrame(master = new_Window, fg_color="#18181B", corner_radius=10, border_width=3, border_color="#323742")
+    detailMailListFolderFrame.grid(row = 0, column = 1, sticky = "nsew")
+    disable(detailMailListFolderFrame)
+
+    with open(PATH/"Database.json", "r") as file:
+        database = json.load(file)
+
+    if len(database["User_list"][user]["Mail_box"][folder]["Email_list"]) == 0:
+        image_path = PATH/"Icons/letter.png"  # Replace with the path to your image
+        image = load_and_resize_image(image_path, 1100, 693)  # Adjust the width and height as needed
+
+        label_second_part = customtkinter.CTkLabel(master = detailMailListFolderFrame, image=image, text = "", anchor = "s")
+        label_second_part.pack(padx=3, pady=3)
+    
+    for index, mail in enumerate(database["User_list"][user]["Mail_box"][folder]["Email_list"]):
+        textButton = fixTextForButton(mail["From"], mail["Date"], mail["Subject"], 40)
+        mailFolderButton = CTkButton(mailListFolderFrame, height = 40, width = 290, text = textButton, fg_color="#323742", font=("Montserra", 14), hover_color="#1A3145", command=lambda user=user, mail_box = folder, index = index: resolveMail(user, mail_box, index))
+        
+        if mail["Have_been_read"] == 0:
+            mailFolderButton.configure(text_color = "white", font = ("Montserra",14, "bold"))
+        else:
+            mailFolderButton.configure(fg_color = "#282C34")
+        mailFolderButton.pack(pady = 2)
+
+        disable(mailFolderButton)
+
+
 # ===============================================================================================
 # Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước
 def disable(frame):
     frame.configure(height=frame["height"],width=frame["width"])
     frame.grid_propagate(0)
 # ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================
-def send_data_to_server():
+def send_data_to_server(user):
+
     with open(PATH/'Temp_email.json', 'r') as f:
         data = json.load(f)
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
@@ -50,7 +271,7 @@ def send_data_to_server():
             print(response)
 
             # Send RCPT TO command
-            client.sendall(f'RCPT TO: <{data["To"]}>\r\n'.encode())
+            client.sendall(f'RCPT TO: <{user}>\r\n'.encode())
             response = client.recv(1024).decode()
             print(response)
 
@@ -83,13 +304,12 @@ def send_data_to_server():
             print("Send successfully")
         except Exception as e:
             print(f"Error: {e}")
-    # Đưa file json tạm về trạng thái ban đầu
-    with open(PATH/'Temp_email.json', 'w') as f:
-        json.dump(data_copy, f, indent= 2)
     
 # ========================= Phần nhận =========================
 def is_valid_string(input_string, list_of_keywords):
+    input_string = input_string.lower()
     for keyword in list_of_keywords:
+        keyword = keyword.lower()
         pattern = re.compile(r'\b' + re.escape(keyword) + r'\b')
         if pattern.search(input_string):
             return True  
@@ -266,6 +486,7 @@ file_mail_list = []  # List to store FileMail objects
 btn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None
 btn_receive_all = btn_receive_all1 = btn_receive_all2 = None
 btn_inbox = None
+detailMailListFolderFrame = None
 
 to_entry = None
 from_entry = None
@@ -278,6 +499,10 @@ buttons = []
 
 image_references = []
 
+tagName = 0
+resolveTagName = 0
+content_Text = None
+
 
 def on_entry_click(event, entry_widget):
     entry_widget.configure(border_color = "#84EFB9")
@@ -285,14 +510,6 @@ def on_entry_click(event, entry_widget):
 def on_entry_leave(event, entry_widget):
     entry_widget.configure(border_color = "gray")
 
-def center_window(window, width, height):
-    screen_width = window.winfo_screenwidth()
-    screen_height = window.winfo_screenheight()
-
-    x_coordinate = (screen_width - width) // 2
-    y_coordinate = (screen_height - height) // 2
-
-    window.geometry(f"{width}x{height}+{x_coordinate}+{y_coordinate}")
 
 def load_and_resize_image(file_path, width, height):
     original_image = Image.open(file_path)
@@ -305,28 +522,33 @@ def remove_file_mail(index):
         print(f"Removed file: {removed_file_mail.file_name}")
 
 def remove_file_window():
-    remove_window = tk.Toplevel(window)
-    remove_window.title("Remove File")
-    center_window(remove_window, 500, 400)
+    
+    global new_Window, file_mail_list
+    remove_Window = CTkToplevel(new_Window)
+    remove_Window.geometry("300x350")
+    remove_Window.title("Remove - ThunderOwl")
+    remove_Window.resizable(False, False)
+
+    remove_Window.transient(new_Window)
 
     # Create a label to display file list
-    label = tk.Label(remove_window, text="File Mail List:")
-    label.pack(pady=10)
+    label = CTkLabel(remove_Window, text="File Mail List:")
+    label.pack(pady=5)
 
     # Create a listbox to show files
-    listbox = tk.Listbox(remove_window, selectmode=tk.SINGLE)
+    listbox = tk.Listbox(remove_Window, selectmode=tk.SINGLE)
     for i, file_mail in enumerate(file_mail_list):
         listbox.insert(tk.END, f"{i}: {file_mail.file_name}")
     listbox.pack(pady=10)
 
     # Create an entry for the user to input the index
-    index_entry = tk.Entry(remove_window, width=10)
+    index_entry = tk.Entry(remove_Window, width=15)
     index_entry.pack(pady=10)
 
     # Create a button to perform removal
     remove_button = customtkinter.CTkButton(
-        remove_window,
-        text="Remove",
+        remove_Window,
+        text="Remove",     
         corner_radius=10,
         command=lambda: remove_file_mail(int(index_entry.get()) if index_entry.get().isdigit() else -1)
     )
@@ -335,6 +557,7 @@ def remove_file_window():
 def cut_action():
     global mail_entry
     mail_entry.event_generate("<<Cut>>")
+    
 
 def copy_action():
     global mail_entry
@@ -347,7 +570,7 @@ def paste_action():
 def select_all_action():
     global mail_entry
     mail_entry.tag_add("sel", "1.0", tk.END)
-
+    
 
 def find_action():
     global mail_entry
@@ -361,6 +584,7 @@ def find_action():
                 mail_entry.tag_add("sel", start, end)
                 mail_entry.mark_set("insert", end)
                 start = end
+    
 
 def find_replace_action():
     global mail_entry
@@ -378,32 +602,17 @@ def find_replace_action():
                     start = mail_entry.index(end)
 
 
-def open_edit_window():
-    edit_window = tk.Toplevel(window)
-    edit_window.title("Edit Options")
+def open_edit_window(event):
 
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-    cut_button = customtkinter.CTkButton(edit_window, text="Cut",corner_radius=10, command=cut_action, width=button_width)
-    cut_button.pack(pady=5)
-
-    copy_button = customtkinter.CTkButton(edit_window, text="Copy", corner_radius=10, command=copy_action, width=button_width)
-    copy_button.pack(pady=5)
-
-    paste_button = customtkinter.CTkButton(edit_window, text="Paste", corner_radius=10, command=paste_action, width=button_width)
-    paste_button.pack(pady=5)
-
-    select_all_button = customtkinter.CTkButton(edit_window, text="Select All", corner_radius=10, command=select_all_action, width=button_width)
-    select_all_button.pack(pady=5)
-
-    find_button = customtkinter.CTkButton(edit_window, text="Find", corner_radius=10, command=find_action, width=button_width)
-    find_button.pack(pady=5)
-
-    find_replace_button = customtkinter.CTkButton(edit_window, text="Find and Replace", corner_radius=10, command=find_replace_action, width=button_width)
-    find_replace_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(edit_window, 300, 250)  # Adjust the size as needed
+    global new_Window, edit_menu
+    edit_menu = tk.Menu(new_Window, tearoff=0, background="#D6F2FE")
+    edit_menu.add_command(label="Cut", command=cut_action)
+    edit_menu.add_command(label="Copy", command=copy_action)
+    edit_menu.add_command(label="Paste", command=paste_action)
+    edit_menu.add_command(label="Select All", command=select_all_action)
+    edit_menu.add_command(label="Find", command=find_action)
+    edit_menu.add_command(label="Find and Replace", command=find_replace_action)
+    edit_menu.post(event.x_root, event.y_root)
 
 def zoomIn_action():
     global mail_entry
@@ -423,26 +632,16 @@ def zoomOut_action():
 
 def reset_action():
     global mail_entry
-    mail_entry.configure(font=("Calibri", 11))
+    mail_entry.configure(font=("Calibri", 12))
 
-def open_view_window():
-    view_window = tk.Toplevel(window)
-    view_window.title("View Options")
+def open_view_window(event):
 
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-
-    zoomIn_button = customtkinter.CTkButton(view_window, text="Zoom In",corner_radius=10,  command=zoomIn_action, width=button_width)
-    zoomIn_button.pack(pady=5)
-
-    zoomOut_button = customtkinter.CTkButton(view_window, text="Zoom Out",corner_radius=10,  command=zoomOut_action, width=button_width)
-    zoomOut_button.pack(pady=5)
-
-    reset_button = customtkinter.CTkButton(view_window, text="Reset",corner_radius=10, command=reset_action, width=button_width)
-    reset_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(view_window, 200, 120)  # Adjust the size as needed
+    global new_Window, view_menu
+    view_menu = tk.Menu(new_Window, tearoff=0, background="#D6F2FE")
+    view_menu.add_command(label="Zoom In", command=zoomIn_action)
+    view_menu.add_command(label="Zoom Out", command=zoomOut_action)
+    view_menu.add_command(label="Reset", command=reset_action)
+    view_menu.post(event.x_root, event.y_root)
 
 
 def getIndexImage(event):
@@ -500,21 +699,18 @@ def insert_image():
             data["Main_content"]["Image"]["height"].append(new_height)
         with open(PATH/"Temp_email.json", "w") as file:
                 json.dump(data, file, indent = 2)
-        
 
 def change_font(font_name):
 
-    global mail_entry
+    global mail_entry, tagName
     print(font_name)
-    if mail_entry.tag_ranges(tk.SEL):
-        start, end = mail_entry.tag_ranges(tk.SEL)
+    mail_entry.tag_configure(tagName, font=font_name)
+    mail_entry.tag_add(tagName, "sel.first", "sel.last")
 
-        if "highlighted" in mail_entry.tag_names(start):
-            # Remove the "highlighted" tag from the previous selection
-            mail_entry.tag_remove("highlighted", start, end)
-
-        mail_entry.tag_add("highlighted", start, end)
-        mail_entry.tag_configure("highlighted", font = font_name)
+    tag_ranges = mail_entry.tag_ranges(tagName)
+    tagName = tagName + 1
+    if tag_ranges:
+        start, end = tag_ranges[0], tag_ranges[1]
 
         with open(PATH/"Temp_email.json", "r") as file:
             data = json.load(file)
@@ -524,23 +720,6 @@ def change_font(font_name):
         with open(PATH/"Temp_email.json", "w") as file:
                 json.dump(data, file, indent = 2)
 
-def font_action():
-    global mail_entry
-    font_window = tk.Toplevel(window)
-    font_window.title("Font Options")
-
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-
-    font_buttons = ["Arial", "Terminal", "Roman", "Roboto", "Stencil", "Verdana", "Tahoma", "Calibri", "Gigi", "Broadway"
-                    , "Wingdings", "Meiryo", "@SimSun", "Georgia", "Impact", "Courier"]
-    
-    for font_name in font_buttons:
-        font_button = customtkinter.CTkButton(master = font_window, text=font_name, corner_radius=10, width = button_width, command=lambda font=font_name: change_font(font))
-        font_button.pack(pady=5)
-
-    # Center the font_window within the main window
-    center_window(font_window, 250, 640)  # Adjust the size as needed
 
 def change_style(style):
     if style == "Bold":
@@ -561,22 +740,22 @@ def change_style(style):
         apply_tag("code")
 
 def apply_tag(tag):
-    current_tags = mail_entry.tag_names("sel.first")
-    if tag in current_tags:
-        mail_entry.tag_remove(tag, "sel.first", "sel.last")
-    else:
-        mail_entry.tag_add(tag, "sel.first", "sel.last")
-        mail_entry.tag_configure(tag, **tag_styles[tag])
+    global tagName
+    mail_entry.tag_configure(tagName, **tag_styles[tag])
+            
+    # Apply the tag to the selected text
+    mail_entry.tag_add(tagName, "sel.first", "sel.last")
 
-        tag_ranges = mail_entry.tag_ranges(tag)
-        if tag_ranges:
-            start_index, end_index = tag_ranges[0], tag_ranges[1]
-            with open(PATH/"Temp_email.json", "r") as file:
-                data = json.load(file)
-                data["Main_content"]["Style"][tag]["start"].append(str(start_index))
-                data["Main_content"]["Style"][tag]["end"].append(str(end_index))
-            with open(PATH/"Temp_email.json", "w") as file:
-                    json.dump(data, file, indent = 2)
+    tag_ranges = mail_entry.tag_ranges(tagName)
+    tagName = tagName + 1
+    if tag_ranges:
+        start_index, end_index = tag_ranges[0], tag_ranges[1]
+        with open(PATH/"Temp_email.json", "r") as file:
+            data = json.load(file)
+            data["Main_content"]["Style"][tag]["start"].append(str(start_index))
+            data["Main_content"]["Style"][tag]["end"].append(str(end_index))
+        with open(PATH/"Temp_email.json", "w") as file:
+                json.dump(data, file, indent = 2)
             
 tag_styles = {
     "bold": {"font": ("Helvetica", 12, "bold")},
@@ -589,25 +768,9 @@ tag_styles = {
     "code": {"font": ("Courier New", 12)},
 }
 
-def text_style_action():
-    global mail_entry
-    style_window = tk.Toplevel(window)
-    style_window.title("Style Options")
-
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-
-    style_buttons = ["Bold", "Italic", "Underline", "Strikethrough", "Superscript", "Subscript", "Emphasis", "Code"]
-    
-    for style_name in style_buttons:
-        style_button = customtkinter.CTkButton(style_window, text=style_name, corner_radius=10, width = button_width, command=lambda style=style_name: change_style(style))
-        style_button.pack(pady=5)
-
-    # Center the font_window within the main window
-    center_window(style_window, 250, 640)  # Adjust the size as needed
 
 def text_color_action():
-    global mail_entry
+    global mail_entry, tagName
     # Get the current selected text
     selected_text = mail_entry.get("sel.first", "sel.last")
     print(selected_text)
@@ -621,12 +784,13 @@ def text_color_action():
             hex_color = "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
             
             # Configure the tag with the selected color
-            mail_entry.tag_configure("text_color", foreground=hex_color)
+            mail_entry.tag_configure(tagName, foreground=hex_color)
             
             # Apply the tag to the selected text
-            mail_entry.tag_add("text_color", "sel.first", "sel.last")
+            mail_entry.tag_add(tagName, "sel.first", "sel.last")
 
-            tag_ranges = mail_entry.tag_ranges("text_color")
+            tag_ranges = mail_entry.tag_ranges(tagName)
+            tagName = tagName + 1
             if tag_ranges:
                 start_index, end_index = tag_ranges[0], tag_ranges[1]
                 with open(PATH/"Temp_email.json", "r") as file:
@@ -638,52 +802,37 @@ def text_color_action():
                         json.dump(data, file, indent = 2)
 
 
-def align_action(alignment):
-    global mail_entry
+def open_format_window(event):
 
-    # Get the currently selected text
-    selected_text = mail_entry.get(tk.SEL_FIRST, tk.SEL_LAST)
+    global new_Window, format_menu
+    format_menu = tk.Menu(new_Window, tearoff=0, background="#D6F2FE")
+    font_sub_menu = tk.Menu(new_Window, tearoff=False)
+    format_menu.add_cascade(label="Font", menu=font_sub_menu)
+    fonts = ["Arial", "Terminal", "Roman", "Roboto", "Stencil", "Verdana", "Tahoma", "Calibri", "Gigi", "Broadway"
+                    , "Wingdings", "Meiryo", "@SimSun", "Georgia", "Impact", "Courier"]
+    for font in fonts:
+        font_sub_menu.add_command(label=font, command=lambda font = font :change_font(font))
 
-    # If there is no selected text, do nothing
-    if not selected_text:
-        return
+    style_sub_menu = tk.Menu(new_Window, tearoff=False)
+    format_menu.add_cascade(label="Style", menu=style_sub_menu)
+    styles = ["Bold", "Italic", "Underline", "Strikethrough", "Superscript", "Subscript", "Emphasis", "Code"]
+    for style in styles:
+        style_sub_menu.add_command(label=style, command=lambda style=style :change_style(style))
 
-    # Configure a tag for the selected alignment
-    mail_entry.tag_configure(alignment, lmargin1=0, lmargin2=0, rmargin=mail_entry.winfo_width())
-
-    # Add the tag to the selected text
-    mail_entry.tag_add(alignment, tk.SEL_FIRST, tk.SEL_LAST)
-
-
-def open_format_window():
-    format_window = tk.Toplevel(window)
-    format_window.title("Format Options")
-
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-    font_button = customtkinter.CTkButton(format_window, text="Font", corner_radius=10, command=font_action, width=button_width)
-    font_button.pack(pady=5)
-
-    copy_button = customtkinter.CTkButton(format_window, text="Text Style", corner_radius=10, command=text_style_action, width=button_width)
-    copy_button.pack(pady=5)
-
-    paste_button = customtkinter.CTkButton(format_window, text="Text Color", corner_radius=10, command=text_color_action, width=button_width)
-    paste_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(format_window, 300, 130)  # Adjust the size as needed
+    format_menu.add_command(label="Color", command=text_color_action)
+    format_menu.post(event.x_root, event.y_root)
 
 new_Window = None
-file_window = None
+file_menu = None
 
 def close_action():
     global new_Window
-    global file_window
+    global file_menu
 
     if new_Window.winfo_exists():
         new_Window.destroy()
-    if file_window.winfo_exists():
-        file_window.destroy()
+    if file_menu.winfo_exists():
+        file_menu.destroy()
 
 def saveAs_action():
     # Ask the user for the file location
@@ -699,31 +848,19 @@ def saveAs_action():
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(text_content)
 
-def open_file_window():
-    global file_window
-    file_window = tk.Toplevel(window)
-    file_window.title("File Options")
 
-    # Create buttons in the Edit window with fixed width
-    button_width = 15  # Adjust the width as needed
-    new_button = customtkinter.CTkButton(file_window, text="New",corner_radius=10,  command=newMessage, width=button_width)
-    new_button.pack(pady=5)
+def open_file_window(event):
 
-    attach_button = customtkinter.CTkButton(file_window, text="Attach",corner_radius=10,  command=attach_file, width=button_width)
-    attach_button.pack(pady=5)
-
-    saveAs_button = customtkinter.CTkButton(file_window, text="Save as", corner_radius=10, command=saveAs_action, width=button_width)
-    saveAs_button.pack(pady=5)
-
-    close_button = customtkinter.CTkButton(file_window, text="Close", corner_radius=10, command=close_action, width=button_width)
-    close_button.pack(pady=5)
-
-    # Center the edit_window within the main window
-    center_window(file_window, 300, 170)  # Adjust the size as needed
+    global new_Window, file_menu
+    file_menu = tk.Menu(new_Window, tearoff=0, background="#D6F2FE")
+    file_menu.add_command(label="New", command=newMessage)
+    file_menu.add_command(label="Attach", command=attach_file)
+    file_menu.add_command(label="Save as", command=saveAs_action)
+    file_menu.add_command(label="Close", command=close_action)
+    file_menu.post(event.x_root, event.y_root)
 
 
-
-def connect_server():
+def json_fully_complete_now_send_the_json_file_to_server():
     global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list
 
     with open(PATH/"Temp_email.json", "r") as file:
@@ -734,10 +871,12 @@ def connect_server():
 
 
     with open(PATH/"Temp_email.json", "r") as file:
-        data = json.load(file)
-        data["To"] = to_entry.get()
+        data = json.load(file)   
         data["From"] = from_entry.get()
         data["Subject"] = subject_entry.get()
+        data["Date"] = get_date()
+
+        data["To"] = to_entry.get()
 
         cc_list = cc_entry.get().split()
         for name in cc_list:
@@ -760,22 +899,36 @@ def connect_server():
                 }
                 data["File_list"].append(file_block) 
 
-    with open(PATH/"Temp_email.json", "w") as file:
-            json.dump(data, file, indent = 2)
+    with open(PATH/'Temp_email.json', 'w') as file:
+        json.dump(data, file, indent=2)
 
-    with open(PATH/"Temp_email.json", "r") as file:
-        data = json.load(file)
-        send_data_to_server()
+    to_user_list = data["To"].split()
+    for user in to_user_list:
+        send_data_to_server(user)
+    
+    for user in data["Cc"]:
+        send_data_to_server(user)
 
+    bcc_list = bcc_entry.get().split()
+    data["Cc"].clear()
+    with open(PATH/'Temp_email.json', 'w') as file:
+        json.dump(data, file, indent=2)
+    for user in bcc_list:
+        send_data_to_server(user)
+
+    # Đưa file json tạm về trạng thái ban đầu
+    with open(PATH/'Temp_email.json', 'w') as f:
+        json.dump(data_copy, f, indent= 2)
 
 def button_toolbar_clicked(button_name):
+    global buttons
     print(f"Toolbar button {button_name} clicked!")
     if(button_name == "File"):
-        open_file_window()
+        buttons[0].bind("<Button-1>", open_file_window)
     if (button_name == "Edit"):
-        open_edit_window()
+        buttons[1].bind("<Button-1>", open_edit_window)
     if(button_name == "View"):
-        open_view_window()
+        buttons[2].bind("<Button-1>", open_view_window)
     if(button_name == "Attach"):
         attach_file()
     if(button_name == "Remove"):
@@ -783,9 +936,9 @@ def button_toolbar_clicked(button_name):
     if(button_name == "Image"):
         insert_image()
     if(button_name == "Format"):
-        open_format_window()
+        buttons[5].bind("<Button-1>", open_format_window)
     if(button_name == "Send"):
-        connect_server()
+        json_fully_complete_now_send_the_json_file_to_server()
 
 def button_clicked(button_name):
     print(f"{button_name} clicked!")
@@ -793,8 +946,10 @@ def button_clicked(button_name):
 def on_button_click(button_name):
     print(f"{button_name} clicked!")
 
-    label_second_part.pack_forget()
+    label_second_part.pack_forget()   
     if button_name=="Mail":
+        dowload_email_every_1_minute_thread = threading.Thread(target=dowload_email_every_1_minute_thread_function)
+        dowload_email_every_1_minute_thread.start()
         create_mail_subframe()
     elif button_name=="Sign out":
         window.destroy()
@@ -807,36 +962,49 @@ def create_button_with_image(parent, file_path, width, height, button_name):
         parent,
         image=image,
         text = button_name,
-        text_color="black",
         corner_radius=7,
         command=lambda: on_button_click(button_name),
-        fg_color = "white",
-        hover_color="#F2F3F5",
-        anchor="w"
+        anchor="w",
     )
     button.configure(width = width, height = height)
+
     if button_name == "Download":
         button.configure(text = "")
     if button_name == "Logo":
         button.configure(font = ("Arial", 15))
     return button, image
 
-def create_button_with_image_senDown(parent, file_path, width, height, button_name, command=None, text=None):
+def create_button_with_image_senDown(parent, file_path, width, height, button_name, user, command=None):
     image = load_and_resize_image(file_path, width, height)
-    button_text = text if text is not None else button_name
     button = customtkinter.CTkButton(
         parent,
-        text=button_text,
+        text=button_name,
         image=image,
         cursor="hand2",
         corner_radius=10,
         command=command,
-        anchor="w"
+        anchor="w",
     )
 
     #if(button)
     if(button_name!="hungm0434@gmail.com" and button_name != "hahuy@gmail.com" and button_name != "hoangkhang@gmail.com"):
-        button.configure(hover_color = "#D2FFE6", text_color = "black")
+        button.configure(font=("Montserrat", 12, "bold"),
+        fg_color = "#282C34",
+        hover_color = "#484F60",
+        text_color = "#979EAF"
+    )
+        
+    if(button_name!="hungm0434@gmail.com" and button_name != "hahuy@gmail.com" and button_name != "hoangkhang@gmail.com" and button_name != "Download"):
+        with open(PATH/"database.json", "r") as file:
+            database = json.load(file)
+        
+        unreadMail = 0
+        for data in database["User_list"][user]["Mail_box"][button_name]["Email_list"]:
+            if data["Have_been_read"] == 0:
+                unreadMail += 1
+
+        if unreadMail != 0:
+            button.configure(text = button_name + f'  ({unreadMail})')
     return button
 
 def attach_file():
@@ -853,14 +1021,15 @@ def attach_file():
         file_mail = FileMail(file_name, file_data)
         file_mail_list.append(file_mail)
 
-        print(f"File data:\n{file_mail.file_name}, {file_mail.file_data}")
-
-
 def newMessage():
     global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry
-
+    global buttons
     global new_Window
-    new_Window = CTkToplevel(window, fg_color="white")
+    global file_mail_list
+
+    file_mail_list = []
+
+    new_Window = CTkToplevel(window)
     new_Window.geometry("950x600")
     new_Window.title("Write - ThunderOwl")
     new_Window.iconbitmap(PATH/"Icons/owl_icon.ico")
@@ -871,82 +1040,83 @@ def newMessage():
     # Toolbar frame (top)
     new_Window.columnconfigure(0, weight=1)
 
-    toolbar_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color="#F2F3F5")
-    toolbar_frame.grid(row=0, column=0, sticky="nsew", padx=3, pady=3)
+    toolbar_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color="#282C34")
+    toolbar_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
 
     # Create buttons for the toolbar
     buttons = []
-    button_names = ["File", "Edit", "View", "Image", "Attach", "Format", "Options", "Tools", "Help", "Send", "Remove"]
+    button_names = ["File", "Edit", "View", "Image", "Attach", "Format", "Tools", "Help", "Send", "Remove"]
 
     for name in button_names:
-        button = customtkinter.CTkButton(toolbar_frame, text=name, corner_radius=5, height=30, width=50, command=lambda n=name: button_toolbar_clicked(n), fg_color= "#0D99FF", text_color=  "black")
+        button = customtkinter.CTkButton(toolbar_frame, text=name, corner_radius=5, height=30, width=50, command=lambda n=name: button_toolbar_clicked(n), fg_color= "#323742", text_color= "#AAB0BE", hover_color="#484F60")
         button.pack(side="left", padx=5, pady=5)
         buttons.append(button)
     
     
-    buttons[9].pack(side="right", padx=20, pady=5)
+    buttons[8].pack(side="right", padx=20, pady=5)
     # Create textboxes and buttons
 
-    field_frame = CTkFrame(new_Window, border_color="white", border_width=1, fg_color="white")
-    field_frame.grid(row=1, column=0, sticky="nsew", padx=0, pady=2)
+    field_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color="#282C34")
+    field_frame.grid(row=1, column=0, sticky="nsew", padx=5, pady=0)
 
     field_frame.rowconfigure(5, weight=1)
     field_frame.columnconfigure(0, weight=1)
     field_frame.columnconfigure(1, weight=30)
 
-    from_label = customtkinter.CTkLabel(field_frame, text="From:", font=("Arial", 15), fg_color="white")
-    from_label.grid(row=0, column=0, pady=2, padx=10, sticky="w")
+    from_label = customtkinter.CTkLabel(field_frame, text="From:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    from_label.grid(row=0, column=0, pady=5, padx=10, sticky="w")
 
-    from_entry = CTkEntry(field_frame, placeholder_text="From", width = 800, fg_color="white")
-    from_entry.grid(row=0, column=1, pady=2, padx=0, sticky="w")
+    from_entry = CTkEntry(field_frame, placeholder_text="From", width = 800, fg_color="#323742")
+    from_entry.grid(row=0, column=1, pady=5, padx=0, sticky="w")
 
     from_entry.bind("<FocusIn>", lambda event: on_entry_click(event, from_entry))
     from_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, from_entry))
 
     # First text box
-    to_entry = CTkEntry(field_frame, placeholder_text="To", width = 800, fg_color="white")
+    to_entry = CTkEntry(field_frame, placeholder_text="To", width = 800, fg_color="#323742")
     to_entry.grid(row=1, column=1, sticky="w", pady=2, padx = 0)
     to_entry.bind("<FocusIn>", lambda event: on_entry_click(event, to_entry))
     to_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, to_entry))
-    to_label = customtkinter.CTkLabel(field_frame, text="To:", font=("Arial", 15), fg_color="white")
+    to_label = customtkinter.CTkLabel(field_frame, text="To:", font=("Arial", 15), fg_color="#282C34", text_color="white")
     to_label.grid(row=1, column=0, pady=2, padx=10, sticky="w")
     # Second text box
-    subject_entry = CTkEntry(field_frame, placeholder_text="Subject", width = 800, fg_color="white")
-    subject_entry.grid(row=2, column=1, sticky="w", pady=2)
+    subject_entry = CTkEntry(field_frame, placeholder_text="Subject", width = 800, fg_color="#323742")
+    subject_entry.grid(row=2, column=1, sticky="w", pady=5)
     subject_entry.bind("<FocusIn>", lambda event: on_entry_click(event, subject_entry))
     subject_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, subject_entry))
-    subject_label = customtkinter.CTkLabel(field_frame, text="Subject:", font=("Arial", 15), fg_color="white")
-    subject_label.grid(row=2, column=0, pady=2, padx=10, sticky="w")
+    subject_label = customtkinter.CTkLabel(field_frame, text="Subject:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    subject_label.grid(row=2, column=0, pady=5, padx=10, sticky="w")
 
-    cc_entry = CTkEntry(field_frame, placeholder_text="Cc", width = 800, fg_color="white")
+    cc_entry = CTkEntry(field_frame, placeholder_text="Cc", width = 800, fg_color="#323742")
     cc_entry.grid(row=3, column=1, sticky="w", pady=2)
     cc_entry.bind("<FocusIn>", lambda event: on_entry_click(event, cc_entry))
     cc_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, cc_entry))
-    cc_label = customtkinter.CTkLabel(field_frame, text="Cc:", font=("Arial", 15), fg_color="white")
+    cc_label = customtkinter.CTkLabel(field_frame, text="Cc:", font=("Arial", 15), fg_color="#282C34", text_color="white")
     cc_label.grid(row=3, column=0, pady=2, padx=10, sticky="w")
 
-    bcc_entry = CTkEntry(field_frame, placeholder_text="Bcc", width = 800, fg_color="white")
-    bcc_entry.grid(row=4, column=1, sticky="w", pady=2)
+    bcc_entry = CTkEntry(field_frame, placeholder_text="Bcc", width = 800, fg_color="#323742")
+    bcc_entry.grid(row=4, column=1, sticky="w", pady=5)
     bcc_entry.bind("<FocusIn>", lambda event: on_entry_click(event, bcc_entry))
     bcc_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, bcc_entry))
-    bcc_label = customtkinter.CTkLabel(field_frame, text="Bcc:", font=("Arial", 15), fg_color="white")
-    bcc_label.grid(row=4, column=0, pady=2, padx=10, sticky="w")
+    bcc_label = customtkinter.CTkLabel(field_frame, text="Bcc:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    bcc_label.grid(row=4, column=0, pady=5, padx=10, sticky="w")
 
 
-    text_mail_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color = "#84EFB9")
-    text_mail_frame.grid(row=2, column=0, sticky="nsew", padx=3, pady=1)
+    text_mail_frame = CTkFrame(new_Window, border_color="#282C34", border_width=2, fg_color = "#84EFB9", corner_radius=10, height=330, width=100)
+    text_mail_frame.grid(row=2, column=0, sticky="nsew", padx=3, pady=2)
+    disable(text_mail_frame)
 
     text_mail_frame.rowconfigure(0, weight=1)
     text_mail_frame.columnconfigure(0, weight=1)
     
-    mail_entry = tk.Text(text_mail_frame, wrap="word", width=940, height=19, bd=1, relief="solid", borderwidth=2)
-    mail_entry.grid(row=0, column=0, sticky="w", padx = 3, pady=3)
+    mail_entry = tk.Text(text_mail_frame, bd=1, relief="solid", borderwidth=2, background="#282C34", foreground="white", insertbackground="white")
+    mail_entry.grid(row=0, column=0, sticky="nsew", padx = 3, pady=3)
     mail_entry.configure(font=("Calibri", 12))
 
 
 def toggle_additional_buttons(button_name):
     global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2
-    if button_name == "Sender":
+    if button_name == "hungm0434@gmail.com":
         if btn_inbox.winfo_ismapped():
             btn_inbox.grid_forget()
             btn_spam.grid_forget()
@@ -962,7 +1132,7 @@ def toggle_additional_buttons(button_name):
             btn_important.grid(row=5, column=0, pady=5)
             btn_project.grid(row=6, column=0, pady=5)
 
-    elif button_name == "Receiver1":
+    elif button_name == "hahuy@gmail.com":
         if btn_inbox_receiver1.winfo_ismapped():
             btn_inbox_receiver1.grid_forget()
             btn_spam_receiver1.grid_forget()
@@ -978,7 +1148,7 @@ def toggle_additional_buttons(button_name):
             btn_work_receiver1.grid(row=11, column=0, pady=5)
             btn_important_receiver1.grid(row=12, column=0, pady=5)
             btn_project_receiver1.grid(row=13, column=0, pady=5)
-    elif button_name == "Receiver2":
+    elif button_name == "hoangkhang@gmail.com":
         if btn_inbox_receiver2.winfo_ismapped():
             btn_inbox_receiver2.grid_forget()
             btn_spam_receiver2.grid_forget()
@@ -999,110 +1169,110 @@ def toggle_additional_buttons(button_name):
 def create_second_part():
 
     global label_second_part, second_part_frame
-    second_part_frame = CTkFrame(master=window, border_color="#66BF94", border_width=2, fg_color="white")
+    second_part_frame = CTkFrame(master=window, border_color="#323742", border_width=2)
     second_part_frame.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
 
     image_path = PATH/"Icons/Thunder.png"  # Replace with the path to your image
-    image = load_and_resize_image(image_path, 1458, 769)  # Adjust the width and height as needed
+    image = load_and_resize_image(image_path, 1230, 769)  # Adjust the width and height as needed
 
     label_second_part = customtkinter.CTkLabel(master = second_part_frame, image=image, text = "", anchor = "s")
-    label_second_part.pack(padx=2, pady=2)
+    label_second_part.pack(padx=4, pady=4)
 
 
 def create_mail_subframe():
     global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2
     global second_part_frame
 
-    second_part_frame.configure(border_color = "white", fg_color = "white", corner_radius=15)
+    second_part_frame.destroy()
 
-    second_subframe = customtkinter.CTkFrame(window, border_width=3, border_color="white", fg_color="white")
-    second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=2)
+    second_subframe = customtkinter.CTkFrame(window, fg_color="#282C34")
+    second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
 
     second_subframe.columnconfigure(0, weight=1)  # Part 1
     second_subframe.columnconfigure(1, weight=20)  # Part 2
     second_subframe.rowconfigure(0, weight=1)
 
-    whitesubframe = customtkinter.CTkFrame(second_subframe, fg_color="white", corner_radius=15)
-    whitesubframe.grid(row=0, column=0, sticky="nsew", padx=3, pady=0)
+    whitesubframe = customtkinter.CTkFrame(second_subframe, fg_color="#282C34", corner_radius=15)
+    whitesubframe.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
     disable(whitesubframe)
 
-    graysubframe = customtkinter.CTkFrame(second_subframe, border_width=2, border_color="#6096FD", fg_color="white")
-    graysubframe.grid(row=0, column=1, sticky="nsew", padx=3, pady=0)
+    graysubframe = customtkinter.CTkFrame(second_subframe, border_width=3, border_color="#323742", fg_color="white")
+    graysubframe.grid(row=0, column=1, sticky="nsew", padx=3, pady=2)
     image_path = PATH/"Icons/thankYou.png"  # Replace with the path to your image
-    image = load_and_resize_image(image_path, 1000, 700)  # Adjust the width and height as needed
-    disable(graysubframe)
+    image = load_and_resize_image(image_path, 975, 690)  # Adjust the width and height as needed
+    disable(whitesubframe)
 
     label_second_part = customtkinter.CTkLabel(master = graysubframe, image=image, text = "", anchor = "s")
-    label_second_part.pack(padx=2, pady=2)
+    label_second_part.pack(padx=3, pady=3)
 
 
-    whitesubframe.rowconfigure(0, weight=1)  # Part 1
-    whitesubframe.rowconfigure(1, weight=15)
+    whitesubframe.rowconfigure(1, weight=1)  # Part 1
+    whitesubframe.rowconfigure(0, weight=25)
     whitesubframe.columnconfigure(0, weight=1)  # Part 2
 
-    sendown_frame = customtkinter.CTkFrame(whitesubframe, fg_color="#F2F3F5")
-    sendown_frame.grid(row=0, column=0, sticky="nsew", padx = 2, pady=0)
+    sendown_frame = customtkinter.CTkFrame(whitesubframe, fg_color="#1E2128")
+    sendown_frame.grid(row=1, column=0, sticky="nsew", padx = 2, pady=0)
 
-    email_frame = customtkinter.CTkScrollableFrame(whitesubframe, fg_color="white", scrollbar_button_color = "#D0DFB7", scrollbar_button_hover_color="#D0DFB7", border_width=2, border_color="#D0DFB7")
-    email_frame.grid(row=1, column=0, sticky="nsew", padx = 2, pady=2)
+    email_frame = customtkinter.CTkScrollableFrame(whitesubframe, fg_color="#1E2128", scrollbar_button_color = "#323742", scrollbar_button_hover_color="#323742", border_width=2, border_color="#282C34")
+    email_frame.grid(row=0, column=0, sticky="nsew", padx = 2, pady=2)
 
-    button_inside_whitesubframe = customtkinter.CTkButton(sendown_frame, text="+ New message" , fg_color="#9747FF", corner_radius=12, height=50, anchor = "center", command=lambda: newMessage())
-    button_inside_whitesubframe.grid(row=0, column=0, sticky="nse", padx=40, pady=25)
+    button_inside_whitesubframe = customtkinter.CTkButton(sendown_frame, text="+ NEW MESSAGE" ,font = ("Montserrat", 15), fg_color="#00CCC7", corner_radius=12, height=50, anchor = "center", command=lambda: newMessage(), text_color="black")
+    button_inside_whitesubframe.grid(row=0, column=0, sticky="nse", padx=36, pady=25)
 
 
-    btn_sender = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hungm0434@gmail.com', lambda button_name="Sender": toggle_additional_buttons(button_name))
-    btn_sender.configure(font=("Calibri", 14, "bold"), anchor = "w", height = 40, fg_color = "#0D99FF", hover_color = "#B1E0ED", text_color = "black")   
-    btn_sender.grid(row=0, column=0, sticky="nsew", padx = 5, pady=10)
+    btn_sender = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hungm0434@gmail.com', 'hungm0434@gmail.com', lambda user = "hungm0434@gmail.com": toggle_additional_buttons(user))
+    btn_sender.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
+    btn_sender.grid(row=0, column=0, sticky="nsew", padx = 5, pady=5)
 
-    btn_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hahuy@gmail.com', lambda button_name="Receiver1": toggle_additional_buttons(button_name))
-    btn_receiver1.configure(font=("Calibri", 14, "bold"), anchor = "w", height = 40, fg_color = "#0D99FF", hover_color = "#B1E0ED", text_color = "black")       
-    btn_receiver1.grid(row=7, column=0, sticky="nsew", padx = 5, pady=10)
+    btn_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hahuy@gmail.com','hungm0434@gmail.com', lambda user = "hahuy@gmail.com": toggle_additional_buttons(user))
+    btn_receiver1.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
+    btn_receiver1.grid(row=7, column=0, sticky="nsew", padx = 5, pady=5)
 
-    btn_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hoangkhang@gmail.com', lambda button_name="Receiver2": toggle_additional_buttons(button_name))
-    btn_receiver2.configure(font=("Calibri", 14, "bold"), anchor = "w", height = 40, fg_color = "#0D99FF", hover_color = "#B1E0ED", text_color = "black")    
-    btn_receiver2.grid(row=14, column=0, sticky="nsew", padx = 5, pady=10)
+    btn_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/mail.png', 20, 20, 'hoangkhang@gmail.com', 'hungm0434@gmail.com',lambda user = "hoangkhang@gmail.com": toggle_additional_buttons(user))
+    btn_receiver2.configure(font=("Montserrat", 12, "bold"), anchor = "w", height = 40, fg_color = "#323742", hover_color = "#484F60", text_color = "#AAB0BE")   
+    btn_receiver2.grid(row=14, column=0, sticky="nsew", padx = 5, pady=5)
 
 
 
     # Create buttons 4 and 5 with icons but initially hide them
-    btn_receive_all = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download')
+    btn_receive_all = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download', "hungm0434@gmail.com", lambda user="hungm0434@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all.pack_forget()
-    btn_inbox = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox')
+    btn_inbox = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hungm0434@gmail.com", lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox.pack_forget()
-    btn_project = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project')
+    btn_project = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project',"hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Project'))
     btn_project.pack_forget()
-    btn_work = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work')
+    btn_work = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Work'))
     btn_work.pack_forget()
-    btn_important = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important')
+    btn_important = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', "hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Important'))
     btn_important.pack_forget()
-    btn_spam = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam')
+    btn_spam = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', "hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam.pack_forget()
 
     
-    btn_receive_all1 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download')
+    btn_receive_all1 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download',"hahuy@gmail.com", lambda user="hahuy@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all1.pack_forget()
-    btn_inbox_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox')
+    btn_inbox_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox_receiver1.pack_forget()
-    btn_work_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work')
+    btn_work_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Work'))
     btn_work_receiver1.pack_forget()
-    btn_spam_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam')
+    btn_spam_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam_receiver1.pack_forget()
-    btn_important_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important')
+    btn_important_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important',"hahuy@gmail.com", lambda user="hahuy@gmail.com": getFolderMessage(user, 'Important'))
     btn_important_receiver1.pack_forget()
-    btn_project_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project')
+    btn_project_receiver1 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', "hahuy@gmail.com",lambda user="hahuy@gmail.com": getFolderMessage(user, 'Project'))
     btn_project_receiver1.pack_forget()
 
-    btn_receive_all2 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download')
+    btn_receive_all2 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all2.pack_forget()
-    btn_inbox_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox')
+    btn_inbox_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/inbox.png', 20, 20, 'Inbox',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Inbox'))
     btn_inbox_receiver2.pack_forget()
-    btn_work_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work')
+    btn_work_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/work_icon.png', 20, 20, 'Work',"hoangkhang@gmail.com", lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Work'))
     btn_work_receiver2.pack_forget()
-    btn_spam_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam')
+    btn_spam_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam_receiver2.pack_forget()
-    btn_important_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important')
+    btn_important_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/important_icon.png', 20, 20, 'Important', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Important'))
     btn_important_receiver2.pack_forget()
-    btn_project_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project')
+    btn_project_receiver2 = create_button_with_image_senDown(email_frame, PATH/'Icons/project_icon.png', 20, 20, 'Project', "hoangkhang@gmail.com",lambda user="hoangkhang@gmail.com": getFolderMessage(user, 'Project'))
     btn_project_receiver2.pack_forget()
 
 
@@ -1132,40 +1302,49 @@ def create_calendar_subframe():
     open_cal.pack(padx=15, pady=15)
 
 def create_buttons_frame():
-    buttons_frame = CTkFrame(master = window, border_color="white", border_width=2, fg_color="white")
+    buttons_frame = CTkFrame(master = window, fg_color="#282C34")
     buttons_frame.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
-    buttons_frame.rowconfigure(0, weight=10)
+    buttons_frame.rowconfigure(0, weight=20)
     buttons_frame.rowconfigure(1, weight=1)
+    buttons_frame.columnconfigure(0, weight=1)
  
-    buttons_sub_frame = CTkFrame(master = buttons_frame, border_color="white", border_width=2, fg_color="white")
+    buttons_sub_frame = CTkFrame(master = buttons_frame, fg_color="#282C34", border_color="#323742", border_width=3, corner_radius=10, height=600)
     buttons_sub_frame.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
 
-    logout_frame = CTkFrame(master = buttons_frame, border_color="white", border_width=2, fg_color="white")
-    logout_frame.grid(row=1, column=0, sticky="sew", padx=0, pady=0)
-    btn_logout, _ = create_button_with_image(logout_frame, PATH/'Icons/settings.png', 30, 30, 'Sign out')
-    btn_logout.configure(fg_color = "#F2F3F5")
+    logout_frame = CTkFrame(master = buttons_frame, border_color="#323742", border_width=3, fg_color="#282C34")
+    logout_frame.grid(row=1, column=0, sticky="nsew", padx=0, pady=0)
+    btn_logout = CTkButton(logout_frame, text='Sign out')
+    btn_logout.configure(fg_color = "#282C34", text_color = "#AAB0BE", font=("Montserrat", 15), height = 35, hover_color = "#282C34", cursor = "hand2", command = lambda: on_button_click("Sign out"))
     # Create buttons with images
     global buttons
 
-    btn_logo, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/owl_icon.ico', 40, 40, 'THUNDER OWL')
-    btn_logo.configure(fg_color = "white", border_width = 2, border_color = '#E2E4E5', state = "disabled", text_color_disabled = "black")
-    btn_mail, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/mail.png', 30, 30, 'Mail')
-    btn_address_book, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/phone-book.png', 30, 30, 'Address_Book')
+    btn_logo, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/owl.png', 60, 60, '')
+    btn_logo.configure(fg_color = "#282C34", state = "disabled", anchor = "center")
+    btn_text = CTkButton(buttons_sub_frame, text = 'THUNDER OWL', fg_color = "#282C34", state = "disabled", text_color_disabled = "#00CCC7", font = ("Montserrat Medium", 14))
+    btn_mail, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/mail.png', 29, 29, 'Mail')
+    btn_mail.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15), height = 50, width=100, hover_color = "#484F60")
+    disable(btn_mail)
+    btn_address_book, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/phone-book.png', 30, 30, 'Address')
+    btn_address_book.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50, hover_color = "#484F60")
     btn_calendar, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/calendar.png', 30, 30, 'Calendar')
+    btn_calendar.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50,hover_color = "#484F60")
     btn_task, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/list.png', 30, 30, 'Task')
+    btn_task.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50 , hover_color = "#484F60")
     btn_chat, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/chat.png', 30, 30, 'Chat')
+    btn_chat.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50 , hover_color = "#484F60")
     
     
-    btn_logo.grid(row=0, column=0, sticky="ew", padx=13, pady=10)
-    btn_mail.grid(row=1, column=0, sticky="ew", padx=13, pady=10)
-    btn_address_book.grid(row=2, column=0, sticky="ew", padx=13, pady=10)
-    btn_calendar.grid(row=3, column=0, sticky="ew", padx=13, pady=10)
-    btn_task.grid(row=4, column=0, sticky="ew", padx=13, pady=10)
-    btn_chat.grid(row=5, column=0, sticky="ew", padx=13, pady=10)
-    btn_logout.grid(row=6, column=0, sticky="ew", padx=25, pady=15)
+    btn_logo.grid(row=0, column=0, sticky="nsew", padx=13, pady=2)
+    btn_text.grid(row=1, column=0, sticky="nsew", padx=13, pady=2)
+    btn_mail.grid(row=2, column=0, sticky="nsew", padx=13, pady=3)
+    btn_address_book.grid(row=3, column=0, sticky="nsew", padx=13, pady=3)
+    btn_calendar.grid(row=4, column=0, sticky="nsew", padx=13, pady=3)
+    btn_task.grid(row=5, column=0, sticky="nsew", padx=13, pady=3)
+    btn_chat.grid(row=6, column=0, sticky="nsew", padx=13, pady=3)
+    btn_logout.grid(row=7, column=0, sticky="nsew", padx=10, pady=20)
     buttons.append([btn_logo, btn_mail, btn_address_book, btn_calendar, btn_task, btn_chat, btn_logout])
 
-customtkinter.set_appearance_mode("light")
+customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")
 
 window = customtkinter.CTk()
@@ -1177,7 +1356,7 @@ window.resizable(False, False)
 # Set up grid weights for resizable behavior
 window.rowconfigure(0, weight=1)
 window.columnconfigure(0, weight = 1)
-window.columnconfigure(1, weight = 35)
+window.columnconfigure(1, weight = 3)
 
 create_second_part() # Image
 # Create buttons frame (Part 1)

@@ -1,8 +1,12 @@
 {
+  "Have_been_read": 0,
   "To": "",
   "From": "",
+  "Date": "",
   "Subject": "",
-  "Content_type": {
+  "Content_type": "",
+  "Cc": [],
+  "Main_content": {
     "RawContent": "",
     "Style": {
       "bold": {
@@ -55,6 +59,5 @@
       "width": []
     }
   },
-  "Cc": [],
   "File_list": []
 }

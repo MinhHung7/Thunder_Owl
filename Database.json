@@ -1,0 +1,260 @@
+{
+  "Number_of_user": 3,
+  "User_list": {
+    "hungm0434@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "report",
+            "meeting"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "urgent",
+            "ASAP",
+            "Important"
+          ],
+          "Mail_box": "Important"
+        },
+        {
+          "Target": "From",
+          "Key_word": [
+            "ahihi@testing.com",
+            "ahuu@testing.com",
+            "hungm0434@gmail.com",
+            "hahuy@gmail.com",
+            "hoangkhang@gmail.com",
+            "boss@gmail.com"
+          ],
+          "Mail_box": "Project"
+        },
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    },
+    "hahuy@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "report",
+            "meeting"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "urgent",
+            "ASAP",
+            "Important"
+          ],
+          "Mail_box": "Important"
+        },
+        {
+          "Target": "From",
+          "Key_word": [
+            "ahihi@testing.com",
+            "ahuu@testing.com",
+            "hungm0434@gmail.com",
+            "hahuy@gmail.com",
+            "hoangkhang@gmail.com",
+            "boss@gmail.com"
+          ],
+          "Mail_box": "Project"
+        },
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    },
+    "hoangkhang@gmail.com": {
+      "Password": "123",
+      "MailServer": "127.0.1.1",
+      "SMTP": 2225,
+      "POP3": 3335,
+      "Autoload": 10,
+      "Filter": [
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "report",
+            "meeting"
+          ],
+          "Mail_box": "Work"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "urgent",
+            "ASAP",
+            "Important"
+          ],
+          "Mail_box": "Important"
+        },
+        {
+          "Target": "From",
+          "Key_word": [
+            "ahihi@testing.com",
+            "ahuu@testing.com",
+            "hungm0434@gmail.com",
+            "hahuy@gmail.com",
+            "hoangkhang@gmail.com",
+            "boss@gmail.com"
+          ],
+          "Mail_box": "Project"
+        },
+        {
+          "Target": "RawContent",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        },
+        {
+          "Target": "Subject",
+          "Key_word": [
+            "Hack",
+            "Virus",
+            "Crack",
+            "hack",
+            "virus",
+            "crack"
+          ],
+          "Mail_box": "Spam"
+        }
+      ],
+      "Mail_box": {
+        "Number_of_email_total": 0,
+        "Inbox": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Work": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Project": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Spam": {
+          "Number_of_email": 0,
+          "Email_list": []
+        },
+        "Important": {
+          "Number_of_email": 0,
+          "Email_list": []
+        }
+      }
+    }
+  }
+}
