@@ -96,6 +96,22 @@
         "documentation": {}
     },
     {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
         "label": "io",
         "kind": 6,
         "isExtraImport": true,
@@ -127,6 +143,22 @@
         "isExtraImport": true,
         "importPath": "tkinter",
         "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "simpledialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
         "detail": "tkinter",
         "documentation": {}
     },
@@ -331,12 +363,28 @@
         "documentation": {}
     },
     {
+        "label": "Calendar",
+        "importPath": "tkcalendar",
+        "description": "tkcalendar",
+        "isExtraImport": true,
+        "detail": "tkcalendar",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "askcolor",
+        "importPath": "tkinter.colorchooser",
+        "description": "tkinter.colorchooser",
+        "isExtraImport": true,
+        "detail": "tkinter.colorchooser",
         "documentation": {}
     },
     {
@@ -398,11 +446,27 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "customtkinter",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "customtkinter",
         "description": "customtkinter",
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "isExtraImport": true,
         "detail": "customtkinter",
         "documentation": {}
     },
@@ -445,6 +509,32 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -1381,6 +1471,843 @@
         "description": "testFolder.testCode",
         "peekOfCode": "window = customtkinter.CTk()\nwindow.title(\"Thunder-Owl\")\nwindow.geometry(\"1400x700\")\nwindow.iconbitmap(PATH/\"Icons/owl_icon.ico\")\nwindow.resizable(False, False)\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 3)\ncreate_second_part() # Image",
         "detail": "testFolder.testCode",
+        "documentation": {}
+    },
+    {
+        "label": "FileMail",
+        "kind": 6,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "class FileMail:\n    def __init__(self, file_name, file_data):\n        self.file_name = file_name\n        self.file_data = file_data\nfile_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "dowload_email_every_1_minute_thread_function",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hungm0434@gmail.com', 123)\n# ===============================================================================================\ndef get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "get_date",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def get_date():\n    current_date = datetime.now()\n    formatted_date = current_date.strftime(\"%a, %d %b %Y %H:%M:%S\")\n    return formatted_date\n# ===============================================================================================\ndef fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "fixTextForButton",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def fixTextForButton(fromUser, date, subject, width):\n    finalText = fromUser\n    for i in range(width - 20 - len(fromUser)):\n        finalText += \" \"\n    finalText = finalText + date + \"\\n\" + \"Subject: \" + subject\n    return finalText \n# ===============================================================================================\ndef resolveFile(data):\n    file_path = filedialog.asksaveasfilename(\n        defaultextension=f\".{data[\"File_content_type\"]}\",",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "resolveFile",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def resolveFile(data):\n    file_path = filedialog.asksaveasfilename(\n        defaultextension=f\".{data[\"File_content_type\"]}\",\n        filetypes=[(f\"{data[\"File_content_type\"].upper()} files\", f\"*.{data[\"File_content_type\"]}\")],\n        title=\"Save File As\"\n    )\n    if file_path:\n        with open(file_path, \"wb\") as file:\n            file.write(base64.b64decode(data[\"File_content\"]))\n        print(f\"File '{file_path}' has been saved.\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "resolveMail",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def resolveMail(user, Mail_box, index):\n    global detailMailListFolderFrame, resolveTagName, content_Text\n    with open(PATH/\"database.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"User_list\"][user][\"Mail_box\"][Mail_box][\"Email_list\"][index][\"Have_been_read\"] = 1\n    with open(PATH/'database.json', 'w') as file:\n        json.dump(data, file, indent=2)\n    # detailMailListFolderFrame.rowconfigure(0, weight=1)\n    detailMailListFolderFrame.rowconfigure(1, weight=1)\n    detailMailListFolderFrame.columnconfigure(0, weight=1)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "resolve_image",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def resolve_image(image_data, position, height, width):\n    global content_Text, image_references\n    img = Image.open(io.BytesIO(image_data))\n    max_width = 300\n    scale_factor = max_width / width\n    new_size = (int(width * scale_factor), int(height * scale_factor))\n    img = img.resize(new_size, Image.ANTIALIAS)\n    img = ImageTk.PhotoImage(img)\n    # Insert an invisible image at the specified position\n    content_Text.image_create(position, image=img)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_style_resolve",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def change_style_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, **tag_styles[mode])\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\ndef change_font_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, font = mode)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_font_resolve",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def change_font_resolve(start, end, mode):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, font = mode)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\ndef change_color_resolve(start, end, color):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, foreground = color)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_color_resolve",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def change_color_resolve(start, end, color):\n    global resolveTagName, content_Text\n    content_Text.tag_configure(resolveTagName, foreground = color)\n    content_Text.tag_add(resolveTagName, start, end)\n    resolveTagName = resolveTagName + 1\n# ===============================================================================================\ndef getFolderMessage(user, folder):\n    global detailMailListFolderFrame\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"1400x700\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "getFolderMessage",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def getFolderMessage(user, folder):\n    global detailMailListFolderFrame\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"1400x700\")\n    new_Window.title(f\"{folder} - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")\n    new_Window.resizable(False, False)\n    new_Window.transient(window)\n    new_Window.rowconfigure(0, weight=1)\n    new_Window.columnconfigure(0, weight=1)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "disable",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def disable(frame):\n    frame.configure(height=frame[\"height\"],width=frame[\"width\"])\n    frame.grid_propagate(0)\n# ===================== LẬP TỨC GỬI TOÀN BỘ FILE TEMP_EMAIL.JSON TỚI SERVER ==========================\ndef send_data_to_server(user):\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "send_data_to_server",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def send_data_to_server(user):\n    with open(PATH/'Temp_email.json', 'r') as f:\n        data = json.load(f)\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:\n        try:\n            client.connect(ADDR_SMTP)\n            response = client.recv(1024).decode()\n            print(response)\n            # Send EHLO command\n            client.sendall(b'EHLO test mail server\\n')",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "is_valid_string",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def is_valid_string(input_string, list_of_keywords):\n    input_string = input_string.lower()\n    for keyword in list_of_keywords:\n        keyword = keyword.lower()\n        pattern = re.compile(r'\\b' + re.escape(keyword) + r'\\b')\n        if pattern.search(input_string):\n            return True  \n    return False \n# ========================== Nhận data ==============================\ndef recvall(sock):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "recvall",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def recvall(sock):\n    BUFF_SIZE = 1024 # 4 KiB\n    data = b''\n    while True:\n        part = sock.recv(BUFF_SIZE)\n        data += part\n        if len(part) < BUFF_SIZE:\n            # either 0 or end of data\n            break\n    return data",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_from_server",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def get_data_from_server(user, password, mail_id):\n    final = ''\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "proccess_data_so_we_can_convert_to_json_file",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def proccess_data_so_we_can_convert_to_json_file(raw_data):\n    lines = raw_data.splitlines()\n    # Remove the first and last lines\n    result_lines = lines[1:-1]\n    # Join the remaining lines into a new string\n    result_string = '\\n'.join(result_lines)\n    # Decode\n    decoded_string_that_can_be_write_directly_into_json = base64.b64decode(result_string).decode()\n    return decoded_string_that_can_be_write_directly_into_json\ndef write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json):\n    with open(PATH/'Buffer.json', 'w') as file:\n        file.write(decoded_string_that_can_be_write_directly_into_json)\ndef clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "clean_the_temporary_json_file_afer_we_done_with_it",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def clean_the_temporary_json_file_afer_we_done_with_it():\n    with open(PATH/'Buffer.json', 'w') as file:\n        pass\ndef choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "choose_which_mail_box_base_on_user_config",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def choose_which_mail_box_base_on_user_config(user):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    with open(PATH/'Buffer.json', 'r') as file:\n        buffer_json = json.load(file)\n    final_mailbox = 'Inbox'\n    for condition in database['User_list'][user]['Filter']:\n        target_string = None\n        if condition['Target'] == 'Subject': # Check the Subject part\n            target_string = buffer_json['Subject']",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox):\n    # turn the buffer json into a dictionary\n    with open(PATH/'Buffer.json', 'r') as file:\n        dict_data = json.load(file)\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Email_list'].append(dict_data)\n    database['User_list'][user]['Mail_box'][final_mailbox]['Number_of_email'] += 1\n    database['User_list'][user]['Mail_box']['Number_of_email_total'] += 1\n    with open(PATH/'database.json', 'w') as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "check_to_see_how_many_mail_are_there_in_the_acount_of_the_user",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password):\n    number_of_line = 0\n    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:\n        client_socket.connect(ADDR_POP3)\n        response = recvall(client_socket).decode()\n        print(response)\n        # Send USER command\n        client_socket.sendall(f'USER {user}\\r\\n'.encode())\n        response = recvall(client_socket).decode()\n        print(response)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "get_the_number_of_mail_the_user_already_has",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def get_the_number_of_mail_the_user_already_has(user, password):\n    with open(PATH/'database.json', 'r') as file:\n        database = json.load(file)\n    return database['User_list'][user]['Mail_box']['Number_of_email_total']\n# ======================================= Tổng hợp ====================================================\ndef get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_the_mail_from_sever_that_has_not_been_dowloaded",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, password):\n    mail_in_server = check_to_see_how_many_mail_are_there_in_the_acount_of_the_user(user, password)\n    mail_in_database = get_the_number_of_mail_the_user_already_has(user, password)\n    for id in range(mail_in_database + 1, mail_in_server + 1):\n        data = get_data_from_server(user, password, id)\n        decoded_string_that_can_be_write_directly_into_json = proccess_data_so_we_can_convert_to_json_file(data)\n        write_the_data_received_to_the_temporary_json_file_to_help_us_read_easier(decoded_string_that_can_be_write_directly_into_json)\n        final_mailbox = choose_which_mail_box_base_on_user_config(user)\n        after_decided_the_mailbox_now_we_take_the_buffer_json_and_add_it_to_the_database(user, final_mailbox)\n        clean_the_temporary_json_file_afer_we_done_with_it()",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_click",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "on_entry_leave",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "load_and_resize_image",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    global new_Window, file_mail_list",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_mail",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def remove_file_mail(index):\n    if 0 <= index < len(file_mail_list):\n        removed_file_mail = file_mail_list.pop(index)\n        print(f\"Removed file: {removed_file_mail.file_name}\")\ndef remove_file_window():\n    global new_Window, file_mail_list\n    remove_Window = CTkToplevel(new_Window)\n    remove_Window.geometry(\"300x350\")\n    remove_Window.title(\"Remove - ThunderOwl\")\n    remove_Window.resizable(False, False)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "remove_file_window",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def remove_file_window():\n    global new_Window, file_mail_list\n    remove_Window = CTkToplevel(new_Window)\n    remove_Window.geometry(\"300x350\")\n    remove_Window.title(\"Remove - ThunderOwl\")\n    remove_Window.resizable(False, False)\n    remove_Window.transient(new_Window)\n    # Create a label to display file list\n    label = CTkLabel(remove_Window, text=\"File Mail List:\")\n    label.pack(pady=5)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "cut_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def cut_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Cut>>\")\ndef copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "copy_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def copy_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Copy>>\")\ndef paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "paste_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def paste_action():\n    global mail_entry\n    mail_entry.event_generate(\"<<Paste>>\")\ndef select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "select_all_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def select_all_action():\n    global mail_entry\n    mail_entry.tag_add(\"sel\", \"1.0\", tk.END)\ndef find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "find_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def find_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find\", \"Enter text to find:\")\n    if target:\n        start = \"1.0\"\n        while start:\n            start = mail_entry.search(target, start, tk.END, nocase=True)\n            if start:\n                end = f\"{start}+{len(target)}c\"\n                mail_entry.tag_add(\"sel\", start, end)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "find_replace_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def find_replace_action():\n    global mail_entry\n    target = simpledialog.askstring(\"Find and Replace\", \"Enter text to find:\")\n    if target:\n        replace_text = simpledialog.askstring(\"Find and Replace\", f\"Replace '{target}' with:\")\n        if replace_text:\n            start = \"1.0\"\n            while start:\n                start = mail_entry.search(target, start, tk.END, nocase=True)\n                if start:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "open_edit_window",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def open_edit_window(event):\n    global new_Window, edit_menu\n    edit_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    edit_menu.add_command(label=\"Cut\", command=cut_action)\n    edit_menu.add_command(label=\"Copy\", command=copy_action)\n    edit_menu.add_command(label=\"Paste\", command=paste_action)\n    edit_menu.add_command(label=\"Select All\", command=select_all_action)\n    edit_menu.add_command(label=\"Find\", command=find_action)\n    edit_menu.add_command(label=\"Find and Replace\", command=find_replace_action)\n    edit_menu.post(event.x_root, event.y_root)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "zoomIn_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def zoomIn_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size += 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "zoomOut_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def zoomOut_action():\n    global mail_entry\n    _ , current_size = mail_entry.cget(\"font\").split()\n    current_size = int(current_size)\n    current_size -= 1\n    mail_entry.configure(font=(\"Calibri\", int(current_size)))\ndef reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 12))\ndef open_view_window(event):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "reset_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def reset_action():\n    global mail_entry\n    mail_entry.configure(font=(\"Calibri\", 12))\ndef open_view_window(event):\n    global new_Window, view_menu\n    view_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    view_menu.add_command(label=\"Zoom In\", command=zoomIn_action)\n    view_menu.add_command(label=\"Zoom Out\", command=zoomOut_action)\n    view_menu.add_command(label=\"Reset\", command=reset_action)\n    view_menu.post(event.x_root, event.y_root)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "open_view_window",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def open_view_window(event):\n    global new_Window, view_menu\n    view_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    view_menu.add_command(label=\"Zoom In\", command=zoomIn_action)\n    view_menu.add_command(label=\"Zoom Out\", command=zoomOut_action)\n    view_menu.add_command(label=\"Reset\", command=reset_action)\n    view_menu.post(event.x_root, event.y_root)\ndef getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "getIndexImage",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def getIndexImage(event):\n    global cursor_index\n    cursor_index = mail_entry.index(tk.CURRENT)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"Image\"][\"position\"].append(cursor_index)\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\ndef insert_image():\n    global mail_entry",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "insert_image",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def insert_image():\n    global mail_entry\n    global image_references\n    # Ask the user to choose an image file\n    file_path = filedialog.askopenfilename(filetypes=[(\"Image files\", \"*.png;*.jpg;*.jpeg;*.gif\")])\n    if file_path:\n        # Create a PhotoImage object\n        img = tk.PhotoImage(file=file_path)\n        # Get the dimensions of the image\n        img_width = img.width()",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_font",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def change_font(font_name):\n    global mail_entry, tagName\n    print(font_name)\n    mail_entry.tag_configure(tagName, font=font_name)\n    mail_entry.tag_add(tagName, \"sel.first\", \"sel.last\")\n    tag_ranges = mail_entry.tag_ranges(tagName)\n    tagName = tagName + 1\n    if tag_ranges:\n        start, end = tag_ranges[0], tag_ranges[1]\n        with open(PATH/\"Temp_email.json\", \"r\") as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_style",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def change_style(style):\n    if style == \"Bold\":\n        apply_tag(\"bold\")\n    elif style == \"Italic\":\n        apply_tag(\"italic\")\n    elif style == \"Underline\":\n        apply_tag(\"underline\")\n    elif style == \"Strikethrough\":\n        apply_tag(\"strikethrough\")\n    elif style == \"Superscript\":",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "apply_tag",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def apply_tag(tag):\n    global tagName\n    mail_entry.tag_configure(tagName, **tag_styles[tag])\n    # Apply the tag to the selected text\n    mail_entry.tag_add(tagName, \"sel.first\", \"sel.last\")\n    tag_ranges = mail_entry.tag_ranges(tagName)\n    tagName = tagName + 1\n    if tag_ranges:\n        start_index, end_index = tag_ranges[0], tag_ranges[1]\n        with open(PATH/\"Temp_email.json\", \"r\") as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "text_color_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def text_color_action():\n    global mail_entry, tagName\n    # Get the current selected text\n    selected_text = mail_entry.get(\"sel.first\", \"sel.last\")\n    print(selected_text)\n    if selected_text:\n        # Show color dialog\n        color, _ = askcolor()\n        if color:\n            # Convert RGB values to hex color string",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "open_format_window",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def open_format_window(event):\n    global new_Window, format_menu\n    format_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    font_sub_menu = tk.Menu(new_Window, tearoff=False)\n    format_menu.add_cascade(label=\"Font\", menu=font_sub_menu)\n    fonts = [\"Arial\", \"Terminal\", \"Roman\", \"Roboto\", \"Stencil\", \"Verdana\", \"Tahoma\", \"Calibri\", \"Gigi\", \"Broadway\"\n                    , \"Wingdings\", \"Meiryo\", \"@SimSun\", \"Georgia\", \"Impact\", \"Courier\"]\n    for font in fonts:\n        font_sub_menu.add_command(label=font, command=lambda font = font :change_font(font))\n    style_sub_menu = tk.Menu(new_Window, tearoff=False)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "close_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "saveAs_action",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def saveAs_action():\n    # Ask the user for the file location\n    file_path = filedialog.asksaveasfilename(defaultextension=\".txt\", filetypes=[(\"Text files\", \"*.txt\")])\n    if not file_path:\n        return  # User canceled the file dialog\n    # Get the content from the Text widget\n    text_content = mail_entry.get(\"0.0\", \"end\")\n    print(text_content)\n    # Save the content to the specified file\n    with open(file_path, 'w', encoding='utf-8') as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "open_file_window",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def open_file_window(event):\n    global new_Window, file_menu\n    file_menu = tk.Menu(new_Window, tearoff=0, background=\"#D6F2FE\")\n    file_menu.add_command(label=\"New\", command=newMessage)\n    file_menu.add_command(label=\"Attach\", command=attach_file)\n    file_menu.add_command(label=\"Save as\", command=saveAs_action)\n    file_menu.add_command(label=\"Close\", command=close_action)\n    file_menu.post(event.x_root, event.y_root)\ndef json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "json_fully_complete_now_send_the_json_file_to_server",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def json_fully_complete_now_send_the_json_file_to_server():\n    global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)\n        data[\"Main_content\"][\"RawContent\"] = mail_entry.get(\"0.0\", \"end\")\n    with open(PATH/\"Temp_email.json\", \"w\") as file:\n            json.dump(data, file, indent = 2)\n    with open(PATH/\"Temp_email.json\", \"r\") as file:\n        data = json.load(file)   \n        data[\"From\"] = from_entry.get()",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "button_toolbar_clicked",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def button_toolbar_clicked(button_name):\n    global buttons\n    print(f\"Toolbar button {button_name} clicked!\")\n    if(button_name == \"File\"):\n        buttons[0].bind(\"<Button-1>\", open_file_window)\n    if (button_name == \"Edit\"):\n        buttons[1].bind(\"<Button-1>\", open_edit_window)\n    if(button_name == \"View\"):\n        buttons[2].bind(\"<Button-1>\", open_view_window)\n    if(button_name == \"Attach\"):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "button_clicked",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def button_clicked(button_name):\n    print(f\"{button_name} clicked!\")\ndef on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()   \n    if button_name==\"Mail\":\n        dowload_email_every_1_minute_thread = threading.Thread(target=dowload_email_every_1_minute_thread_function)\n        dowload_email_every_1_minute_thread.start()\n        create_mail_subframe()\n    elif button_name==\"Sign out\":",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "on_button_click",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def on_button_click(button_name):\n    print(f\"{button_name} clicked!\")\n    label_second_part.pack_forget()   \n    if button_name==\"Mail\":\n        dowload_email_every_1_minute_thread = threading.Thread(target=dowload_email_every_1_minute_thread_function)\n        dowload_email_every_1_minute_thread.start()\n        create_mail_subframe()\n    elif button_name==\"Sign out\":\n        window.destroy()\n    elif button_name==\"Calendar\":",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_button_with_image(parent, file_path, width, height, button_name):\n    image = load_and_resize_image(file_path, width, height)\n    button = customtkinter.CTkButton(\n        parent,\n        image=image,\n        text = button_name,\n        corner_radius=7,\n        command=lambda: on_button_click(button_name),\n        anchor=\"w\",\n    )",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_with_image_senDown",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_button_with_image_senDown(parent, file_path, width, height, button_name, user, command=None):\n    image = load_and_resize_image(file_path, width, height)\n    button = customtkinter.CTkButton(\n        parent,\n        text=button_name,\n        image=image,\n        cursor=\"hand2\",\n        corner_radius=10,\n        command=command,\n        anchor=\"w\",",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "attach_file",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def attach_file():\n    file_path = filedialog.askopenfilename(title=\"Select File\", filetypes=[(\"All Files\", \"*.*\")])\n    if file_path:\n        print(f\"File attached: {file_path}\")\n        # Read the contents of the file into a bytes variable\n        with open(file_path, 'rb') as file:\n            file_data = file.read()\n        # Create a FileMail object and add it to the list\n        file_name = os.path.basename(file_path)\n        file_mail = FileMail(file_name, file_data)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "newMessage",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def newMessage():\n    global to_entry, subject_entry, cc_entry, bcc_entry, mail_entry, from_entry\n    global buttons\n    global new_Window\n    global file_mail_list\n    file_mail_list = []\n    new_Window = CTkToplevel(window)\n    new_Window.geometry(\"950x600\")\n    new_Window.title(\"Write - ThunderOwl\")\n    new_Window.iconbitmap(PATH/\"Icons/owl_icon.ico\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "toggle_additional_buttons",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def toggle_additional_buttons(button_name):\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    if button_name == \"hungm0434@gmail.com\":\n        if btn_inbox.winfo_ismapped():\n            btn_inbox.grid_forget()\n            btn_spam.grid_forget()\n            btn_work.grid_forget()\n            btn_important.grid_forget()\n            btn_project.grid_forget()\n            btn_receive_all.grid_forget()",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_second_part",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_second_part():\n    global label_second_part, second_part_frame\n    second_part_frame = CTkFrame(master=window, border_color=\"#323742\", border_width=2)\n    second_part_frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    image_path = PATH/\"Icons/Thunder.png\"  # Replace with the path to your image\n    image = load_and_resize_image(image_path, 1230, 769)  # Adjust the width and height as needed\n    label_second_part = customtkinter.CTkLabel(master = second_part_frame, image=image, text = \"\", anchor = \"s\")\n    label_second_part.pack(padx=4, pady=4)\ndef create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_mail_subframe",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_mail_subframe():\n    global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver2, btn_project_receiver1, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2\n    global second_part_frame\n    second_part_frame.destroy()\n    second_subframe = customtkinter.CTkFrame(window, fg_color=\"#282C34\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.columnconfigure(0, weight=1)  # Part 1\n    second_subframe.columnconfigure(1, weight=20)  # Part 2\n    second_subframe.rowconfigure(0, weight=1)\n    whitesubframe = customtkinter.CTkFrame(second_subframe, fg_color=\"#282C34\", corner_radius=15)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "select_date",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_calendar_subframe",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_calendar_subframe():\n    second_subframe = tk.Frame(window, bg=\"white\")\n    second_subframe.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    second_subframe.rowconfigure(0, weight=1)\n    second_subframe.columnconfigure(1, weight=1)\n    # Left part (Mini Calendar)\n    left_frame = tk.Frame(second_subframe, bg=\"#F4F4F9\")\n    left_frame.grid(row=0, column=0, sticky=\"ns\")\n    # Increase the font size of the calendar\n    mycal = Calendar(left_frame, setmode=\"day\", date_pattern='d/m/yy', font=\"Arial 10\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_buttons_frame",
+        "kind": 2,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "def create_buttons_frame():\n    buttons_frame = CTkFrame(master = window, fg_color=\"#282C34\")\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    buttons_frame.rowconfigure(0, weight=20)\n    buttons_frame.rowconfigure(1, weight=1)\n    buttons_frame.columnconfigure(0, weight=1)\n    buttons_sub_frame = CTkFrame(master = buttons_frame, fg_color=\"#282C34\", border_color=\"#323742\", border_width=3, corner_radius=10, height=600)\n    buttons_sub_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    logout_frame = CTkFrame(master = buttons_frame, border_color=\"#323742\", border_width=3, fg_color=\"#282C34\")\n    logout_frame.grid(row=1, column=0, sticky=\"nsew\", padx=0, pady=0)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "IP",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "IP = socket.gethostbyname(socket.gethostname())\nSMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "SMTP_PORT = 2225\nPOP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "POP3_PORT",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "POP3_PORT = 3335\nADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_SMTP",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "ADDR_SMTP = (IP, SMTP_PORT)\nADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "ADDR_POP3",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "ADDR_POP3 = (IP, POP3_PORT)\nSIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "SIZE",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "SIZE = 1024\nFORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "FORMAT = \"utf-8\"\nDISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "DISCONNECT_MSG",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "DISCONNECT_MSG = \"!DISCONNECT\"\nPATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hungm0434@gmail.com', 123)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "PATH",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "PATH = CRIPT_LOCATION = Path(__file__).absolute().parent\nwith open(PATH/'Temp_email.json', 'r') as file:\n    data_copy = json.load(file)\ndef dowload_email_every_1_minute_thread_function():\n    while (True):\n        time.sleep(10)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)\n        get_all_the_mail_from_sever_that_has_not_been_dowloaded('hungm0434@gmail.com', 123)\n# ===============================================================================================",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "file_mail_list",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "file_mail_list = []  # List to store FileMail objects\nbtn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "btn_sender",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "btn_sender = btn_receiver1 = btn_receiver2 = btn_project_receiver1 = btn_project_receiver2 = btn_project = btn_important_receiver1 = btn_important_receiver2 = btn_important = btn_work = btn_work_receiver1 = btn_work_receiver2 = btn_spam = btn_spam_receiver1 = btn_spam_receiver2 = btn_inbox_receiver1 = btn_inbox_receiver2 = None\nbtn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "btn_receive_all",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "btn_receive_all = btn_receive_all1 = btn_receive_all2 = None\nbtn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "btn_inbox",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "btn_inbox = None\ndetailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "detailMailListFolderFrame",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "detailMailListFolderFrame = None\nto_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "to_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "to_entry = None\nfrom_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "from_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "from_entry = None\nsubject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "subject_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "subject_entry = None\ncc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "cc_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "cc_entry = None\nbcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "bcc_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "bcc_entry = None\nmail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "mail_entry",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "mail_entry = None\nbuttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "buttons = []\nimage_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "image_references",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "image_references = []\ntagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "tagName",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "tagName = 0\nresolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "resolveTagName",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "resolveTagName = 0\ncontent_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "content_Text",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "content_Text = None\ndef on_entry_click(event, entry_widget):\n    entry_widget.configure(border_color = \"#84EFB9\")\ndef on_entry_leave(event, entry_widget):\n    entry_widget.configure(border_color = \"gray\")\ndef load_and_resize_image(file_path, width, height):\n    original_image = Image.open(file_path)\n    photo_image = customtkinter.CTkImage(original_image, size = (width, height))\n    return photo_image\ndef remove_file_mail(index):",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "tag_styles",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "tag_styles = {\n    \"bold\": {\"font\": (\"Helvetica\", 12, \"bold\")},\n    \"italic\": {\"font\": (\"Helvetica\", 12, \"italic\")},\n    \"underline\": {\"underline\": True},\n    \"strikethrough\": {\"overstrike\": True},\n    \"superscript\": {\"offset\": 10, \"font\": (\"Helvetica\", 10)},\n    \"subscript\": {\"offset\": -5, \"font\": (\"Helvetica\", 10)},\n    \"emphasis\": {\"foreground\": \"blue\"},\n    \"code\": {\"font\": (\"Courier New\", 12)},\n}",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "new_Window",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "new_Window = None\nfile_menu = None\ndef close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "file_menu",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "file_menu = None\ndef close_action():\n    global new_Window\n    global file_menu\n    if new_Window.winfo_exists():\n        new_Window.destroy()\n    if file_menu.winfo_exists():\n        file_menu.destroy()\ndef saveAs_action():\n    # Ask the user for the file location",
+        "detail": "testFolder.Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "testFolder.Thunder_Owl",
+        "description": "testFolder.Thunder_Owl",
+        "peekOfCode": "window = customtkinter.CTk()\nwindow.title(\"Thunder-Owl\")\nwindow.geometry(\"1400x700\")\nwindow.iconbitmap(PATH/\"Icons/owl_icon.ico\")\nwindow.resizable(False, False)\n# Set up grid weights for resizable behavior\nwindow.rowconfigure(0, weight=1)\nwindow.columnconfigure(0, weight = 1)\nwindow.columnconfigure(1, weight = 3)\ncreate_second_part() # Image",
+        "detail": "testFolder.Thunder_Owl",
         "documentation": {}
     },
     {
