@@ -14,7 +14,8 @@ from pathlib import Path
 import customtkinter
 from customtkinter import *
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
+import subprocess
 
 IP = socket.gethostbyname(socket.gethostname())
 SMTP_PORT = 2225
@@ -35,7 +36,6 @@ def dowload_email_every_1_minute_thread_function():
         get_all_the_mail_from_sever_that_has_not_been_dowloaded('hoangkhang@gmail.com', 123)
         get_all_the_mail_from_sever_that_has_not_been_dowloaded('hahuy@gmail.com', 123)
         get_all_the_mail_from_sever_that_has_not_been_dowloaded('hungm0434@gmail.com', 123)
-    
 
 # ===============================================================================================
 def get_date():
@@ -89,7 +89,7 @@ def resolveMail(user, Mail_box, index):
         database = json.load(file)
 
     for file in database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["File_list"]:
-        file_button = CTkButton(file_frame, text = file["File_name"], fg_color="#484F60", font=("Montserra", 14), hover_color="#707A94", cursor = "hand2", text_color="#91F3FD", height = 50, command=lambda data = file: resolveFile(data))
+        file_button = CTkButton(file_frame, text = file["File_name"], fg_color="#484F60", font=("Montserrat", 14), hover_color="#707A94", cursor = "hand2", text_color="#91F3FD", height = 50, command=lambda data = file: resolveFile(data))
         file_button.pack(side = tk.LEFT, padx = 5)
     disable(header_frame)
 
@@ -97,7 +97,6 @@ def resolveMail(user, Mail_box, index):
     header_frame.rowconfigure(1, weight=1)
     header_frame.rowconfigure(2, weight=1)
     header_frame.rowconfigure(3, weight=1)
-    
 
     from_header_text = ">>> From: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]
     length_To_Header = len(database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["From"]) + 3
@@ -109,7 +108,7 @@ def resolveMail(user, Mail_box, index):
     
     to_header_text = ">>> To: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["To"]
     to_header_label = CTkLabel(master = header_frame, text = to_header_text, font = ("Montserrat", 17))
-    to_header_label.grid(row=1, column=0, padx = 20, pady = 4, sticky = "w")
+    to_header_label.grid(row=1, column=0, padx = 20, pady = 0, sticky = "w")
     
     text_cc = ">>> Cc: "
     if not database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Cc"]:
@@ -119,10 +118,10 @@ def resolveMail(user, Mail_box, index):
         text_cc = text_cc + " " + user_cc
 
     cc_header_label = CTkLabel(master = header_frame, text =  text_cc, font = ("Montserrat", 17))
-    cc_header_label.grid(row=2, column=0, padx = 20, pady = 4, sticky = "w")
+    cc_header_label.grid(row=2, column=0, padx = 20, pady = 5, sticky = "w")
     
     subject_header_label = CTkLabel(master = header_frame, text = ">>> Subject: " + database["User_list"][user]["Mail_box"][Mail_box]["Email_list"][index]["Subject"], font = ("Montserrat", 17))
-    subject_header_label.grid(row=3, column=0, padx = 20, pady = 10, sticky = "w")
+    subject_header_label.grid(row=3, column=0, padx = 20, pady = 0, sticky = "w")
 
     content_frame.rowconfigure(0, weight=1)
     content_frame.columnconfigure(0, weight=1)
@@ -161,9 +160,7 @@ def resolveMail(user, Mail_box, index):
         height = target_mail["Image"]["height"][index]
         width = target_mail["Image"]["width"][index]
 
-        resolve_image(data, position, height, width)
-
-    
+        resolve_image(data, position, height, width) 
   
 # ===============================================================================================
 def resolve_image(image_data, position, height, width):
@@ -197,7 +194,6 @@ def change_color_resolve(start, end, color):
     content_Text.tag_configure(resolveTagName, foreground = color)
     content_Text.tag_add(resolveTagName, start, end)
     resolveTagName = resolveTagName + 1
-
 
 # ===============================================================================================
 def getFolderMessage(user, folder):
@@ -233,16 +229,15 @@ def getFolderMessage(user, folder):
     
     for index, mail in enumerate(database["User_list"][user]["Mail_box"][folder]["Email_list"]):
         textButton = fixTextForButton(mail["From"], mail["Date"], mail["Subject"], 40)
-        mailFolderButton = CTkButton(mailListFolderFrame, height = 40, width = 290, text = textButton, fg_color="#323742", font=("Montserra", 14), hover_color="#1A3145", command=lambda user=user, mail_box = folder, index = index: resolveMail(user, mail_box, index))
+        mailFolderButton = CTkButton(mailListFolderFrame, height = 40, width = 290, text = textButton, fg_color="#323742", font=("Montserrat", 14), hover_color="#1A3145", command=lambda user=user, mail_box = folder, index = index: resolveMail(user, mail_box, index))
         
         if mail["Have_been_read"] == 0:
-            mailFolderButton.configure(text_color = "white", font = ("Montserra",14, "bold"))
+            mailFolderButton.configure(text_color = "white", font = ("Montserrat",14, "bold"))
         else:
             mailFolderButton.configure(fg_color = "#282C34")
-        mailFolderButton.pack(pady = 2)
+        mailFolderButton.pack(side = "bottom", pady = 2)
 
         disable(mailFolderButton)
-
 
 # ===============================================================================================
 # Tắt grid_propate -> frame giữ nguyên không thay đổi kích thước
@@ -503,13 +498,11 @@ tagName = 0
 resolveTagName = 0
 content_Text = None
 
-
 def on_entry_click(event, entry_widget):
     entry_widget.configure(border_color = "#84EFB9")
 
 def on_entry_leave(event, entry_widget):
     entry_widget.configure(border_color = "gray")
-
 
 def load_and_resize_image(file_path, width, height):
     original_image = Image.open(file_path)
@@ -557,7 +550,6 @@ def remove_file_window():
 def cut_action():
     global mail_entry
     mail_entry.event_generate("<<Cut>>")
-    
 
 def copy_action():
     global mail_entry
@@ -643,7 +635,6 @@ def open_view_window(event):
     view_menu.add_command(label="Reset", command=reset_action)
     view_menu.post(event.x_root, event.y_root)
 
-
 def getIndexImage(event):
     global cursor_index
     cursor_index = mail_entry.index(tk.CURRENT)
@@ -720,7 +711,6 @@ def change_font(font_name):
         with open(PATH/"Temp_email.json", "w") as file:
                 json.dump(data, file, indent = 2)
 
-
 def change_style(style):
     if style == "Bold":
         apply_tag("bold")
@@ -768,7 +758,6 @@ tag_styles = {
     "code": {"font": ("Courier New", 12)},
 }
 
-
 def text_color_action():
     global mail_entry, tagName
     # Get the current selected text
@@ -800,7 +789,6 @@ def text_color_action():
                     data["Main_content"]["Color"]["colors"].append(str(hex_color))
                 with open(PATH/"Temp_email.json", "w") as file:
                         json.dump(data, file, indent = 2)
-
 
 def open_format_window(event):
 
@@ -848,7 +836,6 @@ def saveAs_action():
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(text_content)
 
-
 def open_file_window(event):
 
     global new_Window, file_menu
@@ -858,7 +845,6 @@ def open_file_window(event):
     file_menu.add_command(label="Save as", command=saveAs_action)
     file_menu.add_command(label="Close", command=close_action)
     file_menu.post(event.x_root, event.y_root)
-
 
 def json_fully_complete_now_send_the_json_file_to_server():
     global from_entry, to_entry, mail_entry, cc_entry, bcc_entry, file_mail_list
@@ -943,6 +929,251 @@ def button_toolbar_clicked(button_name):
 def button_clicked(button_name):
     print(f"{button_name} clicked!")
 
+def callback(url):
+    chrome_path = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"  # Adjust the path based on your Chrome installation
+
+    # Open the URL in Chrome
+    subprocess.run([chrome_path, url])
+
+emails_text = None
+add_emails_label = None
+
+def add_email_entry(edit_frame):
+    global emails_text, add_emails_label
+    add_emails_label.grid_configure(row=len(emails_text) + 3, column = 0, padx = 30, pady=0, sticky = "w")
+    new_entry = customtkinter.CTkEntry(edit_frame, width=800, placeholder_text="Email", text_color="white")
+    new_entry.grid(row=len(emails_text) + 2, column=0, padx=30, pady=0, sticky="w")
+    emails_text.append(new_entry)
+    
+
+websites_text = add_websites_label = None
+def add_website_entry(websites_frame):
+    global websites_text, add_websites_label
+    add_websites_label.grid_configure(row=len(websites_text) + 3, column = 0, padx = 30, pady=0, sticky = "w")
+    new_entry = customtkinter.CTkEntry(websites_frame, width=800, placeholder_text="Website", text_color="white")
+    new_entry.grid(row=len(websites_text) + 2, column=0, padx=30, pady=0, sticky="w")
+    websites_text.append(new_entry)
+
+phones_text = add_phones_label = None
+def add_phone_entry(phones_frame):
+    global phones_text, add_phones_label
+    add_phones_label.grid_configure(row=len(phones_text) + 3, column = 0, padx = 30, pady=0, sticky = "w")
+    new_entry = customtkinter.CTkEntry(phones_frame, width=800, placeholder_text="Phone", text_color="white")
+    new_entry.grid(row=len(phones_text) + 2, column=0, padx=30, pady=0, sticky="w")
+    phones_text.append(new_entry)
+
+def cancelEvent(user, edit_frame, frame):
+    edit_frame.destroy()
+    showInfo(user, frame)
+
+def saveEvent(user, frame, name_text, emails_text, websites_text, phones_text, notes_text):
+    with open(PATH/"Database.json", "r") as file:
+        data = json.load(file)
+        user_name = user["Nickname"]
+        for email in emails_text:
+            if email.get().strip():
+                data["User_list"][user_name]['Email'].append(email.get().strip())
+        
+        for website in websites_text:
+            if website.get().strip():
+                data["User_list"][user_name]['Website'].append(website.get().strip())
+
+        for phone in phones_text:
+            if phone.get().strip():
+                data["User_list"][user_name]['PhoneNumber'].append(phone.get().strip())
+
+        if notes_text.get("1.0", "end-1c").strip():
+            data["User_list"][user_name]['Note'] = notes_text.get("1.0", "end-1c").strip()
+        
+        if name_text.get().strip():
+            data["User_list"][user_name]['Name'] = name_text.get().strip()
+
+    with open(PATH/"Database.json", "w") as file:
+            json.dump(data, file, indent = 2)
+    
+    showInfo(user, frame)
+        
+
+def open_editInfo_frame(frame, user):
+    global emails_text, add_emails_label, websites_text, add_websites_label, phones_text, add_phones_label
+
+    edit_frame = customtkinter.CTkScrollableFrame(frame, fg_color="#1E2128", height=450)
+    edit_frame.grid(row=2, column=0, sticky="nsew", padx=5, pady=5)
+    edit_frame.rowconfigure(20, weight=1)
+    edit_frame.columnconfigure(0, weight=1)
+    
+    name_label = customtkinter.CTkLabel(edit_frame, text="Full Name", width=80, anchor="w")
+    name_label.grid(row=0, column = 0, padx = 30, pady=0, sticky = "w")
+    name_text = customtkinter.CTkEntry(edit_frame, width=800, placeholder_text="Full Name", text_color="white")
+    name_text.grid(row=1, column = 0, padx = 30, pady = 0, sticky="w")
+
+    emails_frame = CTkFrame(edit_frame, fg_color="#1E2128")
+    emails_frame.grid(row = 2, column=0, padx=0, pady=0, sticky="nsew")
+    emails_label = customtkinter.CTkLabel(emails_frame, text="Emails", width=80, anchor="w")
+    emails_label.grid(row=0, column = 0, padx = 30, pady=0, sticky = "w")
+    emails_text = [customtkinter.CTkEntry(emails_frame, width=800, placeholder_text="Email", text_color="white")]
+    emails_text[0].grid(row=1, column = 0, padx = 30, pady = 0, sticky="w")
+    add_emails_label = customtkinter.CTkLabel(emails_frame, text="+ Add mails address", width=80, anchor="w")
+    add_emails_label.grid(row=len(emails_text) + 2, column = 0, padx = 30, pady=0, sticky = "w")
+    add_emails_label.bind('<Button-1>', command=lambda event, emails_frame = emails_frame: add_email_entry(emails_frame))
+    
+    websites_frame = CTkFrame(edit_frame, fg_color="#1E2128")
+    websites_frame.grid(row = 3, column=0, padx=0, pady=0, sticky="nsew")
+    websites_label = customtkinter.CTkLabel(websites_frame, text="Websites", width=80, anchor="w")
+    websites_label.grid(row=0, column = 0, padx = 30, pady=0, sticky = "w")
+    websites_text = [customtkinter.CTkEntry(websites_frame, width=800, placeholder_text="Website", text_color="white")]
+    websites_text[0].grid(row=1, column = 0, padx = 30, pady = 0, sticky="w")
+    add_websites_label = customtkinter.CTkLabel(websites_frame, text="+ Add websites address", width=80, anchor="w")
+    add_websites_label.grid(row=len(websites_text) + 2, column = 0, padx = 30, pady=0, sticky = "w")
+    add_websites_label.bind('<Button-1>', command=lambda event, websites_frame = websites_frame: add_website_entry(websites_frame))
+
+    phones_frame = CTkFrame(edit_frame, fg_color="#1E2128")
+    phones_frame.grid(row = 4, column=0, padx=0, pady=0, sticky="nsew")
+    phones_label = customtkinter.CTkLabel(phones_frame, text="Phones", width=80, anchor="w")
+    phones_label.grid(row=0, column = 0, padx = 30, pady=0, sticky = "w")
+    phones_text = [customtkinter.CTkEntry(phones_frame, width=800, placeholder_text="Phone", text_color="white")]
+    phones_text[0].grid(row=1, column = 0, padx = 30, pady = 0, sticky="w")
+    add_phones_label = customtkinter.CTkLabel(phones_frame, text="+ Add phones", width=80, anchor="w")
+    add_phones_label.grid(row=len(phones_text) + 2, column = 0, padx = 30, pady=0, sticky = "w")
+    add_phones_label.bind('<Button-1>', command=lambda event, phones_frame = phones_frame: add_phone_entry(phones_frame))
+
+    notes_frame = CTkFrame(edit_frame, fg_color="#1E2128")
+    notes_frame.grid(row = 5, column=0, padx=0, pady=0, sticky="nsew")
+    notes_label = customtkinter.CTkLabel(notes_frame, text="Notes", width=80, anchor="w")
+    notes_label.grid(row=0, column = 0, padx = 30, pady=0, sticky = "w")
+    notes_text = customtkinter.CTkTextbox(notes_frame, width=800, text_color="white", border_color="#282C34", border_width=3)
+    notes_text.grid(row=1, column = 0, padx = 30, pady = 0, sticky="w")
+
+    btn_frame = CTkFrame(edit_frame, fg_color="#1E2128")
+    btn_frame.grid(row = 6, column=0, padx=125, pady=15, sticky="nsew")
+    btn_frame.columnconfigure(7, weight=1)
+
+    cancel_btn = CTkButton(btn_frame, text = "Cancel", width=100, fg_color="#484F60", hover_color="#484F60", cursor="hand2", command = lambda user=user, edit_frame = edit_frame, frame = frame: cancelEvent(user, edit_frame, frame))
+    cancel_btn.grid(row=0, column=7, sticky = "e", padx = 10)
+
+    save_btn = CTkButton(btn_frame, text = "Save", width=100, fg_color="#323742", hover_color="#484F60", cursor="hand2", command = lambda user=user, frame = frame,name_text=name_text, emails_text = emails_text, websites_text=websites_text, phones_text=phones_text, notes_text=notes_text : saveEvent(user, frame, name_text, emails_text, websites_text, phones_text, notes_text))
+    save_btn.grid(row=0, column=8, sticky = "e")
+
+def showInfo(user, info_frame):
+
+    first_frame = customtkinter.CTkFrame(info_frame, height = 150, fg_color="#282C34")
+    first_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+
+    image_path = PATH/"Icons/user.png"  # Replace with the path to your image
+    image = load_and_resize_image(image_path, 100, 100)  # Adjust the width and height as needed
+
+    img_label = customtkinter.CTkLabel(master = first_frame, image=image, text = "", anchor = "s")
+    img_label.pack(side = "left", padx=10, pady=20)
+
+    infolabel = customtkinter.CTkLabel(master = first_frame, text = user["Name"] + "\n" + user["Nickname"], anchor = "s", font=("Montserrat", 14))
+    infolabel.pack(side="left", padx=0, pady=60)
+
+    edit_frame = customtkinter.CTkFrame(info_frame, height = 60, fg_color = "#1E2128", corner_radius=10)
+    edit_frame.grid(row=1, column=0, sticky="nsew", padx=40, pady=0)
+
+    write_btn, _ = create_button_with_image(edit_frame, PATH/'Icons/pen.png', 20, 20, 'Write')
+    write_btn.configure(fg_color = "#1E2128", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 35 , hover_color = "#323742", command = newMessage)
+    write_btn.pack(side = "left", padx=15, pady=15)
+
+    event_btn, _ = create_button_with_image(edit_frame, PATH/'Icons/event.png', 20, 20, 'Event')
+    event_btn.configure(fg_color = "#1E2128", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 35 , hover_color = "#323742")
+    event_btn.pack(side = "left", padx=5, pady=15)
+
+    search_btn, _ = create_button_with_image(edit_frame, PATH/'Icons/search.png', 20, 20, 'Search')
+    search_btn.configure(fg_color = "#1E2128", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 35 , hover_color = "#323742")
+    search_btn.pack(side = "left", padx=15, pady=15)
+
+    edit_btn, _ = create_button_with_image(edit_frame, PATH/'Icons/edit.png', 20, 20, 'Edit')
+    edit_btn.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 35 , hover_color = "#323742", command = lambda frame = info_frame, user=user:open_editInfo_frame(frame, user))
+    edit_btn.pack(side = "right", padx=15, pady=15)
+
+    detail_info_frame = customtkinter.CTkFrame(info_frame, fg_color="#282C34", height = 410)
+    detail_info_frame.grid(row=2, column=0, sticky="nsew", padx=5, pady=5)
+    disable(detail_info_frame)
+
+    detail_info_frame.rowconfigure(0, weight=1)
+    detail_info_frame.columnconfigure(0, weight=1)
+    detail_info_frame.columnconfigure(1, weight=1)
+
+    left_sub_frame = customtkinter.CTkScrollableFrame(detail_info_frame, fg_color="#282C34")
+    left_sub_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+    left_sub_frame.columnconfigure(0, weight=1)
+
+    right_sub_frame = customtkinter.CTkScrollableFrame(detail_info_frame, fg_color="#282C34")
+    right_sub_frame.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
+    right_sub_frame.columnconfigure(0, weight=1)
+
+    mail_frame = customtkinter.CTkFrame(right_sub_frame, fg_color = "#484F60")
+    mail_frame.grid(row=0, column=0, sticky = "nsew", padx=5, pady=5)
+
+    mail_label = customtkinter.CTkLabel(mail_frame, text = "Email Addresses", justify = "left", text_color="#BABABA")
+    mail_label.pack(padx=0, pady=2)
+
+    for email in user["Email"]:
+        mail_add = customtkinter.CTkLabel(mail_frame, text = email, text_color="#F3F3F3")
+        mail_add.pack(padx=15, pady=0)
+
+    note_frame = customtkinter.CTkFrame(left_sub_frame, fg_color = "#484F60")
+    note_frame.grid(row=1, column=0,sticky = "nsew", padx=5, pady=5)
+
+    note_label = customtkinter.CTkLabel(note_frame, text = "Notes", justify = "left", text_color="#BABABA")
+    note_label.pack(padx=0, pady=2)
+
+    note_add = customtkinter.CTkLabel(note_frame, text = user["Note"], text_color="#F3F3F3")
+    note_add.pack(padx=15, pady=0)
+
+    phone_frame = customtkinter.CTkFrame(left_sub_frame, fg_color = "#484F60")
+    phone_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+
+    phone_label = customtkinter.CTkLabel(phone_frame, text = "Phone Number", justify = "left", text_color="#BABABA")
+    phone_label.pack(padx=0, pady=2)
+
+    for phone in user["PhoneNumber"]:
+        phone_add = customtkinter.CTkLabel(phone_frame, text = phone, text_color="#F3F3F3")
+        phone_add.pack(padx=15, pady=0)
+    
+    website_frame = customtkinter.CTkFrame(right_sub_frame, fg_color = "#484F60")
+    website_frame.grid(row=1, column=0, sticky="nsew", padx=5, pady=5)
+
+    website_label = customtkinter.CTkLabel(website_frame, text = "Website", text_color="#BABABA")
+    website_label.pack(padx=0, pady=2)
+
+    for website in user["Website"]:
+        website_add = customtkinter.CTkLabel(website_frame, text = website, text_color="#F3F3F3", cursor = "hand2")
+        website_add.pack(padx=0, pady=0)
+        website_add.bind("<Button-1>", lambda e: callback("website"))
+
+def create_address_subframe():
+    global second_part_frame, info_frame
+    second_part_frame.destroy()
+
+    subframe = customtkinter.CTkFrame(window, fg_color="#282C34", width=1130)
+    subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
+    disable(subframe)
+
+    subframe.columnconfigure(0, weight=1)
+    subframe.columnconfigure(1, weight=4)
+    subframe.rowconfigure(0, weight=1)
+
+    user_frame = customtkinter.CTkScrollableFrame(subframe, fg_color="#1E2128", scrollbar_button_color = "#323742", scrollbar_button_hover_color="#323742", border_width=2, border_color="#282C34", width=100)
+    user_frame.grid(row=0, column=0, sticky="nsew", padx = 2, pady=2)
+
+    info_frame = customtkinter.CTkFrame(subframe, fg_color="#282C34", border_color="#323742", border_width=3, corner_radius=10)
+    info_frame.grid(row=0, column=1, sticky="nsew", padx=2, pady=2)
+
+    info_frame.columnconfigure(0, weight=1)
+
+
+    with open(PATH/"Database.json", "r") as file:
+        database = json.load(file)
+    
+    for user in database["User_list"].values():
+        user_button = CTkButton(user_frame, text = user["Name"] + "\n" + user["Nickname"], text_color="#979EAF", fg_color="#323742", font=("Montserrat", 12, "bold"), anchor = "s", height = 40, hover_color = "#484F60", width=250, cursor = "hand2", command=lambda user = user, info_frame = info_frame: showInfo(user, info_frame))
+        user_button.pack(pady = 5)
+        disable(user_button)
+    
+        
+
 def on_button_click(button_name):
     print(f"{button_name} clicked!")
 
@@ -951,6 +1182,8 @@ def on_button_click(button_name):
         dowload_email_every_1_minute_thread = threading.Thread(target=dowload_email_every_1_minute_thread_function)
         dowload_email_every_1_minute_thread.start()
         create_mail_subframe()
+    elif button_name=="Address":
+        create_address_subframe()
     elif button_name=="Sign out":
         window.destroy()
     elif button_name=="Calendar":
@@ -1040,7 +1273,7 @@ def newMessage():
     # Toolbar frame (top)
     new_Window.columnconfigure(0, weight=1)
 
-    toolbar_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color="#282C34")
+    toolbar_frame = CTkFrame(new_Window, border_color="#323742", border_width=2, fg_color="#282C34")
     toolbar_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
 
     # Create buttons for the toolbar
@@ -1049,21 +1282,21 @@ def newMessage():
 
     for name in button_names:
         button = customtkinter.CTkButton(toolbar_frame, text=name, corner_radius=5, height=30, width=50, command=lambda n=name: button_toolbar_clicked(n), fg_color= "#323742", text_color= "#AAB0BE", hover_color="#484F60")
-        button.pack(side="left", padx=5, pady=5)
+        button.pack(side="left", padx=4, pady=5)
         buttons.append(button)
     
     
     buttons[8].pack(side="right", padx=20, pady=5)
     # Create textboxes and buttons
 
-    field_frame = CTkFrame(new_Window, border_color="#7cbf86", border_width=1, fg_color="#282C34")
+    field_frame = CTkFrame(new_Window, border_color="#323742", border_width=2, fg_color="#282C34")
     field_frame.grid(row=1, column=0, sticky="nsew", padx=5, pady=0)
 
     field_frame.rowconfigure(5, weight=1)
     field_frame.columnconfigure(0, weight=1)
     field_frame.columnconfigure(1, weight=30)
 
-    from_label = customtkinter.CTkLabel(field_frame, text="From:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    from_label = customtkinter.CTkLabel(field_frame, text="From:", font=("Montserrat", 14), fg_color="#282C34", text_color="white")
     from_label.grid(row=0, column=0, pady=5, padx=10, sticky="w")
 
     from_entry = CTkEntry(field_frame, placeholder_text="From", width = 800, fg_color="#323742")
@@ -1077,42 +1310,41 @@ def newMessage():
     to_entry.grid(row=1, column=1, sticky="w", pady=2, padx = 0)
     to_entry.bind("<FocusIn>", lambda event: on_entry_click(event, to_entry))
     to_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, to_entry))
-    to_label = customtkinter.CTkLabel(field_frame, text="To:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    to_label = customtkinter.CTkLabel(field_frame, text="To:", font=("Montserrat", 14), fg_color="#282C34", text_color="white")
     to_label.grid(row=1, column=0, pady=2, padx=10, sticky="w")
     # Second text box
     subject_entry = CTkEntry(field_frame, placeholder_text="Subject", width = 800, fg_color="#323742")
     subject_entry.grid(row=2, column=1, sticky="w", pady=5)
     subject_entry.bind("<FocusIn>", lambda event: on_entry_click(event, subject_entry))
     subject_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, subject_entry))
-    subject_label = customtkinter.CTkLabel(field_frame, text="Subject:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    subject_label = customtkinter.CTkLabel(field_frame, text="Subject:", font=("Montserrat", 14), fg_color="#282C34", text_color="white")
     subject_label.grid(row=2, column=0, pady=5, padx=10, sticky="w")
 
     cc_entry = CTkEntry(field_frame, placeholder_text="Cc", width = 800, fg_color="#323742")
     cc_entry.grid(row=3, column=1, sticky="w", pady=2)
     cc_entry.bind("<FocusIn>", lambda event: on_entry_click(event, cc_entry))
     cc_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, cc_entry))
-    cc_label = customtkinter.CTkLabel(field_frame, text="Cc:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    cc_label = customtkinter.CTkLabel(field_frame, text="Cc:", font=("Montserrat", 14), fg_color="#282C34", text_color="white")
     cc_label.grid(row=3, column=0, pady=2, padx=10, sticky="w")
 
     bcc_entry = CTkEntry(field_frame, placeholder_text="Bcc", width = 800, fg_color="#323742")
     bcc_entry.grid(row=4, column=1, sticky="w", pady=5)
     bcc_entry.bind("<FocusIn>", lambda event: on_entry_click(event, bcc_entry))
     bcc_entry.bind("<FocusOut>", lambda event: on_entry_leave(event, bcc_entry))
-    bcc_label = customtkinter.CTkLabel(field_frame, text="Bcc:", font=("Arial", 15), fg_color="#282C34", text_color="white")
+    bcc_label = customtkinter.CTkLabel(field_frame, text="Bcc:", font=("Montserrat", 14), fg_color="#282C34", text_color="white")
     bcc_label.grid(row=4, column=0, pady=5, padx=10, sticky="w")
 
 
-    text_mail_frame = CTkFrame(new_Window, border_color="#282C34", border_width=2, fg_color = "#84EFB9", corner_radius=10, height=330, width=100)
+    text_mail_frame = CTkFrame(new_Window, border_color="#323742", border_width=2, fg_color = "#323742", corner_radius=10, height=330, width=100)
     text_mail_frame.grid(row=2, column=0, sticky="nsew", padx=3, pady=2)
     disable(text_mail_frame)
 
     text_mail_frame.rowconfigure(0, weight=1)
     text_mail_frame.columnconfigure(0, weight=1)
     
-    mail_entry = tk.Text(text_mail_frame, bd=1, relief="solid", borderwidth=2, background="#282C34", foreground="white", insertbackground="white")
+    mail_entry = tk.Text(text_mail_frame, bd=1, relief="solid", borderwidth=2, background="#323742", foreground="white", insertbackground="white")
     mail_entry.grid(row=0, column=0, sticky="nsew", padx = 3, pady=3)
     mail_entry.configure(font=("Calibri", 12))
-
 
 def toggle_additional_buttons(button_name):
     global btn_sender, btn_receiver1, btn_receiver2, btn_project_receiver1, btn_project_receiver2, btn_project, btn_important_receiver1, btn_important_receiver2, btn_important, btn_work, btn_work_receiver1, btn_work_receiver2, btn_spam, btn_spam_receiver1, btn_spam_receiver2, btn_inbox, btn_inbox_receiver1, btn_inbox_receiver2, btn_receive_all, btn_receive_all1, btn_receive_all2
@@ -1247,7 +1479,6 @@ def create_mail_subframe():
     btn_important.pack_forget()
     btn_spam = create_button_with_image_senDown(email_frame, PATH/'Icons/spam_icon.png', 20, 20, 'Spam', "hungm0434@gmail.com",lambda user="hungm0434@gmail.com": getFolderMessage(user, 'Spam'))
     btn_spam.pack_forget()
-
     
     btn_receive_all1 = create_button_with_image_senDown(email_frame, PATH/'Icons/download.png', 20, 20, 'Download',"hahuy@gmail.com", lambda user="hahuy@gmail.com": get_all_the_mail_from_sever_that_has_not_been_dowloaded(user, 123))
     btn_receive_all1.pack_forget()
@@ -1276,31 +1507,91 @@ def create_mail_subframe():
     btn_project_receiver2.pack_forget()
 
 
+def showCalendarTable(curDate, plan_frame):
+    plan_frame.columnconfigure(0, weight=1)
+    date_frame = CTkFrame(plan_frame, fg_color="#323742", height=50)
+    date_frame.grid(row=0, column=0, sticky = "nsew")
+    disable(date_frame)
 
-def select_date(mycal, selected_date_label):
-    my_date = mycal.get_date()
-    selected_date_label.config(text=my_date)
+    for i in range(0, 9):
+        date_frame.columnconfigure(i, weight=1)
+
+    date_label = []
+
+    fake_label = CTkLabel(date_frame, width=70)
+    fake_label.configure(text ='')
+    fake_label.grid(row=0, column = 0, sticky = "nsew")
+
+    fake_label2 = CTkLabel(date_frame, width=20)
+    fake_label2.configure(text ='')
+    fake_label2.grid(row=0, column = 8, sticky = "nsew")
+    
+    for i in range(1, 4):
+        label = CTkLabel(date_frame, width = 120)
+        label.configure(text = str((curDate - timedelta(days=i)).strftime("%a %b %d")), font = ("Montserrat", 14, "bold"))
+        label.grid(row=0, column = i, sticky = "nsew", padx=1, pady=10)
+
+        date_label.append(label)
+
+    label = CTkLabel(date_frame, width = 120)
+    label.configure(text = str(curDate.strftime("%a %b %d")), font = ("Montserrat", 14, "bold"))
+    label.grid(row=0, column = 4, sticky = "nsew", padx=1, pady=10)
+
+    date_label.append(label)
+
+    for i in range(1, 4):
+        label = CTkLabel(date_frame, width = 120)
+        label.configure(text = str((curDate + timedelta(days=i)).strftime("%a %b %d")), font = ("Montserrat", 14, "bold"))
+        label.grid(row=0, column = 4 + i, sticky = "nsew", padx=1, pady=10)
+
+        date_label.append(label)
+
+    tabel_frame = CTkScrollableFrame(plan_frame, fg_color="#282C34", height=625, border_width=2, border_color="#696969")
+    tabel_frame.grid(row=1, column=0, sticky = "nsew")
+
+    for i in range(0, 9):
+        tabel_frame.columnconfigure(0,weight=1)
+    hour_label = []
+    notes = []
+    for hour in range(0, 24):
+        label = CTkLabel(tabel_frame)
+        label.configure(text = str("{:02d}:00 {}".format((hour % 12) or 12, "AM" if hour < 12 else "PM")), text_color="#717C93", anchor="n", font = ("Montserrat", 12, "bold"))
+
+        for j in range(1, 8):
+            note = CTkTextbox(tabel_frame, width=115, height=100, fg_color="#323742")
+            note.grid(row=hour + 1, column = j, sticky = "nsew", padx=1, pady=1)
+            notes.append(note)
+        
+        label.grid(row=hour + 1, column = 0, sticky = "nsew", pady=1)
+        hour_label.append(label)
+    
+def get_selected_date(cal, plan_frame):
+    selected_date = cal.selection_get()
+
+    showCalendarTable(selected_date, plan_frame)
 
 def create_calendar_subframe():
-    second_subframe = tk.Frame(window, bg="white")
-    second_subframe.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
-    second_subframe.rowconfigure(0, weight=1)
-    second_subframe.columnconfigure(1, weight=1)
+    frame = CTkFrame(window)
+    frame.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
+    frame.rowconfigure(0, weight=1)
+    frame.columnconfigure(0, weight=1)
+    frame.columnconfigure(1, weight=7)
 
-    # Left part (Mini Calendar)
-    left_frame = tk.Frame(second_subframe, bg="#F4F4F9")
-    left_frame.grid(row=0, column=0, sticky="ns")
+    plan_frame = customtkinter.CTkFrame(frame, fg_color="#282C34")
+    plan_frame.grid(row=0, column=1, padx=0, pady=0, sticky="nsew")
 
-    # Increase the font size of the calendar
-    mycal = Calendar(left_frame, setmode="day", date_pattern='d/m/yy', font="Arial 10")
-    mycal.pack(padx=20, pady=80)
+    cal_frame = customtkinter.CTkFrame(frame, fg_color="#1E2128")
+    cal_frame.grid(row=0, column=0, padx=0, pady=0, sticky="nsew")
+    cal_frame.columnconfigure(0, weight=1)
+    disable(plan_frame)
 
-    selected_date_label = tk.Label(left_frame, text="")
-    selected_date_label.pack(padx=2, pady=2)
+    cal = Calendar(cal_frame, selectmode="day", year=2023, month=12, day=22)
+    cal.grid(row=0, column=0, sticky="nsew", pady=10, padx=0)
+    
+    get_date_button = CTkButton(cal_frame, text="Get Selected Date", command=lambda cal = cal, plan_frame = plan_frame: get_selected_date(cal, plan_frame), fg_color="#323742", hover_color="#484F60", font=("Montserrat", 13, "bold"))
+    get_date_button.grid(row=1, column=0, pady=20, padx=0)
 
-    open_cal = customtkinter.CTkButton(left_frame, text="Select Date",corner_radius=10,  command=lambda: select_date(mycal, selected_date_label))
-    open_cal.pack(padx=15, pady=15)
-
+    showCalendarTable(datetime.now(), plan_frame)
 def create_buttons_frame():
     buttons_frame = CTkFrame(master = window, fg_color="#282C34")
     buttons_frame.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
@@ -1332,7 +1623,6 @@ def create_buttons_frame():
     btn_task.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50 , hover_color = "#484F60")
     btn_chat, _ = create_button_with_image(buttons_sub_frame, PATH/'Icons/chat.png', 30, 30, 'Chat')
     btn_chat.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 15),  height = 50 , hover_color = "#484F60")
-    
     
     btn_logo.grid(row=0, column=0, sticky="nsew", padx=13, pady=2)
     btn_text.grid(row=1, column=0, sticky="nsew", padx=13, pady=2)
