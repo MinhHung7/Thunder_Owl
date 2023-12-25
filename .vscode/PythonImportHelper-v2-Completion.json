@@ -9,6 +9,105 @@
         "documentation": {}
     },
     {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Flow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "InstalledAppFlow",
+        "importPath": "google_auth_oauthlib.flow",
+        "description": "google_auth_oauthlib.flow",
+        "isExtraImport": true,
+        "detail": "google_auth_oauthlib.flow",
+        "documentation": {}
+    },
+    {
+        "label": "build",
+        "importPath": "googleapiclient.discovery",
+        "description": "googleapiclient.discovery",
+        "isExtraImport": true,
+        "detail": "googleapiclient.discovery",
+        "documentation": {}
+    },
+    {
+        "label": "MediaFileUpload",
+        "importPath": "googleapiclient.http",
+        "description": "googleapiclient.http",
+        "isExtraImport": true,
+        "detail": "googleapiclient.http",
+        "documentation": {}
+    },
+    {
+        "label": "MediaIoBaseDownload",
+        "importPath": "googleapiclient.http",
+        "description": "googleapiclient.http",
+        "isExtraImport": true,
+        "detail": "googleapiclient.http",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "google.auth.transport.requests",
+        "description": "google.auth.transport.requests",
+        "isExtraImport": true,
+        "detail": "google.auth.transport.requests",
+        "documentation": {}
+    },
+    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
@@ -42,14 +141,6 @@
         "documentation": {}
     },
     {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
         "label": "filedialog",
         "importPath": "tkinter",
         "description": "tkinter",
@@ -66,28 +157,12 @@
         "documentation": {}
     },
     {
-        "label": "ThemedStyle",
-        "importPath": "ttkthemes",
-        "description": "ttkthemes",
-        "isExtraImport": true,
-        "detail": "ttkthemes",
-        "documentation": {}
-    },
-    {
-        "label": "notification",
-        "importPath": "plyer",
-        "description": "plyer",
-        "isExtraImport": true,
-        "detail": "plyer",
-        "documentation": {}
-    },
-    {
-        "label": "threading",
+        "label": "colorsys",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "threading",
-        "description": "threading",
-        "detail": "threading",
+        "importPath": "colorsys",
+        "description": "colorsys",
+        "detail": "colorsys",
         "documentation": {}
     },
     {
@@ -124,21 +199,21 @@
         "documentation": {}
     },
     {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "time",
         "description": "time",
         "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -211,14 +286,6 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
@@ -243,6 +310,258 @@
         "description": "date",
         "peekOfCode": "class TodoApp(ft.UserControl):\n    def build(self):\n        self.new_task = ft.TextField(\n            hint_text=\"What needs to be done?\", on_submit=self.add_clicked, expand=True\n        )\n        self.tasks = ft.Column()\n        self.filter = ft.Tabs(\n            scrollable=False,\n            selected_index=0,\n            on_change=self.tabs_changed,",
         "detail": "date",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleSheetsHelper",
+        "kind": 6,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "class GoogleSheetsHelper:\n\t# --> spreadsheets().batchUpdate()\n\tPaste_Type = namedtuple('_Paste_Type', \n\t\t\t\t\t('normal', 'value', 'format', 'without_borders', \n\t\t\t\t\t 'formula', 'date_validation', 'conditional_formatting')\n\t\t\t\t\t)('PASTE_NORMAL', 'PASTE_VALUES', 'PASTE_FORMAT', 'PASTE_NO_BORDERS', \n\t\t\t\t\t  'PASTE_FORMULA', 'PASTE_DATA_VALIDATION', 'PASTE_CONDITIONAL_FORMATTING')\n\tPaste_Orientation = namedtuple('_Paste_Orientation', ('normal', 'transpose'))('NORMAL', 'TRANSPOSE')\n\tMerge_Type = namedtuple('_Merge_Type', ('merge_all', 'merge_columns', 'merge_rows')\n\t\t\t\t\t)('MERGE_ALL', 'MERGE_COLUMNS', 'MERGE_ROWS')",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleCalendarHelper",
+        "kind": 6,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "class GoogleCalendarHelper:\n\t...\nclass GoogleDriverHelper:\n\t...\nif __name__ == '__main__':\n\tg = GoogleSheetsHelper()\n\tprint(g.Delimiter_Type)",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleDriverHelper",
+        "kind": 6,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "class GoogleDriverHelper:\n\t...\nif __name__ == '__main__':\n\tg = GoogleSheetsHelper()\n\tprint(g.Delimiter_Type)",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "Create_Service",
+        "kind": 2,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "def Create_Service(client_secret_file, api_name, api_version, *scopes, prefix=''):\n\tCLIENT_SECRET_FILE = client_secret_file\n\tAPI_SERVICE_NAME = api_name\n\tAPI_VERSION = api_version\n\tSCOPES = [scope for scope in scopes[0]]\n\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "convert_to_RFC_datetime",
+        "kind": 2,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "def convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0):\n\tdt = datetime.datetime(year, month, day, hour, minute, 0).isoformat() + 'Z'\n\treturn dt\nclass GoogleSheetsHelper:\n\t# --> spreadsheets().batchUpdate()\n\tPaste_Type = namedtuple('_Paste_Type', \n\t\t\t\t\t('normal', 'value', 'format', 'without_borders', \n\t\t\t\t\t 'formula', 'date_validation', 'conditional_formatting')\n\t\t\t\t\t)('PASTE_NORMAL', 'PASTE_VALUES', 'PASTE_FORMAT', 'PASTE_NO_BORDERS', \n\t\t\t\t\t  'PASTE_FORMULA', 'PASTE_DATA_VALIDATION', 'PASTE_CONDITIONAL_FORMATTING')",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tCLIENT_SECRET_FILE",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tCLIENT_SECRET_FILE = client_secret_file\n\tAPI_SERVICE_NAME = api_name\n\tAPI_VERSION = api_version\n\tSCOPES = [scope for scope in scopes[0]]\n\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tAPI_SERVICE_NAME",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tAPI_SERVICE_NAME = api_name\n\tAPI_VERSION = api_version\n\tSCOPES = [scope for scope in scopes[0]]\n\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tAPI_VERSION",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tAPI_VERSION = api_version\n\tSCOPES = [scope for scope in scopes[0]]\n\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tSCOPES",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tSCOPES = [scope for scope in scopes[0]]\n\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tcred",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tcred = None\n\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:\n\t\t\tcred = pickle.load(token)",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tworking_dir",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tworking_dir = os.getcwd()\n\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:\n\t\t\tcred = pickle.load(token)\n\tif not cred or not cred.valid:",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\ttoken_dir",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\ttoken_dir = 'token files'\n\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:\n\t\t\tcred = pickle.load(token)\n\tif not cred or not cred.valid:\n\t\tif cred and cred.expired and cred.refresh_token:",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tpickle_file",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tpickle_file = f'token_{API_SERVICE_NAME}_{API_VERSION}{prefix}.pickle'\n\t### Check if token dir exists first, if not, create the folder\n\tif not os.path.exists(os.path.join(working_dir, token_dir)):\n\t\tos.mkdir(os.path.join(working_dir, token_dir))\n\tif os.path.exists(os.path.join(working_dir, token_dir, pickle_file)):\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'rb') as token:\n\t\t\tcred = pickle.load(token)\n\tif not cred or not cred.valid:\n\t\tif cred and cred.expired and cred.refresh_token:\n\t\t\tcred.refresh(Request())",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tcred",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\t\tcred = pickle.load(token)\n\tif not cred or not cred.valid:\n\t\tif cred and cred.expired and cred.refresh_token:\n\t\t\tcred.refresh(Request())\n\t\telse:\n\t\t\tflow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)\n\t\t\tcred = flow.run_local_server()\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'wb') as token:\n\t\t\tpickle.dump(cred, token)\n\ttry:",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tflow",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\t\tflow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)\n\t\t\tcred = flow.run_local_server()\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'wb') as token:\n\t\t\tpickle.dump(cred, token)\n\ttry:\n\t\tservice = build(API_SERVICE_NAME, API_VERSION, credentials=cred)\n\t\tprint(API_SERVICE_NAME, API_VERSION, 'service created successfully')\n\t\treturn service\n\texcept Exception as e:\n\t\tprint(e)",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tcred",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\t\tcred = flow.run_local_server()\n\t\twith open(os.path.join(working_dir, token_dir, pickle_file), 'wb') as token:\n\t\t\tpickle.dump(cred, token)\n\ttry:\n\t\tservice = build(API_SERVICE_NAME, API_VERSION, credentials=cred)\n\t\tprint(API_SERVICE_NAME, API_VERSION, 'service created successfully')\n\t\treturn service\n\texcept Exception as e:\n\t\tprint(e)\n\t\tprint(f'Failed to create service instance for {API_SERVICE_NAME}')",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tservice",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\tservice = build(API_SERVICE_NAME, API_VERSION, credentials=cred)\n\t\tprint(API_SERVICE_NAME, API_VERSION, 'service created successfully')\n\t\treturn service\n\texcept Exception as e:\n\t\tprint(e)\n\t\tprint(f'Failed to create service instance for {API_SERVICE_NAME}')\n\t\tos.remove(os.path.join(working_dir, token_dir, pickle_file))\n\t\treturn None\ndef convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0):\n\tdt = datetime.datetime(year, month, day, hour, minute, 0).isoformat() + 'Z'",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tdt",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tdt = datetime.datetime(year, month, day, hour, minute, 0).isoformat() + 'Z'\n\treturn dt\nclass GoogleSheetsHelper:\n\t# --> spreadsheets().batchUpdate()\n\tPaste_Type = namedtuple('_Paste_Type', \n\t\t\t\t\t('normal', 'value', 'format', 'without_borders', \n\t\t\t\t\t 'formula', 'date_validation', 'conditional_formatting')\n\t\t\t\t\t)('PASTE_NORMAL', 'PASTE_VALUES', 'PASTE_FORMAT', 'PASTE_NO_BORDERS', \n\t\t\t\t\t  'PASTE_FORMULA', 'PASTE_DATA_VALIDATION', 'PASTE_CONDITIONAL_FORMATTING')\n\tPaste_Orientation = namedtuple('_Paste_Orientation', ('normal', 'transpose'))('NORMAL', 'TRANSPOSE')",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tPaste_Type",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tPaste_Type = namedtuple('_Paste_Type', \n\t\t\t\t\t('normal', 'value', 'format', 'without_borders', \n\t\t\t\t\t 'formula', 'date_validation', 'conditional_formatting')\n\t\t\t\t\t)('PASTE_NORMAL', 'PASTE_VALUES', 'PASTE_FORMAT', 'PASTE_NO_BORDERS', \n\t\t\t\t\t  'PASTE_FORMULA', 'PASTE_DATA_VALIDATION', 'PASTE_CONDITIONAL_FORMATTING')\n\tPaste_Orientation = namedtuple('_Paste_Orientation', ('normal', 'transpose'))('NORMAL', 'TRANSPOSE')\n\tMerge_Type = namedtuple('_Merge_Type', ('merge_all', 'merge_columns', 'merge_rows')\n\t\t\t\t\t)('MERGE_ALL', 'MERGE_COLUMNS', 'MERGE_ROWS')\n\tDelimiter_Type = namedtuple('_Delimiter_Type', ('comma', 'semicolon', 'period', 'space', 'custom', 'auto_detect')\n\t\t\t\t\t\t)('COMMA', 'SEMICOLON', 'PERIOD', 'SPACE', 'CUSTOM', 'AUTODETECT')",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tPaste_Orientation",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tPaste_Orientation = namedtuple('_Paste_Orientation', ('normal', 'transpose'))('NORMAL', 'TRANSPOSE')\n\tMerge_Type = namedtuple('_Merge_Type', ('merge_all', 'merge_columns', 'merge_rows')\n\t\t\t\t\t)('MERGE_ALL', 'MERGE_COLUMNS', 'MERGE_ROWS')\n\tDelimiter_Type = namedtuple('_Delimiter_Type', ('comma', 'semicolon', 'period', 'space', 'custom', 'auto_detect')\n\t\t\t\t\t\t)('COMMA', 'SEMICOLON', 'PERIOD', 'SPACE', 'CUSTOM', 'AUTODETECT')\n\t# --> Types\n\tDimension = namedtuple('_Dimension', ('rows', 'columns'))('ROWS', 'COLUMNS')\n\tValue_Input_Option = namedtuple('_Value_Input_Option', ('raw', 'user_entered'))('RAW', 'USER_ENTERED')\n\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tMerge_Type",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tMerge_Type = namedtuple('_Merge_Type', ('merge_all', 'merge_columns', 'merge_rows')\n\t\t\t\t\t)('MERGE_ALL', 'MERGE_COLUMNS', 'MERGE_ROWS')\n\tDelimiter_Type = namedtuple('_Delimiter_Type', ('comma', 'semicolon', 'period', 'space', 'custom', 'auto_detect')\n\t\t\t\t\t\t)('COMMA', 'SEMICOLON', 'PERIOD', 'SPACE', 'CUSTOM', 'AUTODETECT')\n\t# --> Types\n\tDimension = namedtuple('_Dimension', ('rows', 'columns'))('ROWS', 'COLUMNS')\n\tValue_Input_Option = namedtuple('_Value_Input_Option', ('raw', 'user_entered'))('RAW', 'USER_ENTERED')\n\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")\n\t@staticmethod",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tDelimiter_Type",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tDelimiter_Type = namedtuple('_Delimiter_Type', ('comma', 'semicolon', 'period', 'space', 'custom', 'auto_detect')\n\t\t\t\t\t\t)('COMMA', 'SEMICOLON', 'PERIOD', 'SPACE', 'CUSTOM', 'AUTODETECT')\n\t# --> Types\n\tDimension = namedtuple('_Dimension', ('rows', 'columns'))('ROWS', 'COLUMNS')\n\tValue_Input_Option = namedtuple('_Value_Input_Option', ('raw', 'user_entered'))('RAW', 'USER_ENTERED')\n\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")\n\t@staticmethod\n\tdef define_cell_range(\n\t\tsheet_id, ",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tDimension",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tDimension = namedtuple('_Dimension', ('rows', 'columns'))('ROWS', 'COLUMNS')\n\tValue_Input_Option = namedtuple('_Value_Input_Option', ('raw', 'user_entered'))('RAW', 'USER_ENTERED')\n\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")\n\t@staticmethod\n\tdef define_cell_range(\n\t\tsheet_id, \n\t\tstart_row_number=1, end_row_number=0, \n\t\tstart_column_number=None, end_column_number=0):\n\t\t\"\"\"GridRange object\"\"\"",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tValue_Input_Option",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tValue_Input_Option = namedtuple('_Value_Input_Option', ('raw', 'user_entered'))('RAW', 'USER_ENTERED')\n\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")\n\t@staticmethod\n\tdef define_cell_range(\n\t\tsheet_id, \n\t\tstart_row_number=1, end_row_number=0, \n\t\tstart_column_number=None, end_column_number=0):\n\t\t\"\"\"GridRange object\"\"\"\n\t\tjson_body = {",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tValue_Render_Option",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tValue_Render_Option = namedtuple('_Value_Render_Option',[\"formatted\", \"unformatted\", \"formula\"]\n\t\t\t\t\t\t\t)(\"FORMATTED_VALUE\", \"UNFORMATTED_VALUE\", \"FORMULA\")\n\t@staticmethod\n\tdef define_cell_range(\n\t\tsheet_id, \n\t\tstart_row_number=1, end_row_number=0, \n\t\tstart_column_number=None, end_column_number=0):\n\t\t\"\"\"GridRange object\"\"\"\n\t\tjson_body = {\n\t\t\t'sheetId': sheet_id,",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tjson_body",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\tjson_body = {\n\t\t\t'sheetId': sheet_id,\n\t\t\t'startRowIndex': start_row_number - 1,\n\t\t\t'endRowIndex': end_row_number,\n\t\t\t'startColumnIndex': start_column_number - 1,\n\t\t\t'endColumnIndex': end_column_number\n\t\t}\n\t\treturn json_body\n\t@staticmethod\n\tdef define_dimension_range(sheet_id, dimension, start_index, end_index):",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tjson_body",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\t\tjson_body = {\n\t\t\t'sheetId': sheet_id,\n\t\t\t'dimension': dimension,\n\t\t\t'startIndex': start_index,\n\t\t\t'endIndex': end_index\n\t\t}\n\t\treturn json_body\nclass GoogleCalendarHelper:\n\t...\nclass GoogleDriverHelper:",
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "\tg",
+        "kind": 5,
+        "importPath": "Google",
+        "description": "Google",
+        "peekOfCode": "\tg = GoogleSheetsHelper()\n\tprint(g.Delimiter_Type)",
+        "detail": "Google",
         "documentation": {}
     },
     {
@@ -372,11 +691,47 @@
         "documentation": {}
     },
     {
-        "label": "DesktopNotifier",
-        "kind": 6,
+        "label": "hex_to_rgb",
+        "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class DesktopNotifier:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"Desktop Notifier\")\n        self.style = ThemedStyle(self.root)\n        self.style.set_theme(\"arc\")  # Choose a theme from: \"aquativo\", \"arc\", \"clearlooks\", \"keramik\", etc.\n        self.notification_text = tk.StringVar()\n        self.notification_text.set(\"Hello, this is your notifier!\")\n        self.create_gui()\n    def create_gui(self):",
+        "peekOfCode": "def hex_to_rgb(hex_color):\n    r = int(hex_color[1:3], 16)\n    g = int(hex_color[3:5], 16)\n    b = int(hex_color[5:7], 16)\n    return r, g, b\ndef rgb_to_hex(rgb_color):\n    return \"#{:02x}{:02x}{:02x}\".format(*rgb_color)\ndef adjust_brightness(hex_color, factor):\n    r, g, b = hex_to_rgb(hex_color)\n    h, l, s = colorsys.rgb_to_hls(r / 255.0, g / 255.0, b / 255.0)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "rgb_to_hex",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def rgb_to_hex(rgb_color):\n    return \"#{:02x}{:02x}{:02x}\".format(*rgb_color)\ndef adjust_brightness(hex_color, factor):\n    r, g, b = hex_to_rgb(hex_color)\n    h, l, s = colorsys.rgb_to_hls(r / 255.0, g / 255.0, b / 255.0)\n    l = min(1.0, max(0.0, l * factor))\n    r, g, b = colorsys.hls_to_rgb(h, l, s)\n    rgb_color = (int(r * 255), int(g * 255), int(b * 255))\n    return rgb_to_hex(rgb_color)\n# Example",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "adjust_brightness",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def adjust_brightness(hex_color, factor):\n    r, g, b = hex_to_rgb(hex_color)\n    h, l, s = colorsys.rgb_to_hls(r / 255.0, g / 255.0, b / 255.0)\n    l = min(1.0, max(0.0, l * factor))\n    r, g, b = colorsys.hls_to_rgb(h, l, s)\n    rgb_color = (int(r * 255), int(g * 255), int(b * 255))\n    return rgb_to_hex(rgb_color)\n# Example\noriginal_color = \"#3498db\"\nhighlight_color = adjust_brightness(original_color, 1.2)  # Increase brightness (adjust factor as needed)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "original_color",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "original_color = \"#3498db\"\nhighlight_color = adjust_brightness(original_color, 1.2)  # Increase brightness (adjust factor as needed)\nprint(f\"Original color: {original_color}\")\nprint(f\"Highlight color: {highlight_color}\")",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "highlight_color",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "highlight_color = adjust_brightness(original_color, 1.2)  # Increase brightness (adjust factor as needed)\nprint(f\"Original color: {original_color}\")\nprint(f\"Highlight color: {highlight_color}\")",
         "detail": "test",
         "documentation": {}
     },
@@ -939,6 +1294,42 @@
         "documentation": {}
     },
     {
+        "label": "add_task_into_frame",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def add_task_into_frame(event, add_task_entry, task_frame, show_task_frame):\n    with open(PATH/\"Database.json\", \"r\") as file:\n        database = json.load(file)\n        if(add_task_entry.get().strip()):\n            database[\"Tasks\"].append(str(add_task_entry.get().strip()))\n    with open(PATH/\"Database.json\", \"w\") as file:\n        json.dump(database, file, indent = 2)\n    for checkbox in checkboxes:\n        checkbox.destroy()\n    for task in database[\"Tasks\"]:",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "show_detail_task",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def show_detail_task(event, task_frame, checkbox):\n    if checkbox.get() == \"on\":\n        checkbox.configure(text_color = \"green\")\n    else:\n        checkbox.configure(text_color = \"white\")\n    detail_task = CTkFrame(task_frame, fg_color=\"#323742\", height=315)\n    detail_task.grid(row=2, column=0, sticky = \"nsew\", padx = 5, pady =5)\n    detail_task.rowconfigure(50, weight=1)\n    detail_task.columnconfigure(10, weight=1)\n    disable(detail_task)",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "showTaskTable",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def showTaskTable(curDate, task_frame):\n    task_frame.columnconfigure(0, weight=1)\n    write_task_frame = CTkFrame(task_frame, fg_color=\"#323742\", height=50)\n    write_task_frame.grid(row=0, column=0, sticky = \"nsew\", padx = 5, pady =5)\n    add_task_btn, _ = create_button_with_image(write_task_frame, PATH/'Icons/add_task.png', 25, 25, 'Add Tasks')\n    add_task_btn.configure(fg_color = \"#323742\", text_color = \"#AAB0BE\", font=(\"Montserrat\", 13, \"bold\"),  height = 35 , hover_color = \"#282C34\")\n    add_task_btn.pack(side = \"left\", padx=15, pady=10)\n    show_task_frame = CTkScrollableFrame(task_frame, fg_color=\"#323742\", height=250)\n    show_task_frame.grid(row=1, column=0, sticky = \"nsew\", padx = 5, pady =5)\n    add_task_entry = CTkEntry(write_task_frame, width=700, font = (\"Montserrat\", 13, \"bold\"), placeholder_text=\"Click here to add a new task\")",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "create_task_subframe",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def create_task_subframe():\n    frame = CTkFrame(window)\n    frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    frame.rowconfigure(0, weight=1)\n    frame.columnconfigure(0, weight=1)\n    frame.columnconfigure(1, weight=7)\n    task_frame = customtkinter.CTkFrame(frame, fg_color=\"#282C34\")\n    task_frame.grid(row=0, column=1, padx=0, pady=0, sticky=\"nsew\")\n    cal_frame = customtkinter.CTkFrame(frame, fg_color=\"#1E2128\")\n    cal_frame.grid(row=0, column=0, padx=0, pady=0, sticky=\"nsew\")",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
         "label": "on_button_click",
         "kind": 2,
         "importPath": "Thunder_Owl",
@@ -1011,11 +1402,47 @@
         "documentation": {}
     },
     {
-        "label": "select_date",
+        "label": "showCalendarTable",
         "kind": 2,
         "importPath": "Thunder_Owl",
         "description": "Thunder_Owl",
-        "peekOfCode": "def select_date(mycal, selected_date_label):\n    my_date = mycal.get_date()\n    selected_date_label.config(text=my_date)\ndef create_calendar_subframe():\n    frame = CTkFrame(window)\n    frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    frame.rowconfigure(0, weight=1)\n    frame.columnconfigure(1, weight=1)\ndef create_buttons_frame():\n    buttons_frame = CTkFrame(master = window, fg_color=\"#282C34\")",
+        "peekOfCode": "def showCalendarTable(curDate, plan_frame):\n    plan_frame.columnconfigure(0, weight=1)\n    date_frame = CTkFrame(plan_frame, fg_color=\"#323742\", height=50)\n    date_frame.grid(row=0, column=0, sticky = \"nsew\")\n    disable(date_frame)\n    for i in range(0, 9):\n        date_frame.columnconfigure(i, weight=1)\n    date_label = []\n    fake_label = CTkLabel(date_frame, width=70)\n    fake_label.configure(text ='')",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "get_selected_date",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def get_selected_date(cal, plan_frame):\n    selected_date = cal.selection_get()\n    showCalendarTable(selected_date, plan_frame)\ndef change_fg_btn(card):\n    color, _ = askcolor()\n    if color:\n        # Convert RGB values to hex color string\n        hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))\n        card.configure(fg_color=hex_color, text_color = \"black\")\ndef remove_btn(card):",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "change_fg_btn",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def change_fg_btn(card):\n    color, _ = askcolor()\n    if color:\n        # Convert RGB values to hex color string\n        hex_color = \"#{:02x}{:02x}{:02x}\".format(int(color[0]), int(color[1]), int(color[2]))\n        card.configure(fg_color=hex_color, text_color = \"black\")\ndef remove_btn(card):\n    card.destroy()\ncards = []\ndef showNotes(note_frame, write_note):",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "remove_btn",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def remove_btn(card):\n    card.destroy()\ncards = []\ndef showNotes(note_frame, write_note):\n    for card in cards:\n        card.destroy()\n    with open(PATH/\"Database.json\", \"r\") as file:\n        database = json.load(file)\n        if(write_note.get(\"1.0\", \"end-1c\").strip()):\n            database[\"Notes\"].append(str(write_note.get(\"1.0\", \"end-1c\").strip()))",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "showNotes",
+        "kind": 2,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "def showNotes(note_frame, write_note):\n    for card in cards:\n        card.destroy()\n    with open(PATH/\"Database.json\", \"r\") as file:\n        database = json.load(file)\n        if(write_note.get(\"1.0\", \"end-1c\").strip()):\n            database[\"Notes\"].append(str(write_note.get(\"1.0\", \"end-1c\").strip()))\n    with open(PATH/\"Database.json\", \"w\") as file:\n        json.dump(database, file, indent = 2)\n    write_note.delete(\"1.0\", \"end-1c\")",
         "detail": "Thunder_Owl",
         "documentation": {}
     },
@@ -1024,7 +1451,7 @@
         "kind": 2,
         "importPath": "Thunder_Owl",
         "description": "Thunder_Owl",
-        "peekOfCode": "def create_calendar_subframe():\n    frame = CTkFrame(window)\n    frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    frame.rowconfigure(0, weight=1)\n    frame.columnconfigure(1, weight=1)\ndef create_buttons_frame():\n    buttons_frame = CTkFrame(master = window, fg_color=\"#282C34\")\n    buttons_frame.grid(row=0, column=0, sticky=\"nsew\", padx=0, pady=0)\n    buttons_frame.rowconfigure(0, weight=20)\n    buttons_frame.rowconfigure(1, weight=1)",
+        "peekOfCode": "def create_calendar_subframe():\n    frame = CTkFrame(window)\n    frame.grid(row=0, column=1, sticky=\"nsew\", padx=0, pady=0)\n    frame.rowconfigure(0, weight=1)\n    frame.columnconfigure(0, weight=1)\n    frame.columnconfigure(1, weight=7)\n    plan_frame = customtkinter.CTkFrame(frame, fg_color=\"#282C34\")\n    plan_frame.grid(row=0, column=1, padx=0, pady=0, sticky=\"nsew\")\n    cal_frame = customtkinter.CTkFrame(frame, fg_color=\"#1E2128\")\n    cal_frame.grid(row=0, column=0, padx=0, pady=0, sticky=\"nsew\")",
         "detail": "Thunder_Owl",
         "documentation": {}
     },
@@ -1322,6 +1749,24 @@
         "importPath": "Thunder_Owl",
         "description": "Thunder_Owl",
         "peekOfCode": "phones_text = add_phones_label = None\ndef add_phone_entry(phones_frame):\n    global phones_text, add_phones_label\n    add_phones_label.grid_configure(row=len(phones_text) + 3, column = 0, padx = 30, pady=0, sticky = \"w\")\n    new_entry = customtkinter.CTkEntry(phones_frame, width=800, placeholder_text=\"Phone\", text_color=\"white\")\n    new_entry.grid(row=len(phones_text) + 2, column=0, padx=30, pady=0, sticky=\"w\")\n    phones_text.append(new_entry)\ndef cancelEvent(user, edit_frame, frame):\n    edit_frame.destroy()\n    showInfo(user, frame)",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "checkboxes",
+        "kind": 5,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "checkboxes = []\ndef show_detail_task(event, task_frame, checkbox):\n    if checkbox.get() == \"on\":\n        checkbox.configure(text_color = \"green\")\n    else:\n        checkbox.configure(text_color = \"white\")\n    detail_task = CTkFrame(task_frame, fg_color=\"#323742\", height=315)\n    detail_task.grid(row=2, column=0, sticky = \"nsew\", padx = 5, pady =5)\n    detail_task.rowconfigure(50, weight=1)\n    detail_task.columnconfigure(10, weight=1)",
+        "detail": "Thunder_Owl",
+        "documentation": {}
+    },
+    {
+        "label": "cards",
+        "kind": 5,
+        "importPath": "Thunder_Owl",
+        "description": "Thunder_Owl",
+        "peekOfCode": "cards = []\ndef showNotes(note_frame, write_note):\n    for card in cards:\n        card.destroy()\n    with open(PATH/\"Database.json\", \"r\") as file:\n        database = json.load(file)\n        if(write_note.get(\"1.0\", \"end-1c\").strip()):\n            database[\"Notes\"].append(str(write_note.get(\"1.0\", \"end-1c\").strip()))\n    with open(PATH/\"Database.json\", \"w\") as file:\n        json.dump(database, file, indent = 2)",
         "detail": "Thunder_Owl",
         "documentation": {}
     },

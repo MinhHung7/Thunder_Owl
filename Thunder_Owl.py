@@ -1,3 +1,4 @@
+import colorsys
 import tkinter as tk
 from tkinter import filedialog, simpledialog
 from PIL import Image, ImageTk
@@ -161,6 +162,8 @@ def resolveMail(user, Mail_box, index):
         width = target_mail["Image"]["width"][index]
 
         resolve_image(data, position, height, width) 
+    
+    content_Text.config(state = "disabled")
   
 # ===============================================================================================
 def resolve_image(image_data, position, height, width):
@@ -229,7 +232,7 @@ def getFolderMessage(user, folder):
     
     for index, mail in enumerate(database["User_list"][user]["Mail_box"][folder]["Email_list"]):
         textButton = fixTextForButton(mail["From"], mail["Date"], mail["Subject"], 40)
-        mailFolderButton = CTkButton(mailListFolderFrame, height = 40, width = 290, text = textButton, fg_color="#323742", font=("Montserrat", 14), hover_color="#1A3145", command=lambda user=user, mail_box = folder, index = index: resolveMail(user, mail_box, index))
+        mailFolderButton = CTkButton(mailListFolderFrame, height = 40, width = 290, text = textButton, fg_color="#323742", font=("Montserrat", 14), hover_color="#484F60", command=lambda user=user, mail_box = folder, index = index: resolveMail(user, mail_box, index))
         
         if mail["Have_been_read"] == 0:
             mailFolderButton.configure(text_color = "white", font = ("Montserrat",14, "bold"))
@@ -1171,7 +1174,143 @@ def create_address_subframe():
         user_button = CTkButton(user_frame, text = user["Name"] + "\n" + user["Nickname"], text_color="#979EAF", fg_color="#323742", font=("Montserrat", 12, "bold"), anchor = "s", height = 40, hover_color = "#484F60", width=250, cursor = "hand2", command=lambda user = user, info_frame = info_frame: showInfo(user, info_frame))
         user_button.pack(pady = 5)
         disable(user_button)
+
+def add_task_into_frame(event, add_task_entry, task_frame, show_task_frame):
+    with open(PATH/"Database.json", "r") as file:
+        database = json.load(file)
+        
+        if(add_task_entry.get().strip()):
+            database["Tasks"].append(str(add_task_entry.get().strip()))
     
+    with open(PATH/"Database.json", "w") as file:
+        json.dump(database, file, indent = 2)
+
+    for checkbox in checkboxes:
+        checkbox.destroy()
+
+    for task in database["Tasks"]:
+        checkbox = customtkinter.CTkCheckBox(show_task_frame, text=task, onvalue="on", offvalue="off", font = ("Montserrat", 13, "bold"), hover_color="#323742", checkbox_height=20, checkbox_width=20, fg_color="#00CCC7")
+        checkbox.pack(side="top", anchor="w", padx=5, pady=5)
+        checkbox.bind("<Button-1>", command=lambda event, checkbox=checkbox, task_frame=task_frame: show_detail_task(event, task_frame, checkbox))
+        checkbox.bind("<Button-3>", command=lambda event, checkbox = checkbox: remove_btn(checkbox))
+        checkboxes.append(checkbox)
+    
+    add_task_entry.delete("0", "end")
+    
+checkboxes = []
+
+def show_detail_task(event, task_frame, checkbox):
+    if checkbox.get() == "on":
+        checkbox.configure(text_color = "green")
+    else:
+        checkbox.configure(text_color = "white")
+    
+    detail_task = CTkFrame(task_frame, fg_color="#323742", height=315)
+    detail_task.grid(row=2, column=0, sticky = "nsew", padx = 5, pady =5)
+
+    detail_task.rowconfigure(50, weight=1)
+    detail_task.columnconfigure(10, weight=1)
+    disable(detail_task)
+
+    title_label = CTkLabel(detail_task, text = "Title: ", font = ("Montserrat", 14))
+    title_label.grid(row=0, column=0, padx = 15, pady = 5, sticky="w")
+    title_text_label = CTkLabel(detail_task, text = checkbox.cget("text"), font = ("Montserrat", 12,"bold"))
+    title_text_label.grid(row=0, column=1, padx = 0, pady = 5)
+
+    marked_label = CTkLabel(detail_task, text = "Marked Completed: ", font = ("Montserrat", 14))
+    marked_label.grid(row=1, column=0, padx = 15, pady = 5, sticky="w")
+
+    if checkbox.get() == "on":
+        marked_text_label = CTkLabel(detail_task, text = "Done", font = ("Montserrat", 12,"bold"))
+        marked_text_label.grid(row=1, column=1, padx = 0, pady = 5)
+
+        date_compled_label = CTkLabel(detail_task, text = "Completion date: ", font = ("Montserrat", 14))
+        date_compled_label.grid(row=2, column=0, padx = 15, pady = 5, sticky="w")
+        date_compled_text_label = CTkLabel(detail_task, text = datetime.now().strftime("%B %A %d"), font = ("Montserrat", 12,"bold"))
+        date_compled_text_label.grid(row=2, column=1, padx = 0, pady = 5)
+
+        time_compled_label = CTkLabel(detail_task, text = "Completion time: ", font = ("Montserrat", 14))
+        time_compled_label.grid(row=3, column=0, padx = 15, pady = 5, sticky="w")
+        time_compled_text_label = CTkLabel(detail_task, text = datetime.now().strftime("%H:%M:%S"), font = ("Montserrat", 12,"bold"))
+        time_compled_text_label.grid(row=3, column=1, padx = 0, pady = 5)
+    else:
+        marked_text_label = CTkLabel(detail_task, text = "Have not been done yet", font = ("Montserrat", 12,"bold"))
+        marked_text_label.grid(row=1, column=1, padx = 0, pady = 5)
+
+        date_compled_label = CTkLabel(detail_task, text = "Completion date: ", font = ("Montserrat", 14))
+        date_compled_label.grid(row=2, column=0, padx = 15, pady = 5, sticky="w")
+
+        time_compled_label = CTkLabel(detail_task, text = "Completion time: ", font = ("Montserrat", 14))
+        time_compled_label.grid(row=3, column=0, padx = 15, pady = 5, sticky="w")
+
+def showTaskTable(curDate, task_frame):
+    task_frame.columnconfigure(0, weight=1)
+    write_task_frame = CTkFrame(task_frame, fg_color="#323742", height=50)
+    write_task_frame.grid(row=0, column=0, sticky = "nsew", padx = 5, pady =5)
+    
+    add_task_btn, _ = create_button_with_image(write_task_frame, PATH/'Icons/add_task.png', 25, 25, 'Add Tasks')
+    add_task_btn.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 13, "bold"),  height = 35 , hover_color = "#282C34")
+    add_task_btn.pack(side = "left", padx=15, pady=10)
+
+    show_task_frame = CTkScrollableFrame(task_frame, fg_color="#323742", height=250)
+    show_task_frame.grid(row=1, column=0, sticky = "nsew", padx = 5, pady =5)
+
+    add_task_entry = CTkEntry(write_task_frame, width=700, font = ("Montserrat", 13, "bold"), placeholder_text="Click here to add a new task")
+    add_task_entry.bind("<Return>", lambda event, add_task_entry = add_task_entry, task_frame = task_frame, show_task_frame = show_task_frame: add_task_into_frame(event, add_task_entry, task_frame, show_task_frame))
+    add_task_entry.pack(side = "left", padx=5, pady = 10)
+    disable(write_task_frame)
+
+    with open(PATH/"Database.json", "r") as file:
+        datebase = json.load(file)
+    
+    for task in datebase["Tasks"]:
+        checkbox = customtkinter.CTkCheckBox(show_task_frame, text=task, onvalue="on", offvalue="off", font = ("Montserrat", 13, "bold"), hover_color="#323742", checkbox_height=20, checkbox_width=20, fg_color="#00CCC7")
+        checkbox.pack(side="top", anchor="w", padx=5, pady=5)
+        checkbox.bind("<Button-1>", command=lambda event, checkbox=checkbox, task_frame=task_frame: show_detail_task(event, task_frame, checkbox))
+        checkbox.bind("<Button-3>", command=lambda event, checkbox = checkbox: remove_btn(checkbox))
+        checkboxes.append(checkbox)
+
+def create_task_subframe():
+    frame = CTkFrame(window)
+    frame.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
+    frame.rowconfigure(0, weight=1)
+    frame.columnconfigure(0, weight=1)
+    frame.columnconfigure(1, weight=7)
+
+    task_frame = customtkinter.CTkFrame(frame, fg_color="#282C34")
+    task_frame.grid(row=0, column=1, padx=0, pady=0, sticky="nsew")
+
+    cal_frame = customtkinter.CTkFrame(frame, fg_color="#1E2128")
+    cal_frame.grid(row=0, column=0, padx=0, pady=0, sticky="nsew")
+    cal_frame.columnconfigure(0, weight=1)
+    disable(task_frame)
+
+    cal = Calendar(cal_frame, selectmode="day", datetime = datetime.now(), background = "#323742", selectbackground="#282C34")
+    cal.grid(row=0, column=0, sticky="nsew", pady=10, padx=0)
+
+    get_date_button = CTkButton(cal_frame, text="Get Selected Date", command=lambda cal = cal, plan_frame = task_frame: get_selected_date(cal, plan_frame), fg_color="#323742", hover_color="#484F60", font=("Montserrat", 13, "bold"))
+    get_date_button.grid(row=1, column=0, pady=20, padx=0)
+
+    note_frame = CTkScrollableFrame(cal_frame, fg_color="#1E2128", height = 363)
+    note_frame.grid(row=2, column = 0, sticky = "nsew", padx=3, pady=3)
+
+    write_frame = CTkFrame(cal_frame, fg_color="#1E2128", height = 50)
+    write_frame.grid(row=3, column = 0, sticky = "nsew", padx=3, pady=3)
+    write_frame.columnconfigure(0, weight = 1)
+    write_frame.columnconfigure(0, weight = 4)
+    write_frame.rowconfigure(0, weight = 1)
+
+    write_note = CTkTextbox(write_frame, fg_color="#454C59",height = 50, border_color="#282C34", border_width=2, corner_radius=10)  
+    write_note.grid(row=0,column = 0, sticky = "nsew")
+
+    tick_btn, _ = create_button_with_image(write_frame, PATH/'Icons/tick.png', 25, 25, '')
+    tick_btn.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 40 , hover_color = "#282C34", command= lambda write_note = write_note, note_frame = note_frame: showNotes(note_frame, write_note))
+    tick_btn.grid(row=0,column = 1)
+    disable(cal_frame)
+    
+
+    showNotes(note_frame, write_note)
+    showTaskTable(datetime.now(), task_frame)
         
 
 def on_button_click(button_name):
@@ -1188,6 +1327,8 @@ def on_button_click(button_name):
         window.destroy()
     elif button_name=="Calendar":
         create_calendar_subframe()
+    elif button_name=="Task":
+        create_task_subframe()
 
 def create_button_with_image(parent, file_path, width, height, button_name):
     image = load_and_resize_image(file_path, width, height)
@@ -1528,7 +1669,7 @@ def showCalendarTable(curDate, plan_frame):
     
     for i in range(1, 4):
         label = CTkLabel(date_frame, width = 120)
-        label.configure(text = str((curDate - timedelta(days=i)).strftime("%a %b %d")), font = ("Montserrat", 14, "bold"))
+        label.configure(text = str((curDate - timedelta(days=(4-i))).strftime("%a %b %d")), font = ("Montserrat", 14, "bold"))
         label.grid(row=0, column = i, sticky = "nsew", padx=1, pady=10)
 
         date_label.append(label)
@@ -1570,6 +1711,42 @@ def get_selected_date(cal, plan_frame):
 
     showCalendarTable(selected_date, plan_frame)
 
+def change_fg_btn(card):
+    color, _ = askcolor()
+
+    if color:
+        # Convert RGB values to hex color string
+        hex_color = "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
+        card.configure(fg_color=hex_color, text_color = "black")
+
+def remove_btn(card):
+    card.destroy()
+
+cards = []
+
+def showNotes(note_frame, write_note):
+    for card in cards:
+        card.destroy()
+
+    with open(PATH/"Database.json", "r") as file:
+        database = json.load(file)
+        
+        if(write_note.get("1.0", "end-1c").strip()):
+            database["Notes"].append(str(write_note.get("1.0", "end-1c").strip()))
+    
+    with open(PATH/"Database.json", "w") as file:
+        json.dump(database, file, indent = 2)
+
+    write_note.delete("1.0", "end-1c")
+
+    for note in database["Notes"]:
+        card = CTkButton(note_frame, text = note, fg_color="#323742", anchor="w", width = 280, corner_radius=5, cursor = "hand2", hover_color="#484F60", font = ("Montserrat", 13, "bold"))
+        card.pack(side = "bottom", padx=0, pady=2)
+        card.bind("<Button-1>", lambda event, card = card: change_fg_btn(card))
+        card.bind("<Button-3>", lambda event, card = card: remove_btn(card))
+
+        cards.append(card)
+
 def create_calendar_subframe():
     frame = CTkFrame(window)
     frame.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
@@ -1585,12 +1762,31 @@ def create_calendar_subframe():
     cal_frame.columnconfigure(0, weight=1)
     disable(plan_frame)
 
-    cal = Calendar(cal_frame, selectmode="day", year=2023, month=12, day=22)
+    cal = Calendar(cal_frame, selectmode="day", datetime = datetime.now(), background = "#323742", selectbackground="#282C34")
     cal.grid(row=0, column=0, sticky="nsew", pady=10, padx=0)
-    
+
     get_date_button = CTkButton(cal_frame, text="Get Selected Date", command=lambda cal = cal, plan_frame = plan_frame: get_selected_date(cal, plan_frame), fg_color="#323742", hover_color="#484F60", font=("Montserrat", 13, "bold"))
     get_date_button.grid(row=1, column=0, pady=20, padx=0)
 
+    note_frame = CTkScrollableFrame(cal_frame, fg_color="#1E2128", height = 363)
+    note_frame.grid(row=2, column = 0, sticky = "nsew", padx=3, pady=3)
+
+    write_frame = CTkFrame(cal_frame, fg_color="#1E2128", height = 50)
+    write_frame.grid(row=3, column = 0, sticky = "nsew", padx=3, pady=3)
+    write_frame.columnconfigure(0, weight = 1)
+    write_frame.columnconfigure(0, weight = 4)
+    write_frame.rowconfigure(0, weight = 1)
+
+    write_note = CTkTextbox(write_frame, fg_color="#454C59",height = 50, border_color="#282C34", border_width=2, corner_radius=10)  
+    write_note.grid(row=0,column = 0, sticky = "nsew")
+
+    tick_btn, _ = create_button_with_image(write_frame, PATH/'Icons/tick.png', 25, 25, '')
+    tick_btn.configure(fg_color = "#323742", text_color = "#AAB0BE", font=("Montserrat", 12, "bold"),  height = 40 , hover_color = "#282C34", command= lambda write_note = write_note, note_frame = note_frame: showNotes(note_frame, write_note))
+    tick_btn.grid(row=0,column = 1)
+    disable(cal_frame)
+    
+
+    showNotes(note_frame, write_note)
     showCalendarTable(datetime.now(), plan_frame)
 def create_buttons_frame():
     buttons_frame = CTkFrame(master = window, fg_color="#282C34")
